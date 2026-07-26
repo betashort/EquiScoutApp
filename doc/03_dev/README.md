@@ -40,7 +40,7 @@
 ```text
 [開発者のホスト OS: macOS / Windows]
         │
-        ├─ Node.js + npm          ← nodejs.md
+        ├─ fnm → Node.js + npm    ← nodejs.md
         │
         └─ フロント（想定: apps/web または同等）
               ├─ Vite + React + TypeScript   ← vite-react.md
@@ -58,7 +58,8 @@
 
 | ツール | 固定バージョン | 詳細 |
 |--------|----------------|------|
-| Node.js | **26.5.0**（Current） | [`nodejs.md`](./nodejs.md) |
+| fnm | （ホストの Node 版管理・推奨） | [`nodejs.md`](./nodejs.md) |
+| Node.js | **26.5.0**（Current） | 同上 |
 | npm | **11.17.0**（Node 同梱） | 同上 |
 | Vite | **8.1.5** | [`vite-react.md`](./vite-react.md) |
 | React / react-dom | **19.2.8** | 同上 |
@@ -72,7 +73,7 @@
 
 ## 5. 推奨セットアップ順
 
-1. [Node.js + npm](./nodejs.md) を入れる
+1. [Node.js + npm](./nodejs.md) で **fnm** を入れ、Node **26.5.0** を有効化する
 2. [Vite + React + TypeScript](./vite-react.md) でフロント骨格を作る
 3. [Storybook](./storybook.md) を同じ UI ツリーに入れる
 
@@ -82,7 +83,7 @@
 
 | ファイル | 内容 | A / B / C |
 |----------|------|-----------|
-| [`nodejs.md`](./nodejs.md) | Node.js・npm | 方針 / インストール / 日常確認 |
+| [`nodejs.md`](./nodejs.md) | fnm・Node.js・npm | 方針 / fnm 導入 / 版切替 / 日常確認 |
 | [`vite-react.md`](./vite-react.md) | Vite・React・TypeScript | 方針 / プロジェクト作成 / dev・build |
 | [`storybook.md`](./storybook.md) | Storybook | 方針 / 導入 / storybook 起動 |
 
