@@ -1,0 +1,16 @@
+列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
+record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
+data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
+data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
+kaisai_nen	4	varchar(4)	[NULL]	default	true	[NULL]	開催年
+kaisai_tsukihi	5	varchar(4)	[NULL]	default	true	[NULL]	開催月日
+keibajo_code	6	varchar(2)	[NULL]	default	true	[NULL]	競馬場コード
+kaisai_kai	7	varchar(2)	[NULL]	default	false	[NULL]	開催回[第N回]
+kaisai_nichime	8	varchar(2)	[NULL]	default	false	[NULL]	開催日目[N日目]
+race_bango	9	varchar(2)	[NULL]	default	true	[NULL]	レース番号
+happyo_tsukihi_jifun	10	varchar(8)	[NULL]	default	false	[NULL]	発表月日時分
+toroku_tosu	11	varchar(2)	[NULL]	default	false	[NULL]	登録頭数
+shusso_tosu	12	varchar(2)	[NULL]	default	false	[NULL]	出走頭数
+hatsubai_flag_sanrenpuku	13	varchar(1)	[NULL]	default	false	[NULL]	発売フラグ　3連複
+odds_sanrenpuku	14	varchar(12240)	[NULL]	default	false	[NULL]	3連複オッズ
+hyosu_gokei_sanrenpuku	15	varchar(11)	[NULL]	default	false	[NULL]	3連複票数合計

@@ -1,0 +1,8 @@
+列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
+record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
+data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
+data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
+hanshoku_toroku_bango	4	varchar(10)	[NULL]	default	true	[NULL]	繁殖登録番号
+keito_id	5	varchar(30)	[NULL]	default	false	[NULL]	系統ID
+keito_mei	6	varchar(36)	[NULL]	default	false	[NULL]	系統名
+keito_setsumei	7	varchar(6800)	[NULL]	default	false	[NULL]	系統説明

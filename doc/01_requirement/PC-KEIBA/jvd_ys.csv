@@ -1,0 +1,13 @@
+列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
+record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
+data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
+data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
+kaisai_nen	4	varchar(4)	[NULL]	default	true	[NULL]	開催年
+kaisai_tsukihi	5	varchar(4)	[NULL]	default	true	[NULL]	開催月日
+keibajo_code	6	varchar(2)	[NULL]	default	true	[NULL]	競馬場コード
+kaisai_kai	7	varchar(2)	[NULL]	default	false	[NULL]	開催回[第N回]
+kaisai_nichime	8	varchar(2)	[NULL]	default	false	[NULL]	開催日目[N日目]
+yobi_code	9	varchar(1)	[NULL]	default	false	[NULL]	曜日コード
+jusho_joho_1	10	varchar(118)	[NULL]	default	false	[NULL]	重賞案内1
+jusho_joho_2	11	varchar(118)	[NULL]	default	false	[NULL]	重賞案内2
+jusho_joho_3	12	varchar(118)	[NULL]	default	false	[NULL]	重賞案内3

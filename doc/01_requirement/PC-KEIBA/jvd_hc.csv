@@ -1,0 +1,15 @@
+列名,＃,データ・タイプ,身元,Collation,ヌルでない,デフォルト,コメント
+record_id,1,varchar(2),[NULL],default,false,[NULL],レコード種別ID
+data_kubun,2,varchar(1),[NULL],default,false,[NULL],データ区分
+data_sakusei_nengappi,3,varchar(8),[NULL],default,false,[NULL],データ作成年月日
+tracen_kubun,4,varchar(1),[NULL],default,true,[NULL],トレセン区分
+chokyo_nengappi,5,varchar(8),[NULL],default,true,[NULL],調教年月日
+chokyo_jikoku,6,varchar(4),[NULL],default,true,[NULL],調教時刻
+ketto_toroku_bango,7,varchar(10),[NULL],default,true,[NULL],血統登録番号
+time_gokei_4f,8,varchar(4),[NULL],default,false,[NULL],4ハロンタイム合計(800M～0M)
+lap_time_4f,9,varchar(3),[NULL],default,false,[NULL],ラップタイム(800M～600M)
+time_gokei_3f,10,varchar(4),[NULL],default,false,[NULL],3ハロンタイム合計(600M～0M)
+lap_time_3f,11,varchar(3),[NULL],default,false,[NULL],ラップタイム(600M～400M)
+time_gokei_2f,12,varchar(4),[NULL],default,false,[NULL],2ハロンタイム合計(400M～0M)
+lap_time_2f,13,varchar(3),[NULL],default,false,[NULL],ラップタイム(400M～200M)
+lap_time_1f,14,varchar(3),[NULL],default,false,[NULL],ラップタイム(200M～0M)

@@ -1,0 +1,17 @@
+列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
+record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
+data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
+data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
+kaisai_nen	4	varchar(4)	[NULL]	default	true	[NULL]	開催年
+kaisai_tsukihi	5	varchar(4)	[NULL]	default	true	[NULL]	開催月日
+keibajo_code	6	varchar(2)	[NULL]	default	true	[NULL]	競馬場コード
+kaisai_kai	7	varchar(2)	[NULL]	default	false	[NULL]	開催回[第N回]
+kaisai_nichime	8	varchar(2)	[NULL]	default	false	[NULL]	開催日目[N日目]
+happyo_tsukihi_jifun	9	varchar(8)	[NULL]	default	true	[NULL]	発表月日時分
+henko_shikibetsu	10	varchar(1)	[NULL]	default	true	[NULL]	変更識別
+tenko_code	11	varchar(1)	[NULL]	default	false	[NULL]	天候状態
+babajotai_code_shiba	12	varchar(1)	[NULL]	default	false	[NULL]	馬場状態・芝
+babajotai_code_dirt	13	varchar(1)	[NULL]	default	false	[NULL]	馬場状態・ダート
+tenko_code_henkomae	14	varchar(1)	[NULL]	default	false	[NULL]	変更前 天候状態
+babajotai_code_shiba_henkomae	15	varchar(1)	[NULL]	default	false	[NULL]	変更前 馬場状態・芝
+babajotai_code_dirt_henkomae	16	varchar(1)	[NULL]	default	false	[NULL]	変更前 馬場状態・ダート

@@ -1,0 +1,159 @@
+列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
+record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
+data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
+data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
+kaisai_nen	4	varchar(4)	[NULL]	default	true	[NULL]	開催年
+kaisai_tsukihi	5	varchar(4)	[NULL]	default	true	[NULL]	開催月日
+keibajo_code	6	varchar(2)	[NULL]	default	true	[NULL]	競馬場コード
+kaisai_kai	7	varchar(2)	[NULL]	default	false	[NULL]	開催回[第N回]
+kaisai_nichime	8	varchar(2)	[NULL]	default	false	[NULL]	開催日目[N日目]
+race_bango	9	varchar(2)	[NULL]	default	true	[NULL]	レース番号
+toroku_tosu	10	varchar(2)	[NULL]	default	false	[NULL]	登録頭数
+shusso_tosu	11	varchar(2)	[NULL]	default	false	[NULL]	出走頭数
+fuseiritsu_flag_tansho	12	varchar(1)	[NULL]	default	false	[NULL]	不成立フラグ　単勝
+fuseiritsu_flag_fukusho	13	varchar(1)	[NULL]	default	false	[NULL]	不成立フラグ　複勝
+fuseiritsu_flag_wakuren	14	varchar(1)	[NULL]	default	false	[NULL]	不成立フラグ　枠連
+fuseiritsu_flag_umaren	15	varchar(1)	[NULL]	default	false	[NULL]	不成立フラグ　馬連
+fuseiritsu_flag_wide	16	varchar(1)	[NULL]	default	false	[NULL]	不成立フラグ　ワイド
+yobi_1	17	varchar(1)	[NULL]	default	false	[NULL]	予備
+fuseiritsu_flag_umatan	18	varchar(1)	[NULL]	default	false	[NULL]	不成立フラグ　馬単
+fuseiritsu_flag_sanrenpuku	19	varchar(1)	[NULL]	default	false	[NULL]	不成立フラグ　3連複
+fuseiritsu_flag_sanrentan	20	varchar(1)	[NULL]	default	false	[NULL]	不成立フラグ　3連単
+tokubarai_flag_tansho	21	varchar(1)	[NULL]	default	false	[NULL]	特払フラグ　単勝
+tokubarai_flag_fukusho	22	varchar(1)	[NULL]	default	false	[NULL]	特払フラグ　複勝
+tokubarai_flag_wakuren	23	varchar(1)	[NULL]	default	false	[NULL]	特払フラグ　枠連
+tokubarai_flag_umaren	24	varchar(1)	[NULL]	default	false	[NULL]	特払フラグ　馬連
+tokubarai_flag_wide	25	varchar(1)	[NULL]	default	false	[NULL]	特払フラグ　ワイド
+yobi_2	26	varchar(1)	[NULL]	default	false	[NULL]	予備
+tokubarai_flag_umatan	27	varchar(1)	[NULL]	default	false	[NULL]	特払フラグ　馬単
+tokubarai_flag_sanrenpuku	28	varchar(1)	[NULL]	default	false	[NULL]	特払フラグ　3連複
+tokubarai_flag_sanrentan	29	varchar(1)	[NULL]	default	false	[NULL]	特払フラグ　3連単
+henkan_flag_tansho	30	varchar(1)	[NULL]	default	false	[NULL]	返還フラグ　単勝
+henkan_flag_fukusho	31	varchar(1)	[NULL]	default	false	[NULL]	返還フラグ　複勝
+henkan_flag_wakuren	32	varchar(1)	[NULL]	default	false	[NULL]	返還フラグ　枠連
+henkan_flag_umaren	33	varchar(1)	[NULL]	default	false	[NULL]	返還フラグ　馬連
+henkan_flag_wide	34	varchar(1)	[NULL]	default	false	[NULL]	返還フラグ　ワイド
+yobi_3	35	varchar(1)	[NULL]	default	false	[NULL]	予備
+henkan_flag_umatan	36	varchar(1)	[NULL]	default	false	[NULL]	返還フラグ　馬単
+henkan_flag_sanrenpuku	37	varchar(1)	[NULL]	default	false	[NULL]	返還フラグ　3連複
+henkan_flag_sanrentan	38	varchar(1)	[NULL]	default	false	[NULL]	返還フラグ　3連単
+henkan_umaban_joho	39	varchar(28)	[NULL]	default	false	[NULL]	返還馬番情報(馬番01～28)
+henkan_wakuban_joho	40	varchar(8)	[NULL]	default	false	[NULL]	返還枠番情報(枠番1～8)
+henkan_dowaku_joho	41	varchar(8)	[NULL]	default	false	[NULL]	返還同枠情報(枠番1～8)
+haraimodoshi_tansho_1a	42	varchar(2)	[NULL]	default	false	[NULL]	単勝払戻1
+haraimodoshi_tansho_1b	43	varchar(9)	[NULL]	default	false	[NULL]	単勝払戻1
+haraimodoshi_tansho_1c	44	varchar(2)	[NULL]	default	false	[NULL]	単勝払戻1
+haraimodoshi_tansho_2a	45	varchar(2)	[NULL]	default	false	[NULL]	単勝払戻2
+haraimodoshi_tansho_2b	46	varchar(9)	[NULL]	default	false	[NULL]	単勝払戻2
+haraimodoshi_tansho_2c	47	varchar(2)	[NULL]	default	false	[NULL]	単勝払戻2
+haraimodoshi_tansho_3a	48	varchar(2)	[NULL]	default	false	[NULL]	単勝払戻3
+haraimodoshi_tansho_3b	49	varchar(9)	[NULL]	default	false	[NULL]	単勝払戻3
+haraimodoshi_tansho_3c	50	varchar(2)	[NULL]	default	false	[NULL]	単勝払戻3
+haraimodoshi_fukusho_1a	51	varchar(2)	[NULL]	default	false	[NULL]	複勝払戻1
+haraimodoshi_fukusho_1b	52	varchar(9)	[NULL]	default	false	[NULL]	複勝払戻1
+haraimodoshi_fukusho_1c	53	varchar(2)	[NULL]	default	false	[NULL]	複勝払戻1
+haraimodoshi_fukusho_2a	54	varchar(2)	[NULL]	default	false	[NULL]	複勝払戻2
+haraimodoshi_fukusho_2b	55	varchar(9)	[NULL]	default	false	[NULL]	複勝払戻2
+haraimodoshi_fukusho_2c	56	varchar(2)	[NULL]	default	false	[NULL]	複勝払戻2
+haraimodoshi_fukusho_3a	57	varchar(2)	[NULL]	default	false	[NULL]	複勝払戻3
+haraimodoshi_fukusho_3b	58	varchar(9)	[NULL]	default	false	[NULL]	複勝払戻3
+haraimodoshi_fukusho_3c	59	varchar(2)	[NULL]	default	false	[NULL]	複勝払戻3
+haraimodoshi_fukusho_4a	60	varchar(2)	[NULL]	default	false	[NULL]	複勝払戻4
+haraimodoshi_fukusho_4b	61	varchar(9)	[NULL]	default	false	[NULL]	複勝払戻4
+haraimodoshi_fukusho_4c	62	varchar(2)	[NULL]	default	false	[NULL]	複勝払戻4
+haraimodoshi_fukusho_5a	63	varchar(2)	[NULL]	default	false	[NULL]	複勝払戻5
+haraimodoshi_fukusho_5b	64	varchar(9)	[NULL]	default	false	[NULL]	複勝払戻5
+haraimodoshi_fukusho_5c	65	varchar(2)	[NULL]	default	false	[NULL]	複勝払戻5
+haraimodoshi_wakuren_1a	66	varchar(2)	[NULL]	default	false	[NULL]	枠連払戻1
+haraimodoshi_wakuren_1b	67	varchar(9)	[NULL]	default	false	[NULL]	枠連払戻1
+haraimodoshi_wakuren_1c	68	varchar(2)	[NULL]	default	false	[NULL]	枠連払戻1
+haraimodoshi_wakuren_2a	69	varchar(2)	[NULL]	default	false	[NULL]	枠連払戻2
+haraimodoshi_wakuren_2b	70	varchar(9)	[NULL]	default	false	[NULL]	枠連払戻2
+haraimodoshi_wakuren_2c	71	varchar(2)	[NULL]	default	false	[NULL]	枠連払戻2
+haraimodoshi_wakuren_3a	72	varchar(2)	[NULL]	default	false	[NULL]	枠連払戻3
+haraimodoshi_wakuren_3b	73	varchar(9)	[NULL]	default	false	[NULL]	枠連払戻3
+haraimodoshi_wakuren_3c	74	varchar(2)	[NULL]	default	false	[NULL]	枠連払戻3
+haraimodoshi_umaren_1a	75	varchar(4)	[NULL]	default	false	[NULL]	馬連払戻1
+haraimodoshi_umaren_1b	76	varchar(9)	[NULL]	default	false	[NULL]	馬連払戻1
+haraimodoshi_umaren_1c	77	varchar(3)	[NULL]	default	false	[NULL]	馬連払戻1
+haraimodoshi_umaren_2a	78	varchar(4)	[NULL]	default	false	[NULL]	馬連払戻2
+haraimodoshi_umaren_2b	79	varchar(9)	[NULL]	default	false	[NULL]	馬連払戻2
+haraimodoshi_umaren_2c	80	varchar(3)	[NULL]	default	false	[NULL]	馬連払戻2
+haraimodoshi_umaren_3a	81	varchar(4)	[NULL]	default	false	[NULL]	馬連払戻3
+haraimodoshi_umaren_3b	82	varchar(9)	[NULL]	default	false	[NULL]	馬連払戻3
+haraimodoshi_umaren_3c	83	varchar(3)	[NULL]	default	false	[NULL]	馬連払戻3
+haraimodoshi_wide_1a	84	varchar(4)	[NULL]	default	false	[NULL]	ワイド払戻1
+haraimodoshi_wide_1b	85	varchar(9)	[NULL]	default	false	[NULL]	ワイド払戻1
+haraimodoshi_wide_1c	86	varchar(3)	[NULL]	default	false	[NULL]	ワイド払戻1
+haraimodoshi_wide_2a	87	varchar(4)	[NULL]	default	false	[NULL]	ワイド払戻2
+haraimodoshi_wide_2b	88	varchar(9)	[NULL]	default	false	[NULL]	ワイド払戻2
+haraimodoshi_wide_2c	89	varchar(3)	[NULL]	default	false	[NULL]	ワイド払戻2
+haraimodoshi_wide_3a	90	varchar(4)	[NULL]	default	false	[NULL]	ワイド払戻3
+haraimodoshi_wide_3b	91	varchar(9)	[NULL]	default	false	[NULL]	ワイド払戻3
+haraimodoshi_wide_3c	92	varchar(3)	[NULL]	default	false	[NULL]	ワイド払戻3
+haraimodoshi_wide_4a	93	varchar(4)	[NULL]	default	false	[NULL]	ワイド払戻4
+haraimodoshi_wide_4b	94	varchar(9)	[NULL]	default	false	[NULL]	ワイド払戻4
+haraimodoshi_wide_4c	95	varchar(3)	[NULL]	default	false	[NULL]	ワイド払戻4
+haraimodoshi_wide_5a	96	varchar(4)	[NULL]	default	false	[NULL]	ワイド払戻5
+haraimodoshi_wide_5b	97	varchar(9)	[NULL]	default	false	[NULL]	ワイド払戻5
+haraimodoshi_wide_5c	98	varchar(3)	[NULL]	default	false	[NULL]	ワイド払戻5
+haraimodoshi_wide_6a	99	varchar(4)	[NULL]	default	false	[NULL]	ワイド払戻6
+haraimodoshi_wide_6b	100	varchar(9)	[NULL]	default	false	[NULL]	ワイド払戻6
+haraimodoshi_wide_6c	101	varchar(3)	[NULL]	default	false	[NULL]	ワイド払戻6
+haraimodoshi_wide_7a	102	varchar(4)	[NULL]	default	false	[NULL]	ワイド払戻7
+haraimodoshi_wide_7b	103	varchar(9)	[NULL]	default	false	[NULL]	ワイド払戻7
+haraimodoshi_wide_7c	104	varchar(3)	[NULL]	default	false	[NULL]	ワイド払戻7
+yobi_4_1a	105	varchar(4)	[NULL]	default	false	[NULL]	予備1
+yobi_4_1b	106	varchar(9)	[NULL]	default	false	[NULL]	予備1
+yobi_4_1c	107	varchar(3)	[NULL]	default	false	[NULL]	予備1
+yobi_4_2a	108	varchar(4)	[NULL]	default	false	[NULL]	予備2
+yobi_4_2b	109	varchar(9)	[NULL]	default	false	[NULL]	予備2
+yobi_4_2c	110	varchar(3)	[NULL]	default	false	[NULL]	予備2
+yobi_4_3a	111	varchar(4)	[NULL]	default	false	[NULL]	予備3
+yobi_4_3b	112	varchar(9)	[NULL]	default	false	[NULL]	予備3
+yobi_4_3c	113	varchar(3)	[NULL]	default	false	[NULL]	予備3
+haraimodoshi_umatan_1a	114	varchar(4)	[NULL]	default	false	[NULL]	馬単払戻1
+haraimodoshi_umatan_1b	115	varchar(9)	[NULL]	default	false	[NULL]	馬単払戻1
+haraimodoshi_umatan_1c	116	varchar(3)	[NULL]	default	false	[NULL]	馬単払戻1
+haraimodoshi_umatan_2a	117	varchar(4)	[NULL]	default	false	[NULL]	馬単払戻2
+haraimodoshi_umatan_2b	118	varchar(9)	[NULL]	default	false	[NULL]	馬単払戻2
+haraimodoshi_umatan_2c	119	varchar(3)	[NULL]	default	false	[NULL]	馬単払戻2
+haraimodoshi_umatan_3a	120	varchar(4)	[NULL]	default	false	[NULL]	馬単払戻3
+haraimodoshi_umatan_3b	121	varchar(9)	[NULL]	default	false	[NULL]	馬単払戻3
+haraimodoshi_umatan_3c	122	varchar(3)	[NULL]	default	false	[NULL]	馬単払戻3
+haraimodoshi_umatan_4a	123	varchar(4)	[NULL]	default	false	[NULL]	馬単払戻4
+haraimodoshi_umatan_4b	124	varchar(9)	[NULL]	default	false	[NULL]	馬単払戻4
+haraimodoshi_umatan_4c	125	varchar(3)	[NULL]	default	false	[NULL]	馬単払戻4
+haraimodoshi_umatan_5a	126	varchar(4)	[NULL]	default	false	[NULL]	馬単払戻5
+haraimodoshi_umatan_5b	127	varchar(9)	[NULL]	default	false	[NULL]	馬単払戻5
+haraimodoshi_umatan_5c	128	varchar(3)	[NULL]	default	false	[NULL]	馬単払戻5
+haraimodoshi_umatan_6a	129	varchar(4)	[NULL]	default	false	[NULL]	馬単払戻6
+haraimodoshi_umatan_6b	130	varchar(9)	[NULL]	default	false	[NULL]	馬単払戻6
+haraimodoshi_umatan_6c	131	varchar(3)	[NULL]	default	false	[NULL]	馬単払戻6
+haraimodoshi_sanrenpuku_1a	132	varchar(6)	[NULL]	default	false	[NULL]	3連複払戻1
+haraimodoshi_sanrenpuku_1b	133	varchar(9)	[NULL]	default	false	[NULL]	3連複払戻1
+haraimodoshi_sanrenpuku_1c	134	varchar(3)	[NULL]	default	false	[NULL]	3連複払戻1
+haraimodoshi_sanrenpuku_2a	135	varchar(6)	[NULL]	default	false	[NULL]	3連複払戻2
+haraimodoshi_sanrenpuku_2b	136	varchar(9)	[NULL]	default	false	[NULL]	3連複払戻2
+haraimodoshi_sanrenpuku_2c	137	varchar(3)	[NULL]	default	false	[NULL]	3連複払戻2
+haraimodoshi_sanrenpuku_3a	138	varchar(6)	[NULL]	default	false	[NULL]	3連複払戻3
+haraimodoshi_sanrenpuku_3b	139	varchar(9)	[NULL]	default	false	[NULL]	3連複払戻3
+haraimodoshi_sanrenpuku_3c	140	varchar(3)	[NULL]	default	false	[NULL]	3連複払戻3
+haraimodoshi_sanrentan_1a	141	varchar(6)	[NULL]	default	false	[NULL]	3連単払戻1
+haraimodoshi_sanrentan_1b	142	varchar(9)	[NULL]	default	false	[NULL]	3連単払戻1
+haraimodoshi_sanrentan_1c	143	varchar(4)	[NULL]	default	false	[NULL]	3連単払戻1
+haraimodoshi_sanrentan_2a	144	varchar(6)	[NULL]	default	false	[NULL]	3連単払戻2
+haraimodoshi_sanrentan_2b	145	varchar(9)	[NULL]	default	false	[NULL]	3連単払戻2
+haraimodoshi_sanrentan_2c	146	varchar(4)	[NULL]	default	false	[NULL]	3連単払戻2
+haraimodoshi_sanrentan_3a	147	varchar(6)	[NULL]	default	false	[NULL]	3連単払戻3
+haraimodoshi_sanrentan_3b	148	varchar(9)	[NULL]	default	false	[NULL]	3連単払戻3
+haraimodoshi_sanrentan_3c	149	varchar(4)	[NULL]	default	false	[NULL]	3連単払戻3
+haraimodoshi_sanrentan_4a	150	varchar(6)	[NULL]	default	false	[NULL]	3連単払戻4
+haraimodoshi_sanrentan_4b	151	varchar(9)	[NULL]	default	false	[NULL]	3連単払戻4
+haraimodoshi_sanrentan_4c	152	varchar(4)	[NULL]	default	false	[NULL]	3連単払戻4
+haraimodoshi_sanrentan_5a	153	varchar(6)	[NULL]	default	false	[NULL]	3連単払戻5
+haraimodoshi_sanrentan_5b	154	varchar(9)	[NULL]	default	false	[NULL]	3連単払戻5
+haraimodoshi_sanrentan_5c	155	varchar(4)	[NULL]	default	false	[NULL]	3連単払戻5
+haraimodoshi_sanrentan_6a	156	varchar(6)	[NULL]	default	false	[NULL]	3連単払戻6
+haraimodoshi_sanrentan_6b	157	varchar(9)	[NULL]	default	false	[NULL]	3連単払戻6
+haraimodoshi_sanrentan_6c	158	varchar(4)	[NULL]	default	false	[NULL]	3連単払戻6
