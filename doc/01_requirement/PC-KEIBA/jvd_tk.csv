@@ -1,337 +1,337 @@
-列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
-record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
-data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
-data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
-kaisai_nen	4	varchar(4)	[NULL]	default	true	[NULL]	開催年
-kaisai_tsukihi	5	varchar(4)	[NULL]	default	true	[NULL]	開催月日
-keibajo_code	6	varchar(2)	[NULL]	default	true	[NULL]	競馬場コード
-kaisai_kai	7	varchar(2)	[NULL]	default	false	[NULL]	開催回[第N回]
-kaisai_nichime	8	varchar(2)	[NULL]	default	false	[NULL]	開催日目[N日目]
-race_bango	9	varchar(2)	[NULL]	default	true	[NULL]	レース番号
-yobi_code	10	varchar(1)	[NULL]	default	false	[NULL]	曜日コード
-tokubetsu_kyoso_bango	11	varchar(4)	[NULL]	default	false	[NULL]	特別競走番号
-kyosomei_hondai	12	varchar(60)	[NULL]	default	false	[NULL]	競走名本題
-kyosomei_fukudai	13	varchar(60)	[NULL]	default	false	[NULL]	競走名副題
-kyosomei_kakkonai	14	varchar(60)	[NULL]	default	false	[NULL]	競走名カッコ内
-kyosomei_hondai_eur	15	varchar(120)	[NULL]	default	false	[NULL]	競走名本題欧字
-kyosomei_fukudai_eur	16	varchar(120)	[NULL]	default	false	[NULL]	競走名副題欧字
-kyosomei_kakkonai_eur	17	varchar(120)	[NULL]	default	false	[NULL]	競走名カッコ内欧字
-kyosomei_ryakusho_10	18	varchar(20)	[NULL]	default	false	[NULL]	競走名略称10文字
-kyosomei_ryakusho_6	19	varchar(12)	[NULL]	default	false	[NULL]	競走名略称6文字
-kyosomei_ryakusho_3	20	varchar(6)	[NULL]	default	false	[NULL]	競走名略称3文字
-kyosomei_kubun	21	varchar(1)	[NULL]	default	false	[NULL]	競走名区分
-jusho_kaiji	22	varchar(3)	[NULL]	default	false	[NULL]	重賞回次[第N回]
-grade_code	23	varchar(1)	[NULL]	default	false	[NULL]	グレードコード
-kyoso_shubetsu_code	24	varchar(2)	[NULL]	default	false	[NULL]	競走種別コード
-kyoso_kigo_code	25	varchar(3)	[NULL]	default	false	[NULL]	競走記号コード
-juryo_shubetsu_code	26	varchar(1)	[NULL]	default	false	[NULL]	重量種別コード
-kyoso_joken_code_2sai	27	varchar(3)	[NULL]	default	false	[NULL]	競走条件コード 2歳条件
-kyoso_joken_code_3sai	28	varchar(3)	[NULL]	default	false	[NULL]	競走条件コード 3歳条件
-kyoso_joken_code_4sai	29	varchar(3)	[NULL]	default	false	[NULL]	競走条件コード 4歳条件
-kyoso_joken_code_5sai_ijo	30	varchar(3)	[NULL]	default	false	[NULL]	競走条件コード 5歳以上条件
-kyoso_joken_code	31	varchar(3)	[NULL]	default	false	[NULL]	競走条件コード 最若年条件
-kyori	32	varchar(4)	[NULL]	default	false	[NULL]	距離
-track_code	33	varchar(2)	[NULL]	default	false	[NULL]	トラックコード
-course_kubun	34	varchar(2)	[NULL]	default	false	[NULL]	コース区分
-handicap_happyobi	35	varchar(8)	[NULL]	default	false	[NULL]	ハンデ発表日
-toroku_tosu	36	varchar(3)	[NULL]	default	false	[NULL]	登録頭数
-torokuba_joho_001	37	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報1
-torokuba_joho_002	38	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報2
-torokuba_joho_003	39	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報3
-torokuba_joho_004	40	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報4
-torokuba_joho_005	41	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報5
-torokuba_joho_006	42	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報6
-torokuba_joho_007	43	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報7
-torokuba_joho_008	44	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報8
-torokuba_joho_009	45	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報9
-torokuba_joho_010	46	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報10
-torokuba_joho_011	47	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報11
-torokuba_joho_012	48	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報12
-torokuba_joho_013	49	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報13
-torokuba_joho_014	50	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報14
-torokuba_joho_015	51	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報15
-torokuba_joho_016	52	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報16
-torokuba_joho_017	53	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報17
-torokuba_joho_018	54	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報18
-torokuba_joho_019	55	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報19
-torokuba_joho_020	56	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報20
-torokuba_joho_021	57	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報21
-torokuba_joho_022	58	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報22
-torokuba_joho_023	59	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報23
-torokuba_joho_024	60	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報24
-torokuba_joho_025	61	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報25
-torokuba_joho_026	62	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報26
-torokuba_joho_027	63	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報27
-torokuba_joho_028	64	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報28
-torokuba_joho_029	65	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報29
-torokuba_joho_030	66	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報30
-torokuba_joho_031	67	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報31
-torokuba_joho_032	68	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報32
-torokuba_joho_033	69	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報33
-torokuba_joho_034	70	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報34
-torokuba_joho_035	71	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報35
-torokuba_joho_036	72	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報36
-torokuba_joho_037	73	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報37
-torokuba_joho_038	74	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報38
-torokuba_joho_039	75	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報39
-torokuba_joho_040	76	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報40
-torokuba_joho_041	77	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報41
-torokuba_joho_042	78	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報42
-torokuba_joho_043	79	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報43
-torokuba_joho_044	80	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報44
-torokuba_joho_045	81	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報45
-torokuba_joho_046	82	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報46
-torokuba_joho_047	83	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報47
-torokuba_joho_048	84	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報48
-torokuba_joho_049	85	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報49
-torokuba_joho_050	86	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報50
-torokuba_joho_051	87	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報51
-torokuba_joho_052	88	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報52
-torokuba_joho_053	89	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報53
-torokuba_joho_054	90	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報54
-torokuba_joho_055	91	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報55
-torokuba_joho_056	92	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報56
-torokuba_joho_057	93	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報57
-torokuba_joho_058	94	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報58
-torokuba_joho_059	95	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報59
-torokuba_joho_060	96	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報60
-torokuba_joho_061	97	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報61
-torokuba_joho_062	98	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報62
-torokuba_joho_063	99	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報63
-torokuba_joho_064	100	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報64
-torokuba_joho_065	101	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報65
-torokuba_joho_066	102	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報66
-torokuba_joho_067	103	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報67
-torokuba_joho_068	104	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報68
-torokuba_joho_069	105	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報69
-torokuba_joho_070	106	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報70
-torokuba_joho_071	107	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報71
-torokuba_joho_072	108	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報72
-torokuba_joho_073	109	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報73
-torokuba_joho_074	110	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報74
-torokuba_joho_075	111	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報75
-torokuba_joho_076	112	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報76
-torokuba_joho_077	113	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報77
-torokuba_joho_078	114	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報78
-torokuba_joho_079	115	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報79
-torokuba_joho_080	116	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報80
-torokuba_joho_081	117	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報81
-torokuba_joho_082	118	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報82
-torokuba_joho_083	119	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報83
-torokuba_joho_084	120	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報84
-torokuba_joho_085	121	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報85
-torokuba_joho_086	122	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報86
-torokuba_joho_087	123	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報87
-torokuba_joho_088	124	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報88
-torokuba_joho_089	125	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報89
-torokuba_joho_090	126	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報90
-torokuba_joho_091	127	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報91
-torokuba_joho_092	128	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報92
-torokuba_joho_093	129	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報93
-torokuba_joho_094	130	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報94
-torokuba_joho_095	131	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報95
-torokuba_joho_096	132	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報96
-torokuba_joho_097	133	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報97
-torokuba_joho_098	134	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報98
-torokuba_joho_099	135	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報99
-torokuba_joho_100	136	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報100
-torokuba_joho_101	137	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報101
-torokuba_joho_102	138	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報102
-torokuba_joho_103	139	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報103
-torokuba_joho_104	140	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報104
-torokuba_joho_105	141	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報105
-torokuba_joho_106	142	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報106
-torokuba_joho_107	143	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報107
-torokuba_joho_108	144	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報108
-torokuba_joho_109	145	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報109
-torokuba_joho_110	146	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報110
-torokuba_joho_111	147	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報111
-torokuba_joho_112	148	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報112
-torokuba_joho_113	149	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報113
-torokuba_joho_114	150	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報114
-torokuba_joho_115	151	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報115
-torokuba_joho_116	152	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報116
-torokuba_joho_117	153	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報117
-torokuba_joho_118	154	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報118
-torokuba_joho_119	155	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報119
-torokuba_joho_120	156	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報120
-torokuba_joho_121	157	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報121
-torokuba_joho_122	158	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報122
-torokuba_joho_123	159	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報123
-torokuba_joho_124	160	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報124
-torokuba_joho_125	161	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報125
-torokuba_joho_126	162	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報126
-torokuba_joho_127	163	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報127
-torokuba_joho_128	164	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報128
-torokuba_joho_129	165	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報129
-torokuba_joho_130	166	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報130
-torokuba_joho_131	167	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報131
-torokuba_joho_132	168	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報132
-torokuba_joho_133	169	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報133
-torokuba_joho_134	170	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報134
-torokuba_joho_135	171	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報135
-torokuba_joho_136	172	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報136
-torokuba_joho_137	173	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報137
-torokuba_joho_138	174	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報138
-torokuba_joho_139	175	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報139
-torokuba_joho_140	176	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報140
-torokuba_joho_141	177	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報141
-torokuba_joho_142	178	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報142
-torokuba_joho_143	179	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報143
-torokuba_joho_144	180	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報144
-torokuba_joho_145	181	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報145
-torokuba_joho_146	182	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報146
-torokuba_joho_147	183	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報147
-torokuba_joho_148	184	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報148
-torokuba_joho_149	185	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報149
-torokuba_joho_150	186	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報150
-torokuba_joho_151	187	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報151
-torokuba_joho_152	188	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報152
-torokuba_joho_153	189	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報153
-torokuba_joho_154	190	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報154
-torokuba_joho_155	191	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報155
-torokuba_joho_156	192	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報156
-torokuba_joho_157	193	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報157
-torokuba_joho_158	194	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報158
-torokuba_joho_159	195	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報159
-torokuba_joho_160	196	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報160
-torokuba_joho_161	197	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報161
-torokuba_joho_162	198	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報162
-torokuba_joho_163	199	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報163
-torokuba_joho_164	200	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報164
-torokuba_joho_165	201	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報165
-torokuba_joho_166	202	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報166
-torokuba_joho_167	203	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報167
-torokuba_joho_168	204	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報168
-torokuba_joho_169	205	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報169
-torokuba_joho_170	206	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報170
-torokuba_joho_171	207	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報171
-torokuba_joho_172	208	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報172
-torokuba_joho_173	209	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報173
-torokuba_joho_174	210	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報174
-torokuba_joho_175	211	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報175
-torokuba_joho_176	212	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報176
-torokuba_joho_177	213	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報177
-torokuba_joho_178	214	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報178
-torokuba_joho_179	215	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報179
-torokuba_joho_180	216	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報180
-torokuba_joho_181	217	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報181
-torokuba_joho_182	218	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報182
-torokuba_joho_183	219	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報183
-torokuba_joho_184	220	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報184
-torokuba_joho_185	221	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報185
-torokuba_joho_186	222	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報186
-torokuba_joho_187	223	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報187
-torokuba_joho_188	224	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報188
-torokuba_joho_189	225	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報189
-torokuba_joho_190	226	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報190
-torokuba_joho_191	227	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報191
-torokuba_joho_192	228	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報192
-torokuba_joho_193	229	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報193
-torokuba_joho_194	230	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報194
-torokuba_joho_195	231	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報195
-torokuba_joho_196	232	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報196
-torokuba_joho_197	233	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報197
-torokuba_joho_198	234	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報198
-torokuba_joho_199	235	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報199
-torokuba_joho_200	236	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報200
-torokuba_joho_201	237	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報201
-torokuba_joho_202	238	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報202
-torokuba_joho_203	239	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報203
-torokuba_joho_204	240	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報204
-torokuba_joho_205	241	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報205
-torokuba_joho_206	242	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報206
-torokuba_joho_207	243	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報207
-torokuba_joho_208	244	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報208
-torokuba_joho_209	245	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報209
-torokuba_joho_210	246	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報210
-torokuba_joho_211	247	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報211
-torokuba_joho_212	248	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報212
-torokuba_joho_213	249	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報213
-torokuba_joho_214	250	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報214
-torokuba_joho_215	251	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報215
-torokuba_joho_216	252	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報216
-torokuba_joho_217	253	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報217
-torokuba_joho_218	254	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報218
-torokuba_joho_219	255	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報219
-torokuba_joho_220	256	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報220
-torokuba_joho_221	257	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報221
-torokuba_joho_222	258	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報222
-torokuba_joho_223	259	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報223
-torokuba_joho_224	260	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報224
-torokuba_joho_225	261	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報225
-torokuba_joho_226	262	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報226
-torokuba_joho_227	263	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報227
-torokuba_joho_228	264	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報228
-torokuba_joho_229	265	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報229
-torokuba_joho_230	266	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報230
-torokuba_joho_231	267	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報231
-torokuba_joho_232	268	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報232
-torokuba_joho_233	269	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報233
-torokuba_joho_234	270	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報234
-torokuba_joho_235	271	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報235
-torokuba_joho_236	272	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報236
-torokuba_joho_237	273	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報237
-torokuba_joho_238	274	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報238
-torokuba_joho_239	275	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報239
-torokuba_joho_240	276	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報240
-torokuba_joho_241	277	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報241
-torokuba_joho_242	278	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報242
-torokuba_joho_243	279	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報243
-torokuba_joho_244	280	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報244
-torokuba_joho_245	281	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報245
-torokuba_joho_246	282	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報246
-torokuba_joho_247	283	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報247
-torokuba_joho_248	284	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報248
-torokuba_joho_249	285	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報249
-torokuba_joho_250	286	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報250
-torokuba_joho_251	287	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報251
-torokuba_joho_252	288	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報252
-torokuba_joho_253	289	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報253
-torokuba_joho_254	290	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報254
-torokuba_joho_255	291	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報255
-torokuba_joho_256	292	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報256
-torokuba_joho_257	293	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報257
-torokuba_joho_258	294	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報258
-torokuba_joho_259	295	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報259
-torokuba_joho_260	296	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報260
-torokuba_joho_261	297	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報261
-torokuba_joho_262	298	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報262
-torokuba_joho_263	299	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報263
-torokuba_joho_264	300	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報264
-torokuba_joho_265	301	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報265
-torokuba_joho_266	302	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報266
-torokuba_joho_267	303	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報267
-torokuba_joho_268	304	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報268
-torokuba_joho_269	305	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報269
-torokuba_joho_270	306	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報270
-torokuba_joho_271	307	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報271
-torokuba_joho_272	308	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報272
-torokuba_joho_273	309	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報273
-torokuba_joho_274	310	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報274
-torokuba_joho_275	311	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報275
-torokuba_joho_276	312	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報276
-torokuba_joho_277	313	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報277
-torokuba_joho_278	314	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報278
-torokuba_joho_279	315	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報279
-torokuba_joho_280	316	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報280
-torokuba_joho_281	317	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報281
-torokuba_joho_282	318	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報282
-torokuba_joho_283	319	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報283
-torokuba_joho_284	320	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報284
-torokuba_joho_285	321	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報285
-torokuba_joho_286	322	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報286
-torokuba_joho_287	323	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報287
-torokuba_joho_288	324	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報288
-torokuba_joho_289	325	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報289
-torokuba_joho_290	326	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報290
-torokuba_joho_291	327	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報291
-torokuba_joho_292	328	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報292
-torokuba_joho_293	329	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報293
-torokuba_joho_294	330	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報294
-torokuba_joho_295	331	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報295
-torokuba_joho_296	332	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報296
-torokuba_joho_297	333	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報297
-torokuba_joho_298	334	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報298
-torokuba_joho_299	335	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報299
-torokuba_joho_300	336	varchar(70)	[NULL]	default	false	[NULL]	登録馬毎情報300
+列名,＃,データ・タイプ,身元,Collation,ヌルでない,デフォルト,コメント
+record_id,1,varchar(2),[NULL],default,false,[NULL],レコード種別ID
+data_kubun,2,varchar(1),[NULL],default,false,[NULL],データ区分
+data_sakusei_nengappi,3,varchar(8),[NULL],default,false,[NULL],データ作成年月日
+kaisai_nen,4,varchar(4),[NULL],default,true,[NULL],開催年
+kaisai_tsukihi,5,varchar(4),[NULL],default,true,[NULL],開催月日
+keibajo_code,6,varchar(2),[NULL],default,true,[NULL],競馬場コード
+kaisai_kai,7,varchar(2),[NULL],default,false,[NULL],開催回[第N回]
+kaisai_nichime,8,varchar(2),[NULL],default,false,[NULL],開催日目[N日目]
+race_bango,9,varchar(2),[NULL],default,true,[NULL],レース番号
+yobi_code,10,varchar(1),[NULL],default,false,[NULL],曜日コード
+tokubetsu_kyoso_bango,11,varchar(4),[NULL],default,false,[NULL],特別競走番号
+kyosomei_hondai,12,varchar(60),[NULL],default,false,[NULL],競走名本題
+kyosomei_fukudai,13,varchar(60),[NULL],default,false,[NULL],競走名副題
+kyosomei_kakkonai,14,varchar(60),[NULL],default,false,[NULL],競走名カッコ内
+kyosomei_hondai_eur,15,varchar(120),[NULL],default,false,[NULL],競走名本題欧字
+kyosomei_fukudai_eur,16,varchar(120),[NULL],default,false,[NULL],競走名副題欧字
+kyosomei_kakkonai_eur,17,varchar(120),[NULL],default,false,[NULL],競走名カッコ内欧字
+kyosomei_ryakusho_10,18,varchar(20),[NULL],default,false,[NULL],競走名略称10文字
+kyosomei_ryakusho_6,19,varchar(12),[NULL],default,false,[NULL],競走名略称6文字
+kyosomei_ryakusho_3,20,varchar(6),[NULL],default,false,[NULL],競走名略称3文字
+kyosomei_kubun,21,varchar(1),[NULL],default,false,[NULL],競走名区分
+jusho_kaiji,22,varchar(3),[NULL],default,false,[NULL],重賞回次[第N回]
+grade_code,23,varchar(1),[NULL],default,false,[NULL],グレードコード
+kyoso_shubetsu_code,24,varchar(2),[NULL],default,false,[NULL],競走種別コード
+kyoso_kigo_code,25,varchar(3),[NULL],default,false,[NULL],競走記号コード
+juryo_shubetsu_code,26,varchar(1),[NULL],default,false,[NULL],重量種別コード
+kyoso_joken_code_2sai,27,varchar(3),[NULL],default,false,[NULL],競走条件コード 2歳条件
+kyoso_joken_code_3sai,28,varchar(3),[NULL],default,false,[NULL],競走条件コード 3歳条件
+kyoso_joken_code_4sai,29,varchar(3),[NULL],default,false,[NULL],競走条件コード 4歳条件
+kyoso_joken_code_5sai_ijo,30,varchar(3),[NULL],default,false,[NULL],競走条件コード 5歳以上条件
+kyoso_joken_code,31,varchar(3),[NULL],default,false,[NULL],競走条件コード 最若年条件
+kyori,32,varchar(4),[NULL],default,false,[NULL],距離
+track_code,33,varchar(2),[NULL],default,false,[NULL],トラックコード
+course_kubun,34,varchar(2),[NULL],default,false,[NULL],コース区分
+handicap_happyobi,35,varchar(8),[NULL],default,false,[NULL],ハンデ発表日
+toroku_tosu,36,varchar(3),[NULL],default,false,[NULL],登録頭数
+torokuba_joho_001,37,varchar(70),[NULL],default,false,[NULL],登録馬毎情報1
+torokuba_joho_002,38,varchar(70),[NULL],default,false,[NULL],登録馬毎情報2
+torokuba_joho_003,39,varchar(70),[NULL],default,false,[NULL],登録馬毎情報3
+torokuba_joho_004,40,varchar(70),[NULL],default,false,[NULL],登録馬毎情報4
+torokuba_joho_005,41,varchar(70),[NULL],default,false,[NULL],登録馬毎情報5
+torokuba_joho_006,42,varchar(70),[NULL],default,false,[NULL],登録馬毎情報6
+torokuba_joho_007,43,varchar(70),[NULL],default,false,[NULL],登録馬毎情報7
+torokuba_joho_008,44,varchar(70),[NULL],default,false,[NULL],登録馬毎情報8
+torokuba_joho_009,45,varchar(70),[NULL],default,false,[NULL],登録馬毎情報9
+torokuba_joho_010,46,varchar(70),[NULL],default,false,[NULL],登録馬毎情報10
+torokuba_joho_011,47,varchar(70),[NULL],default,false,[NULL],登録馬毎情報11
+torokuba_joho_012,48,varchar(70),[NULL],default,false,[NULL],登録馬毎情報12
+torokuba_joho_013,49,varchar(70),[NULL],default,false,[NULL],登録馬毎情報13
+torokuba_joho_014,50,varchar(70),[NULL],default,false,[NULL],登録馬毎情報14
+torokuba_joho_015,51,varchar(70),[NULL],default,false,[NULL],登録馬毎情報15
+torokuba_joho_016,52,varchar(70),[NULL],default,false,[NULL],登録馬毎情報16
+torokuba_joho_017,53,varchar(70),[NULL],default,false,[NULL],登録馬毎情報17
+torokuba_joho_018,54,varchar(70),[NULL],default,false,[NULL],登録馬毎情報18
+torokuba_joho_019,55,varchar(70),[NULL],default,false,[NULL],登録馬毎情報19
+torokuba_joho_020,56,varchar(70),[NULL],default,false,[NULL],登録馬毎情報20
+torokuba_joho_021,57,varchar(70),[NULL],default,false,[NULL],登録馬毎情報21
+torokuba_joho_022,58,varchar(70),[NULL],default,false,[NULL],登録馬毎情報22
+torokuba_joho_023,59,varchar(70),[NULL],default,false,[NULL],登録馬毎情報23
+torokuba_joho_024,60,varchar(70),[NULL],default,false,[NULL],登録馬毎情報24
+torokuba_joho_025,61,varchar(70),[NULL],default,false,[NULL],登録馬毎情報25
+torokuba_joho_026,62,varchar(70),[NULL],default,false,[NULL],登録馬毎情報26
+torokuba_joho_027,63,varchar(70),[NULL],default,false,[NULL],登録馬毎情報27
+torokuba_joho_028,64,varchar(70),[NULL],default,false,[NULL],登録馬毎情報28
+torokuba_joho_029,65,varchar(70),[NULL],default,false,[NULL],登録馬毎情報29
+torokuba_joho_030,66,varchar(70),[NULL],default,false,[NULL],登録馬毎情報30
+torokuba_joho_031,67,varchar(70),[NULL],default,false,[NULL],登録馬毎情報31
+torokuba_joho_032,68,varchar(70),[NULL],default,false,[NULL],登録馬毎情報32
+torokuba_joho_033,69,varchar(70),[NULL],default,false,[NULL],登録馬毎情報33
+torokuba_joho_034,70,varchar(70),[NULL],default,false,[NULL],登録馬毎情報34
+torokuba_joho_035,71,varchar(70),[NULL],default,false,[NULL],登録馬毎情報35
+torokuba_joho_036,72,varchar(70),[NULL],default,false,[NULL],登録馬毎情報36
+torokuba_joho_037,73,varchar(70),[NULL],default,false,[NULL],登録馬毎情報37
+torokuba_joho_038,74,varchar(70),[NULL],default,false,[NULL],登録馬毎情報38
+torokuba_joho_039,75,varchar(70),[NULL],default,false,[NULL],登録馬毎情報39
+torokuba_joho_040,76,varchar(70),[NULL],default,false,[NULL],登録馬毎情報40
+torokuba_joho_041,77,varchar(70),[NULL],default,false,[NULL],登録馬毎情報41
+torokuba_joho_042,78,varchar(70),[NULL],default,false,[NULL],登録馬毎情報42
+torokuba_joho_043,79,varchar(70),[NULL],default,false,[NULL],登録馬毎情報43
+torokuba_joho_044,80,varchar(70),[NULL],default,false,[NULL],登録馬毎情報44
+torokuba_joho_045,81,varchar(70),[NULL],default,false,[NULL],登録馬毎情報45
+torokuba_joho_046,82,varchar(70),[NULL],default,false,[NULL],登録馬毎情報46
+torokuba_joho_047,83,varchar(70),[NULL],default,false,[NULL],登録馬毎情報47
+torokuba_joho_048,84,varchar(70),[NULL],default,false,[NULL],登録馬毎情報48
+torokuba_joho_049,85,varchar(70),[NULL],default,false,[NULL],登録馬毎情報49
+torokuba_joho_050,86,varchar(70),[NULL],default,false,[NULL],登録馬毎情報50
+torokuba_joho_051,87,varchar(70),[NULL],default,false,[NULL],登録馬毎情報51
+torokuba_joho_052,88,varchar(70),[NULL],default,false,[NULL],登録馬毎情報52
+torokuba_joho_053,89,varchar(70),[NULL],default,false,[NULL],登録馬毎情報53
+torokuba_joho_054,90,varchar(70),[NULL],default,false,[NULL],登録馬毎情報54
+torokuba_joho_055,91,varchar(70),[NULL],default,false,[NULL],登録馬毎情報55
+torokuba_joho_056,92,varchar(70),[NULL],default,false,[NULL],登録馬毎情報56
+torokuba_joho_057,93,varchar(70),[NULL],default,false,[NULL],登録馬毎情報57
+torokuba_joho_058,94,varchar(70),[NULL],default,false,[NULL],登録馬毎情報58
+torokuba_joho_059,95,varchar(70),[NULL],default,false,[NULL],登録馬毎情報59
+torokuba_joho_060,96,varchar(70),[NULL],default,false,[NULL],登録馬毎情報60
+torokuba_joho_061,97,varchar(70),[NULL],default,false,[NULL],登録馬毎情報61
+torokuba_joho_062,98,varchar(70),[NULL],default,false,[NULL],登録馬毎情報62
+torokuba_joho_063,99,varchar(70),[NULL],default,false,[NULL],登録馬毎情報63
+torokuba_joho_064,100,varchar(70),[NULL],default,false,[NULL],登録馬毎情報64
+torokuba_joho_065,101,varchar(70),[NULL],default,false,[NULL],登録馬毎情報65
+torokuba_joho_066,102,varchar(70),[NULL],default,false,[NULL],登録馬毎情報66
+torokuba_joho_067,103,varchar(70),[NULL],default,false,[NULL],登録馬毎情報67
+torokuba_joho_068,104,varchar(70),[NULL],default,false,[NULL],登録馬毎情報68
+torokuba_joho_069,105,varchar(70),[NULL],default,false,[NULL],登録馬毎情報69
+torokuba_joho_070,106,varchar(70),[NULL],default,false,[NULL],登録馬毎情報70
+torokuba_joho_071,107,varchar(70),[NULL],default,false,[NULL],登録馬毎情報71
+torokuba_joho_072,108,varchar(70),[NULL],default,false,[NULL],登録馬毎情報72
+torokuba_joho_073,109,varchar(70),[NULL],default,false,[NULL],登録馬毎情報73
+torokuba_joho_074,110,varchar(70),[NULL],default,false,[NULL],登録馬毎情報74
+torokuba_joho_075,111,varchar(70),[NULL],default,false,[NULL],登録馬毎情報75
+torokuba_joho_076,112,varchar(70),[NULL],default,false,[NULL],登録馬毎情報76
+torokuba_joho_077,113,varchar(70),[NULL],default,false,[NULL],登録馬毎情報77
+torokuba_joho_078,114,varchar(70),[NULL],default,false,[NULL],登録馬毎情報78
+torokuba_joho_079,115,varchar(70),[NULL],default,false,[NULL],登録馬毎情報79
+torokuba_joho_080,116,varchar(70),[NULL],default,false,[NULL],登録馬毎情報80
+torokuba_joho_081,117,varchar(70),[NULL],default,false,[NULL],登録馬毎情報81
+torokuba_joho_082,118,varchar(70),[NULL],default,false,[NULL],登録馬毎情報82
+torokuba_joho_083,119,varchar(70),[NULL],default,false,[NULL],登録馬毎情報83
+torokuba_joho_084,120,varchar(70),[NULL],default,false,[NULL],登録馬毎情報84
+torokuba_joho_085,121,varchar(70),[NULL],default,false,[NULL],登録馬毎情報85
+torokuba_joho_086,122,varchar(70),[NULL],default,false,[NULL],登録馬毎情報86
+torokuba_joho_087,123,varchar(70),[NULL],default,false,[NULL],登録馬毎情報87
+torokuba_joho_088,124,varchar(70),[NULL],default,false,[NULL],登録馬毎情報88
+torokuba_joho_089,125,varchar(70),[NULL],default,false,[NULL],登録馬毎情報89
+torokuba_joho_090,126,varchar(70),[NULL],default,false,[NULL],登録馬毎情報90
+torokuba_joho_091,127,varchar(70),[NULL],default,false,[NULL],登録馬毎情報91
+torokuba_joho_092,128,varchar(70),[NULL],default,false,[NULL],登録馬毎情報92
+torokuba_joho_093,129,varchar(70),[NULL],default,false,[NULL],登録馬毎情報93
+torokuba_joho_094,130,varchar(70),[NULL],default,false,[NULL],登録馬毎情報94
+torokuba_joho_095,131,varchar(70),[NULL],default,false,[NULL],登録馬毎情報95
+torokuba_joho_096,132,varchar(70),[NULL],default,false,[NULL],登録馬毎情報96
+torokuba_joho_097,133,varchar(70),[NULL],default,false,[NULL],登録馬毎情報97
+torokuba_joho_098,134,varchar(70),[NULL],default,false,[NULL],登録馬毎情報98
+torokuba_joho_099,135,varchar(70),[NULL],default,false,[NULL],登録馬毎情報99
+torokuba_joho_100,136,varchar(70),[NULL],default,false,[NULL],登録馬毎情報100
+torokuba_joho_101,137,varchar(70),[NULL],default,false,[NULL],登録馬毎情報101
+torokuba_joho_102,138,varchar(70),[NULL],default,false,[NULL],登録馬毎情報102
+torokuba_joho_103,139,varchar(70),[NULL],default,false,[NULL],登録馬毎情報103
+torokuba_joho_104,140,varchar(70),[NULL],default,false,[NULL],登録馬毎情報104
+torokuba_joho_105,141,varchar(70),[NULL],default,false,[NULL],登録馬毎情報105
+torokuba_joho_106,142,varchar(70),[NULL],default,false,[NULL],登録馬毎情報106
+torokuba_joho_107,143,varchar(70),[NULL],default,false,[NULL],登録馬毎情報107
+torokuba_joho_108,144,varchar(70),[NULL],default,false,[NULL],登録馬毎情報108
+torokuba_joho_109,145,varchar(70),[NULL],default,false,[NULL],登録馬毎情報109
+torokuba_joho_110,146,varchar(70),[NULL],default,false,[NULL],登録馬毎情報110
+torokuba_joho_111,147,varchar(70),[NULL],default,false,[NULL],登録馬毎情報111
+torokuba_joho_112,148,varchar(70),[NULL],default,false,[NULL],登録馬毎情報112
+torokuba_joho_113,149,varchar(70),[NULL],default,false,[NULL],登録馬毎情報113
+torokuba_joho_114,150,varchar(70),[NULL],default,false,[NULL],登録馬毎情報114
+torokuba_joho_115,151,varchar(70),[NULL],default,false,[NULL],登録馬毎情報115
+torokuba_joho_116,152,varchar(70),[NULL],default,false,[NULL],登録馬毎情報116
+torokuba_joho_117,153,varchar(70),[NULL],default,false,[NULL],登録馬毎情報117
+torokuba_joho_118,154,varchar(70),[NULL],default,false,[NULL],登録馬毎情報118
+torokuba_joho_119,155,varchar(70),[NULL],default,false,[NULL],登録馬毎情報119
+torokuba_joho_120,156,varchar(70),[NULL],default,false,[NULL],登録馬毎情報120
+torokuba_joho_121,157,varchar(70),[NULL],default,false,[NULL],登録馬毎情報121
+torokuba_joho_122,158,varchar(70),[NULL],default,false,[NULL],登録馬毎情報122
+torokuba_joho_123,159,varchar(70),[NULL],default,false,[NULL],登録馬毎情報123
+torokuba_joho_124,160,varchar(70),[NULL],default,false,[NULL],登録馬毎情報124
+torokuba_joho_125,161,varchar(70),[NULL],default,false,[NULL],登録馬毎情報125
+torokuba_joho_126,162,varchar(70),[NULL],default,false,[NULL],登録馬毎情報126
+torokuba_joho_127,163,varchar(70),[NULL],default,false,[NULL],登録馬毎情報127
+torokuba_joho_128,164,varchar(70),[NULL],default,false,[NULL],登録馬毎情報128
+torokuba_joho_129,165,varchar(70),[NULL],default,false,[NULL],登録馬毎情報129
+torokuba_joho_130,166,varchar(70),[NULL],default,false,[NULL],登録馬毎情報130
+torokuba_joho_131,167,varchar(70),[NULL],default,false,[NULL],登録馬毎情報131
+torokuba_joho_132,168,varchar(70),[NULL],default,false,[NULL],登録馬毎情報132
+torokuba_joho_133,169,varchar(70),[NULL],default,false,[NULL],登録馬毎情報133
+torokuba_joho_134,170,varchar(70),[NULL],default,false,[NULL],登録馬毎情報134
+torokuba_joho_135,171,varchar(70),[NULL],default,false,[NULL],登録馬毎情報135
+torokuba_joho_136,172,varchar(70),[NULL],default,false,[NULL],登録馬毎情報136
+torokuba_joho_137,173,varchar(70),[NULL],default,false,[NULL],登録馬毎情報137
+torokuba_joho_138,174,varchar(70),[NULL],default,false,[NULL],登録馬毎情報138
+torokuba_joho_139,175,varchar(70),[NULL],default,false,[NULL],登録馬毎情報139
+torokuba_joho_140,176,varchar(70),[NULL],default,false,[NULL],登録馬毎情報140
+torokuba_joho_141,177,varchar(70),[NULL],default,false,[NULL],登録馬毎情報141
+torokuba_joho_142,178,varchar(70),[NULL],default,false,[NULL],登録馬毎情報142
+torokuba_joho_143,179,varchar(70),[NULL],default,false,[NULL],登録馬毎情報143
+torokuba_joho_144,180,varchar(70),[NULL],default,false,[NULL],登録馬毎情報144
+torokuba_joho_145,181,varchar(70),[NULL],default,false,[NULL],登録馬毎情報145
+torokuba_joho_146,182,varchar(70),[NULL],default,false,[NULL],登録馬毎情報146
+torokuba_joho_147,183,varchar(70),[NULL],default,false,[NULL],登録馬毎情報147
+torokuba_joho_148,184,varchar(70),[NULL],default,false,[NULL],登録馬毎情報148
+torokuba_joho_149,185,varchar(70),[NULL],default,false,[NULL],登録馬毎情報149
+torokuba_joho_150,186,varchar(70),[NULL],default,false,[NULL],登録馬毎情報150
+torokuba_joho_151,187,varchar(70),[NULL],default,false,[NULL],登録馬毎情報151
+torokuba_joho_152,188,varchar(70),[NULL],default,false,[NULL],登録馬毎情報152
+torokuba_joho_153,189,varchar(70),[NULL],default,false,[NULL],登録馬毎情報153
+torokuba_joho_154,190,varchar(70),[NULL],default,false,[NULL],登録馬毎情報154
+torokuba_joho_155,191,varchar(70),[NULL],default,false,[NULL],登録馬毎情報155
+torokuba_joho_156,192,varchar(70),[NULL],default,false,[NULL],登録馬毎情報156
+torokuba_joho_157,193,varchar(70),[NULL],default,false,[NULL],登録馬毎情報157
+torokuba_joho_158,194,varchar(70),[NULL],default,false,[NULL],登録馬毎情報158
+torokuba_joho_159,195,varchar(70),[NULL],default,false,[NULL],登録馬毎情報159
+torokuba_joho_160,196,varchar(70),[NULL],default,false,[NULL],登録馬毎情報160
+torokuba_joho_161,197,varchar(70),[NULL],default,false,[NULL],登録馬毎情報161
+torokuba_joho_162,198,varchar(70),[NULL],default,false,[NULL],登録馬毎情報162
+torokuba_joho_163,199,varchar(70),[NULL],default,false,[NULL],登録馬毎情報163
+torokuba_joho_164,200,varchar(70),[NULL],default,false,[NULL],登録馬毎情報164
+torokuba_joho_165,201,varchar(70),[NULL],default,false,[NULL],登録馬毎情報165
+torokuba_joho_166,202,varchar(70),[NULL],default,false,[NULL],登録馬毎情報166
+torokuba_joho_167,203,varchar(70),[NULL],default,false,[NULL],登録馬毎情報167
+torokuba_joho_168,204,varchar(70),[NULL],default,false,[NULL],登録馬毎情報168
+torokuba_joho_169,205,varchar(70),[NULL],default,false,[NULL],登録馬毎情報169
+torokuba_joho_170,206,varchar(70),[NULL],default,false,[NULL],登録馬毎情報170
+torokuba_joho_171,207,varchar(70),[NULL],default,false,[NULL],登録馬毎情報171
+torokuba_joho_172,208,varchar(70),[NULL],default,false,[NULL],登録馬毎情報172
+torokuba_joho_173,209,varchar(70),[NULL],default,false,[NULL],登録馬毎情報173
+torokuba_joho_174,210,varchar(70),[NULL],default,false,[NULL],登録馬毎情報174
+torokuba_joho_175,211,varchar(70),[NULL],default,false,[NULL],登録馬毎情報175
+torokuba_joho_176,212,varchar(70),[NULL],default,false,[NULL],登録馬毎情報176
+torokuba_joho_177,213,varchar(70),[NULL],default,false,[NULL],登録馬毎情報177
+torokuba_joho_178,214,varchar(70),[NULL],default,false,[NULL],登録馬毎情報178
+torokuba_joho_179,215,varchar(70),[NULL],default,false,[NULL],登録馬毎情報179
+torokuba_joho_180,216,varchar(70),[NULL],default,false,[NULL],登録馬毎情報180
+torokuba_joho_181,217,varchar(70),[NULL],default,false,[NULL],登録馬毎情報181
+torokuba_joho_182,218,varchar(70),[NULL],default,false,[NULL],登録馬毎情報182
+torokuba_joho_183,219,varchar(70),[NULL],default,false,[NULL],登録馬毎情報183
+torokuba_joho_184,220,varchar(70),[NULL],default,false,[NULL],登録馬毎情報184
+torokuba_joho_185,221,varchar(70),[NULL],default,false,[NULL],登録馬毎情報185
+torokuba_joho_186,222,varchar(70),[NULL],default,false,[NULL],登録馬毎情報186
+torokuba_joho_187,223,varchar(70),[NULL],default,false,[NULL],登録馬毎情報187
+torokuba_joho_188,224,varchar(70),[NULL],default,false,[NULL],登録馬毎情報188
+torokuba_joho_189,225,varchar(70),[NULL],default,false,[NULL],登録馬毎情報189
+torokuba_joho_190,226,varchar(70),[NULL],default,false,[NULL],登録馬毎情報190
+torokuba_joho_191,227,varchar(70),[NULL],default,false,[NULL],登録馬毎情報191
+torokuba_joho_192,228,varchar(70),[NULL],default,false,[NULL],登録馬毎情報192
+torokuba_joho_193,229,varchar(70),[NULL],default,false,[NULL],登録馬毎情報193
+torokuba_joho_194,230,varchar(70),[NULL],default,false,[NULL],登録馬毎情報194
+torokuba_joho_195,231,varchar(70),[NULL],default,false,[NULL],登録馬毎情報195
+torokuba_joho_196,232,varchar(70),[NULL],default,false,[NULL],登録馬毎情報196
+torokuba_joho_197,233,varchar(70),[NULL],default,false,[NULL],登録馬毎情報197
+torokuba_joho_198,234,varchar(70),[NULL],default,false,[NULL],登録馬毎情報198
+torokuba_joho_199,235,varchar(70),[NULL],default,false,[NULL],登録馬毎情報199
+torokuba_joho_200,236,varchar(70),[NULL],default,false,[NULL],登録馬毎情報200
+torokuba_joho_201,237,varchar(70),[NULL],default,false,[NULL],登録馬毎情報201
+torokuba_joho_202,238,varchar(70),[NULL],default,false,[NULL],登録馬毎情報202
+torokuba_joho_203,239,varchar(70),[NULL],default,false,[NULL],登録馬毎情報203
+torokuba_joho_204,240,varchar(70),[NULL],default,false,[NULL],登録馬毎情報204
+torokuba_joho_205,241,varchar(70),[NULL],default,false,[NULL],登録馬毎情報205
+torokuba_joho_206,242,varchar(70),[NULL],default,false,[NULL],登録馬毎情報206
+torokuba_joho_207,243,varchar(70),[NULL],default,false,[NULL],登録馬毎情報207
+torokuba_joho_208,244,varchar(70),[NULL],default,false,[NULL],登録馬毎情報208
+torokuba_joho_209,245,varchar(70),[NULL],default,false,[NULL],登録馬毎情報209
+torokuba_joho_210,246,varchar(70),[NULL],default,false,[NULL],登録馬毎情報210
+torokuba_joho_211,247,varchar(70),[NULL],default,false,[NULL],登録馬毎情報211
+torokuba_joho_212,248,varchar(70),[NULL],default,false,[NULL],登録馬毎情報212
+torokuba_joho_213,249,varchar(70),[NULL],default,false,[NULL],登録馬毎情報213
+torokuba_joho_214,250,varchar(70),[NULL],default,false,[NULL],登録馬毎情報214
+torokuba_joho_215,251,varchar(70),[NULL],default,false,[NULL],登録馬毎情報215
+torokuba_joho_216,252,varchar(70),[NULL],default,false,[NULL],登録馬毎情報216
+torokuba_joho_217,253,varchar(70),[NULL],default,false,[NULL],登録馬毎情報217
+torokuba_joho_218,254,varchar(70),[NULL],default,false,[NULL],登録馬毎情報218
+torokuba_joho_219,255,varchar(70),[NULL],default,false,[NULL],登録馬毎情報219
+torokuba_joho_220,256,varchar(70),[NULL],default,false,[NULL],登録馬毎情報220
+torokuba_joho_221,257,varchar(70),[NULL],default,false,[NULL],登録馬毎情報221
+torokuba_joho_222,258,varchar(70),[NULL],default,false,[NULL],登録馬毎情報222
+torokuba_joho_223,259,varchar(70),[NULL],default,false,[NULL],登録馬毎情報223
+torokuba_joho_224,260,varchar(70),[NULL],default,false,[NULL],登録馬毎情報224
+torokuba_joho_225,261,varchar(70),[NULL],default,false,[NULL],登録馬毎情報225
+torokuba_joho_226,262,varchar(70),[NULL],default,false,[NULL],登録馬毎情報226
+torokuba_joho_227,263,varchar(70),[NULL],default,false,[NULL],登録馬毎情報227
+torokuba_joho_228,264,varchar(70),[NULL],default,false,[NULL],登録馬毎情報228
+torokuba_joho_229,265,varchar(70),[NULL],default,false,[NULL],登録馬毎情報229
+torokuba_joho_230,266,varchar(70),[NULL],default,false,[NULL],登録馬毎情報230
+torokuba_joho_231,267,varchar(70),[NULL],default,false,[NULL],登録馬毎情報231
+torokuba_joho_232,268,varchar(70),[NULL],default,false,[NULL],登録馬毎情報232
+torokuba_joho_233,269,varchar(70),[NULL],default,false,[NULL],登録馬毎情報233
+torokuba_joho_234,270,varchar(70),[NULL],default,false,[NULL],登録馬毎情報234
+torokuba_joho_235,271,varchar(70),[NULL],default,false,[NULL],登録馬毎情報235
+torokuba_joho_236,272,varchar(70),[NULL],default,false,[NULL],登録馬毎情報236
+torokuba_joho_237,273,varchar(70),[NULL],default,false,[NULL],登録馬毎情報237
+torokuba_joho_238,274,varchar(70),[NULL],default,false,[NULL],登録馬毎情報238
+torokuba_joho_239,275,varchar(70),[NULL],default,false,[NULL],登録馬毎情報239
+torokuba_joho_240,276,varchar(70),[NULL],default,false,[NULL],登録馬毎情報240
+torokuba_joho_241,277,varchar(70),[NULL],default,false,[NULL],登録馬毎情報241
+torokuba_joho_242,278,varchar(70),[NULL],default,false,[NULL],登録馬毎情報242
+torokuba_joho_243,279,varchar(70),[NULL],default,false,[NULL],登録馬毎情報243
+torokuba_joho_244,280,varchar(70),[NULL],default,false,[NULL],登録馬毎情報244
+torokuba_joho_245,281,varchar(70),[NULL],default,false,[NULL],登録馬毎情報245
+torokuba_joho_246,282,varchar(70),[NULL],default,false,[NULL],登録馬毎情報246
+torokuba_joho_247,283,varchar(70),[NULL],default,false,[NULL],登録馬毎情報247
+torokuba_joho_248,284,varchar(70),[NULL],default,false,[NULL],登録馬毎情報248
+torokuba_joho_249,285,varchar(70),[NULL],default,false,[NULL],登録馬毎情報249
+torokuba_joho_250,286,varchar(70),[NULL],default,false,[NULL],登録馬毎情報250
+torokuba_joho_251,287,varchar(70),[NULL],default,false,[NULL],登録馬毎情報251
+torokuba_joho_252,288,varchar(70),[NULL],default,false,[NULL],登録馬毎情報252
+torokuba_joho_253,289,varchar(70),[NULL],default,false,[NULL],登録馬毎情報253
+torokuba_joho_254,290,varchar(70),[NULL],default,false,[NULL],登録馬毎情報254
+torokuba_joho_255,291,varchar(70),[NULL],default,false,[NULL],登録馬毎情報255
+torokuba_joho_256,292,varchar(70),[NULL],default,false,[NULL],登録馬毎情報256
+torokuba_joho_257,293,varchar(70),[NULL],default,false,[NULL],登録馬毎情報257
+torokuba_joho_258,294,varchar(70),[NULL],default,false,[NULL],登録馬毎情報258
+torokuba_joho_259,295,varchar(70),[NULL],default,false,[NULL],登録馬毎情報259
+torokuba_joho_260,296,varchar(70),[NULL],default,false,[NULL],登録馬毎情報260
+torokuba_joho_261,297,varchar(70),[NULL],default,false,[NULL],登録馬毎情報261
+torokuba_joho_262,298,varchar(70),[NULL],default,false,[NULL],登録馬毎情報262
+torokuba_joho_263,299,varchar(70),[NULL],default,false,[NULL],登録馬毎情報263
+torokuba_joho_264,300,varchar(70),[NULL],default,false,[NULL],登録馬毎情報264
+torokuba_joho_265,301,varchar(70),[NULL],default,false,[NULL],登録馬毎情報265
+torokuba_joho_266,302,varchar(70),[NULL],default,false,[NULL],登録馬毎情報266
+torokuba_joho_267,303,varchar(70),[NULL],default,false,[NULL],登録馬毎情報267
+torokuba_joho_268,304,varchar(70),[NULL],default,false,[NULL],登録馬毎情報268
+torokuba_joho_269,305,varchar(70),[NULL],default,false,[NULL],登録馬毎情報269
+torokuba_joho_270,306,varchar(70),[NULL],default,false,[NULL],登録馬毎情報270
+torokuba_joho_271,307,varchar(70),[NULL],default,false,[NULL],登録馬毎情報271
+torokuba_joho_272,308,varchar(70),[NULL],default,false,[NULL],登録馬毎情報272
+torokuba_joho_273,309,varchar(70),[NULL],default,false,[NULL],登録馬毎情報273
+torokuba_joho_274,310,varchar(70),[NULL],default,false,[NULL],登録馬毎情報274
+torokuba_joho_275,311,varchar(70),[NULL],default,false,[NULL],登録馬毎情報275
+torokuba_joho_276,312,varchar(70),[NULL],default,false,[NULL],登録馬毎情報276
+torokuba_joho_277,313,varchar(70),[NULL],default,false,[NULL],登録馬毎情報277
+torokuba_joho_278,314,varchar(70),[NULL],default,false,[NULL],登録馬毎情報278
+torokuba_joho_279,315,varchar(70),[NULL],default,false,[NULL],登録馬毎情報279
+torokuba_joho_280,316,varchar(70),[NULL],default,false,[NULL],登録馬毎情報280
+torokuba_joho_281,317,varchar(70),[NULL],default,false,[NULL],登録馬毎情報281
+torokuba_joho_282,318,varchar(70),[NULL],default,false,[NULL],登録馬毎情報282
+torokuba_joho_283,319,varchar(70),[NULL],default,false,[NULL],登録馬毎情報283
+torokuba_joho_284,320,varchar(70),[NULL],default,false,[NULL],登録馬毎情報284
+torokuba_joho_285,321,varchar(70),[NULL],default,false,[NULL],登録馬毎情報285
+torokuba_joho_286,322,varchar(70),[NULL],default,false,[NULL],登録馬毎情報286
+torokuba_joho_287,323,varchar(70),[NULL],default,false,[NULL],登録馬毎情報287
+torokuba_joho_288,324,varchar(70),[NULL],default,false,[NULL],登録馬毎情報288
+torokuba_joho_289,325,varchar(70),[NULL],default,false,[NULL],登録馬毎情報289
+torokuba_joho_290,326,varchar(70),[NULL],default,false,[NULL],登録馬毎情報290
+torokuba_joho_291,327,varchar(70),[NULL],default,false,[NULL],登録馬毎情報291
+torokuba_joho_292,328,varchar(70),[NULL],default,false,[NULL],登録馬毎情報292
+torokuba_joho_293,329,varchar(70),[NULL],default,false,[NULL],登録馬毎情報293
+torokuba_joho_294,330,varchar(70),[NULL],default,false,[NULL],登録馬毎情報294
+torokuba_joho_295,331,varchar(70),[NULL],default,false,[NULL],登録馬毎情報295
+torokuba_joho_296,332,varchar(70),[NULL],default,false,[NULL],登録馬毎情報296
+torokuba_joho_297,333,varchar(70),[NULL],default,false,[NULL],登録馬毎情報297
+torokuba_joho_298,334,varchar(70),[NULL],default,false,[NULL],登録馬毎情報298
+torokuba_joho_299,335,varchar(70),[NULL],default,false,[NULL],登録馬毎情報299
+torokuba_joho_300,336,varchar(70),[NULL],default,false,[NULL],登録馬毎情報300

@@ -1,90 +1,90 @@
-列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
-record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
-data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
-data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
-ketto_toroku_bango	4	varchar(10)	[NULL]	default	true	[NULL]	血統登録番号
-massho_kubun	5	varchar(1)	[NULL]	default	false	[NULL]	競走馬抹消区分
-toroku_nengappi	6	varchar(8)	[NULL]	default	false	[NULL]	競走馬登録年月日
-massho_nengappi	7	varchar(8)	[NULL]	default	false	[NULL]	競走馬抹消年月日
-seinengappi	8	varchar(8)	[NULL]	default	false	[NULL]	生年月日
-bamei	9	varchar(36)	[NULL]	default	false	[NULL]	馬名
-bamei_hankaku_kana	10	varchar(36)	[NULL]	default	false	[NULL]	馬名半角ｶﾅ
-bamei_eur	11	varchar(60)	[NULL]	default	false	[NULL]	馬名欧字
-zaikyu_flag	12	varchar(1)	[NULL]	default	false	[NULL]	JRA施設在きゅうフラグ
-yobi_1	13	varchar(19)	[NULL]	default	false	[NULL]	予備
-umakigo_code	14	varchar(2)	[NULL]	default	false	[NULL]	馬記号コード
-seibetsu_code	15	varchar(1)	[NULL]	default	false	[NULL]	性別コード
-hinshu_code	16	varchar(1)	[NULL]	default	false	[NULL]	品種コード
-moshoku_code	17	varchar(2)	[NULL]	default	false	[NULL]	毛色コード
-ketto_joho_01a	18	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報1
-ketto_joho_01b	19	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報1
-ketto_joho_02a	20	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報2
-ketto_joho_02b	21	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報2
-ketto_joho_03a	22	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報3
-ketto_joho_03b	23	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報3
-ketto_joho_04a	24	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報4
-ketto_joho_04b	25	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報4
-ketto_joho_05a	26	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報5
-ketto_joho_05b	27	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報5
-ketto_joho_06a	28	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報6
-ketto_joho_06b	29	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報6
-ketto_joho_07a	30	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報7
-ketto_joho_07b	31	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報7
-ketto_joho_08a	32	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報8
-ketto_joho_08b	33	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報8
-ketto_joho_09a	34	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報9
-ketto_joho_09b	35	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報9
-ketto_joho_10a	36	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報10
-ketto_joho_10b	37	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報10
-ketto_joho_11a	38	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報11
-ketto_joho_11b	39	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報11
-ketto_joho_12a	40	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報12
-ketto_joho_12b	41	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報12
-ketto_joho_13a	42	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報13
-ketto_joho_13b	43	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報13
-ketto_joho_14a	44	varchar(10)	[NULL]	default	false	[NULL]	3代血統情報14
-ketto_joho_14b	45	varchar(36)	[NULL]	default	false	[NULL]	3代血統情報14
-tozai_shozoku_code	46	varchar(1)	[NULL]	default	false	[NULL]	東西所属コード
-chokyoshi_code	47	varchar(5)	[NULL]	default	false	[NULL]	調教師コード
-chokyoshimei_ryakusho	48	varchar(8)	[NULL]	default	false	[NULL]	調教師名略称
-shotai_chiikimei	49	varchar(20)	[NULL]	default	false	[NULL]	招待地域名
-seisansha_code	50	varchar(8)	[NULL]	default	false	[NULL]	生産者コード
-seisanshamei	51	varchar(72)	[NULL]	default	false	[NULL]	生産者名(法人格無)
-sanchimei	52	varchar(20)	[NULL]	default	false	[NULL]	産地名
-banushi_code	53	varchar(6)	[NULL]	default	false	[NULL]	馬主コード
-banushimei	54	varchar(64)	[NULL]	default	false	[NULL]	馬主名(法人格無)
-heichi_honshokin_ruikei	55	varchar(9)	[NULL]	default	false	[NULL]	平地本賞金累計
-shogai_honshokin_ruikei	56	varchar(9)	[NULL]	default	false	[NULL]	障害本賞金累計
-heichi_fukashokin_ruikei	57	varchar(9)	[NULL]	default	false	[NULL]	平地付加賞金累計
-shogai_fukashokin_ruikei	58	varchar(9)	[NULL]	default	false	[NULL]	障害付加賞金累計
-heichi_shutokushokin_ruikei	59	varchar(9)	[NULL]	default	false	[NULL]	平地収得賞金累計
-shogai_shutokushokin_ruikei	60	varchar(9)	[NULL]	default	false	[NULL]	障害収得賞金累計
-sogo	61	varchar(18)	[NULL]	default	false	[NULL]	総合着回数
-chuo_gokei	62	varchar(18)	[NULL]	default	false	[NULL]	中央合計着回数
-shiba_choku	63	varchar(18)	[NULL]	default	false	[NULL]	芝直・着回数
-shiba_migi	64	varchar(18)	[NULL]	default	false	[NULL]	芝右・着回数
-shiba_hidari	65	varchar(18)	[NULL]	default	false	[NULL]	芝左・着回数
-dirt_choku	66	varchar(18)	[NULL]	default	false	[NULL]	ダ直・着回数
-dirt_migi	67	varchar(18)	[NULL]	default	false	[NULL]	ダ右・着回数
-dirt_hidari	68	varchar(18)	[NULL]	default	false	[NULL]	ダ左・着回数
-shogai	69	varchar(18)	[NULL]	default	false	[NULL]	障害・着回数
-shiba_ryo	70	varchar(18)	[NULL]	default	false	[NULL]	芝良・着回数
-shiba_yayaomo	71	varchar(18)	[NULL]	default	false	[NULL]	芝稍・着回数
-shiba_omo	72	varchar(18)	[NULL]	default	false	[NULL]	芝重・着回数
-shiba_furyo	73	varchar(18)	[NULL]	default	false	[NULL]	芝不・着回数
-dirt_ryo	74	varchar(18)	[NULL]	default	false	[NULL]	ダ良・着回数
-dirt_yayaomo	75	varchar(18)	[NULL]	default	false	[NULL]	ダ稍・着回数
-dirt_omo	76	varchar(18)	[NULL]	default	false	[NULL]	ダ重・着回数
-dirt_furyo	77	varchar(18)	[NULL]	default	false	[NULL]	ダ不・着回数
-shogai_ryo	78	varchar(18)	[NULL]	default	false	[NULL]	障良・着回数
-shogai_yayaomo	79	varchar(18)	[NULL]	default	false	[NULL]	障稍・着回数
-shogai_omo	80	varchar(18)	[NULL]	default	false	[NULL]	障重・着回数
-shogai_furyo	81	varchar(18)	[NULL]	default	false	[NULL]	障不・着回数
-shiba_short	82	varchar(18)	[NULL]	default	false	[NULL]	芝16下・着回数
-shiba_middle	83	varchar(18)	[NULL]	default	false	[NULL]	芝22下・着回数
-shiba_long	84	varchar(18)	[NULL]	default	false	[NULL]	芝22超・着回数
-dirt_short	85	varchar(18)	[NULL]	default	false	[NULL]	ダ16下・着回数
-dirt_middle	86	varchar(18)	[NULL]	default	false	[NULL]	ダ22下・着回数
-dirt_long	87	varchar(18)	[NULL]	default	false	[NULL]	ダ22超・着回数
-kyakushitsu_keiko	88	varchar(12)	[NULL]	default	false	[NULL]	脚質傾向
-toroku_race_su	89	varchar(3)	[NULL]	default	false	[NULL]	登録レース数
+列名,＃,データ・タイプ,身元,Collation,ヌルでない,デフォルト,コメント
+record_id,1,varchar(2),[NULL],default,false,[NULL],レコード種別ID
+data_kubun,2,varchar(1),[NULL],default,false,[NULL],データ区分
+data_sakusei_nengappi,3,varchar(8),[NULL],default,false,[NULL],データ作成年月日
+ketto_toroku_bango,4,varchar(10),[NULL],default,true,[NULL],血統登録番号
+massho_kubun,5,varchar(1),[NULL],default,false,[NULL],競走馬抹消区分
+toroku_nengappi,6,varchar(8),[NULL],default,false,[NULL],競走馬登録年月日
+massho_nengappi,7,varchar(8),[NULL],default,false,[NULL],競走馬抹消年月日
+seinengappi,8,varchar(8),[NULL],default,false,[NULL],生年月日
+bamei,9,varchar(36),[NULL],default,false,[NULL],馬名
+bamei_hankaku_kana,10,varchar(36),[NULL],default,false,[NULL],馬名半角ｶﾅ
+bamei_eur,11,varchar(60),[NULL],default,false,[NULL],馬名欧字
+zaikyu_flag,12,varchar(1),[NULL],default,false,[NULL],JRA施設在きゅうフラグ
+yobi_1,13,varchar(19),[NULL],default,false,[NULL],予備
+umakigo_code,14,varchar(2),[NULL],default,false,[NULL],馬記号コード
+seibetsu_code,15,varchar(1),[NULL],default,false,[NULL],性別コード
+hinshu_code,16,varchar(1),[NULL],default,false,[NULL],品種コード
+moshoku_code,17,varchar(2),[NULL],default,false,[NULL],毛色コード
+ketto_joho_01a,18,varchar(10),[NULL],default,false,[NULL],3代血統情報1
+ketto_joho_01b,19,varchar(36),[NULL],default,false,[NULL],3代血統情報1
+ketto_joho_02a,20,varchar(10),[NULL],default,false,[NULL],3代血統情報2
+ketto_joho_02b,21,varchar(36),[NULL],default,false,[NULL],3代血統情報2
+ketto_joho_03a,22,varchar(10),[NULL],default,false,[NULL],3代血統情報3
+ketto_joho_03b,23,varchar(36),[NULL],default,false,[NULL],3代血統情報3
+ketto_joho_04a,24,varchar(10),[NULL],default,false,[NULL],3代血統情報4
+ketto_joho_04b,25,varchar(36),[NULL],default,false,[NULL],3代血統情報4
+ketto_joho_05a,26,varchar(10),[NULL],default,false,[NULL],3代血統情報5
+ketto_joho_05b,27,varchar(36),[NULL],default,false,[NULL],3代血統情報5
+ketto_joho_06a,28,varchar(10),[NULL],default,false,[NULL],3代血統情報6
+ketto_joho_06b,29,varchar(36),[NULL],default,false,[NULL],3代血統情報6
+ketto_joho_07a,30,varchar(10),[NULL],default,false,[NULL],3代血統情報7
+ketto_joho_07b,31,varchar(36),[NULL],default,false,[NULL],3代血統情報7
+ketto_joho_08a,32,varchar(10),[NULL],default,false,[NULL],3代血統情報8
+ketto_joho_08b,33,varchar(36),[NULL],default,false,[NULL],3代血統情報8
+ketto_joho_09a,34,varchar(10),[NULL],default,false,[NULL],3代血統情報9
+ketto_joho_09b,35,varchar(36),[NULL],default,false,[NULL],3代血統情報9
+ketto_joho_10a,36,varchar(10),[NULL],default,false,[NULL],3代血統情報10
+ketto_joho_10b,37,varchar(36),[NULL],default,false,[NULL],3代血統情報10
+ketto_joho_11a,38,varchar(10),[NULL],default,false,[NULL],3代血統情報11
+ketto_joho_11b,39,varchar(36),[NULL],default,false,[NULL],3代血統情報11
+ketto_joho_12a,40,varchar(10),[NULL],default,false,[NULL],3代血統情報12
+ketto_joho_12b,41,varchar(36),[NULL],default,false,[NULL],3代血統情報12
+ketto_joho_13a,42,varchar(10),[NULL],default,false,[NULL],3代血統情報13
+ketto_joho_13b,43,varchar(36),[NULL],default,false,[NULL],3代血統情報13
+ketto_joho_14a,44,varchar(10),[NULL],default,false,[NULL],3代血統情報14
+ketto_joho_14b,45,varchar(36),[NULL],default,false,[NULL],3代血統情報14
+tozai_shozoku_code,46,varchar(1),[NULL],default,false,[NULL],東西所属コード
+chokyoshi_code,47,varchar(5),[NULL],default,false,[NULL],調教師コード
+chokyoshimei_ryakusho,48,varchar(8),[NULL],default,false,[NULL],調教師名略称
+shotai_chiikimei,49,varchar(20),[NULL],default,false,[NULL],招待地域名
+seisansha_code,50,varchar(8),[NULL],default,false,[NULL],生産者コード
+seisanshamei,51,varchar(72),[NULL],default,false,[NULL],生産者名(法人格無)
+sanchimei,52,varchar(20),[NULL],default,false,[NULL],産地名
+banushi_code,53,varchar(6),[NULL],default,false,[NULL],馬主コード
+banushimei,54,varchar(64),[NULL],default,false,[NULL],馬主名(法人格無)
+heichi_honshokin_ruikei,55,varchar(9),[NULL],default,false,[NULL],平地本賞金累計
+shogai_honshokin_ruikei,56,varchar(9),[NULL],default,false,[NULL],障害本賞金累計
+heichi_fukashokin_ruikei,57,varchar(9),[NULL],default,false,[NULL],平地付加賞金累計
+shogai_fukashokin_ruikei,58,varchar(9),[NULL],default,false,[NULL],障害付加賞金累計
+heichi_shutokushokin_ruikei,59,varchar(9),[NULL],default,false,[NULL],平地収得賞金累計
+shogai_shutokushokin_ruikei,60,varchar(9),[NULL],default,false,[NULL],障害収得賞金累計
+sogo,61,varchar(18),[NULL],default,false,[NULL],総合着回数
+chuo_gokei,62,varchar(18),[NULL],default,false,[NULL],中央合計着回数
+shiba_choku,63,varchar(18),[NULL],default,false,[NULL],芝直・着回数
+shiba_migi,64,varchar(18),[NULL],default,false,[NULL],芝右・着回数
+shiba_hidari,65,varchar(18),[NULL],default,false,[NULL],芝左・着回数
+dirt_choku,66,varchar(18),[NULL],default,false,[NULL],ダ直・着回数
+dirt_migi,67,varchar(18),[NULL],default,false,[NULL],ダ右・着回数
+dirt_hidari,68,varchar(18),[NULL],default,false,[NULL],ダ左・着回数
+shogai,69,varchar(18),[NULL],default,false,[NULL],障害・着回数
+shiba_ryo,70,varchar(18),[NULL],default,false,[NULL],芝良・着回数
+shiba_yayaomo,71,varchar(18),[NULL],default,false,[NULL],芝稍・着回数
+shiba_omo,72,varchar(18),[NULL],default,false,[NULL],芝重・着回数
+shiba_furyo,73,varchar(18),[NULL],default,false,[NULL],芝不・着回数
+dirt_ryo,74,varchar(18),[NULL],default,false,[NULL],ダ良・着回数
+dirt_yayaomo,75,varchar(18),[NULL],default,false,[NULL],ダ稍・着回数
+dirt_omo,76,varchar(18),[NULL],default,false,[NULL],ダ重・着回数
+dirt_furyo,77,varchar(18),[NULL],default,false,[NULL],ダ不・着回数
+shogai_ryo,78,varchar(18),[NULL],default,false,[NULL],障良・着回数
+shogai_yayaomo,79,varchar(18),[NULL],default,false,[NULL],障稍・着回数
+shogai_omo,80,varchar(18),[NULL],default,false,[NULL],障重・着回数
+shogai_furyo,81,varchar(18),[NULL],default,false,[NULL],障不・着回数
+shiba_short,82,varchar(18),[NULL],default,false,[NULL],芝16下・着回数
+shiba_middle,83,varchar(18),[NULL],default,false,[NULL],芝22下・着回数
+shiba_long,84,varchar(18),[NULL],default,false,[NULL],芝22超・着回数
+dirt_short,85,varchar(18),[NULL],default,false,[NULL],ダ16下・着回数
+dirt_middle,86,varchar(18),[NULL],default,false,[NULL],ダ22下・着回数
+dirt_long,87,varchar(18),[NULL],default,false,[NULL],ダ22超・着回数
+kyakushitsu_keiko,88,varchar(12),[NULL],default,false,[NULL],脚質傾向
+toroku_race_su,89,varchar(3),[NULL],default,false,[NULL],登録レース数

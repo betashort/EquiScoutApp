@@ -1,71 +1,71 @@
-列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
-record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
-data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
-data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
-kaisai_nen	4	varchar(4)	[NULL]	default	true	[NULL]	開催年
-kaisai_tsukihi	5	varchar(4)	[NULL]	default	true	[NULL]	開催月日
-keibajo_code	6	varchar(2)	[NULL]	default	true	[NULL]	競馬場コード
-kaisai_kai	7	varchar(2)	[NULL]	default	false	[NULL]	開催回[第N回]
-kaisai_nichime	8	varchar(2)	[NULL]	default	false	[NULL]	開催日目[N日目]
-race_bango	9	varchar(2)	[NULL]	default	true	[NULL]	レース番号
-wakuban	10	varchar(1)	[NULL]	default	false	[NULL]	枠番
-umaban	11	varchar(2)	[NULL]	default	true	[NULL]	馬番
-ketto_toroku_bango	12	varchar(10)	[NULL]	default	true	[NULL]	血統登録番号
-bamei	13	varchar(36)	[NULL]	default	false	[NULL]	馬名
-umakigo_code	14	varchar(2)	[NULL]	default	false	[NULL]	馬記号コード
-seibetsu_code	15	varchar(1)	[NULL]	default	false	[NULL]	性別コード
-hinshu_code	16	varchar(1)	[NULL]	default	false	[NULL]	品種コード
-moshoku_code	17	varchar(2)	[NULL]	default	false	[NULL]	毛色コード
-barei	18	varchar(2)	[NULL]	default	false	[NULL]	馬齢
-tozai_shozoku_code	19	varchar(1)	[NULL]	default	false	[NULL]	東西所属コード
-chokyoshi_code	20	varchar(5)	[NULL]	default	false	[NULL]	調教師コード
-chokyoshimei_ryakusho	21	varchar(8)	[NULL]	default	false	[NULL]	調教師名略称
-banushi_code	22	varchar(6)	[NULL]	default	false	[NULL]	馬主コード
-banushimei	23	varchar(64)	[NULL]	default	false	[NULL]	馬主名(法人格無)
-fukushoku_hyoji	24	varchar(60)	[NULL]	default	false	[NULL]	服色標示
-yobi_1	25	varchar(60)	[NULL]	default	false	[NULL]	予備
-futan_juryo	26	varchar(3)	[NULL]	default	false	[NULL]	負担重量
-futan_juryo_henkomae	27	varchar(3)	[NULL]	default	false	[NULL]	変更前負担重量
-blinker_shiyo_kubun	28	varchar(1)	[NULL]	default	false	[NULL]	ブリンカー使用区分
-yobi_2	29	varchar(1)	[NULL]	default	false	[NULL]	予備
-kishu_code	30	varchar(5)	[NULL]	default	false	[NULL]	騎手コード
-kishu_code_henkomae	31	varchar(5)	[NULL]	default	false	[NULL]	変更前騎手コード
-kishumei_ryakusho	32	varchar(8)	[NULL]	default	false	[NULL]	騎手名略称
-kishumei_ryakusho_henkomae	33	varchar(8)	[NULL]	default	false	[NULL]	変更前騎手名略称
-kishu_minarai_code	34	varchar(1)	[NULL]	default	false	[NULL]	騎手見習コード
-kishu_minarai_code_henkomae	35	varchar(1)	[NULL]	default	false	[NULL]	変更前騎手見習コード
-bataiju	36	varchar(3)	[NULL]	default	false	[NULL]	馬体重
-zogen_fugo	37	varchar(1)	[NULL]	default	false	[NULL]	増減符号
-zogen_sa	38	varchar(3)	[NULL]	default	false	[NULL]	増減差
-ijo_kubun_code	39	varchar(1)	[NULL]	default	false	[NULL]	異常区分コード
-nyusen_juni	40	varchar(2)	[NULL]	default	false	[NULL]	入線順位
-kakutei_chakujun	41	varchar(2)	[NULL]	default	false	[NULL]	確定着順
-dochaku_kubun	42	varchar(1)	[NULL]	default	false	[NULL]	同着区分
-dochaku_tosu	43	varchar(1)	[NULL]	default	false	[NULL]	同着頭数
-soha_time	44	varchar(4)	[NULL]	default	false	[NULL]	走破タイム
-chakusa_code_1	45	varchar(3)	[NULL]	default	false	[NULL]	着差コード
-chakusa_code_2	46	varchar(3)	[NULL]	default	false	[NULL]	＋着差コード
-chakusa_code_3	47	varchar(3)	[NULL]	default	false	[NULL]	＋＋着差コード
-corner_1	48	varchar(2)	[NULL]	default	false	[NULL]	1コーナーでの順位
-corner_2	49	varchar(2)	[NULL]	default	false	[NULL]	2コーナーでの順位
-corner_3	50	varchar(2)	[NULL]	default	false	[NULL]	3コーナーでの順位
-corner_4	51	varchar(2)	[NULL]	default	false	[NULL]	4コーナーでの順位
-tansho_odds	52	varchar(4)	[NULL]	default	false	[NULL]	単勝オッズ
-tansho_ninkijun	53	varchar(2)	[NULL]	default	false	[NULL]	単勝人気順
-kakutoku_honshokin	54	varchar(8)	[NULL]	default	false	[NULL]	獲得本賞金
-kakutoku_fukashokin	55	varchar(8)	[NULL]	default	false	[NULL]	獲得付加賞金
-yobi_3	56	varchar(3)	[NULL]	default	false	[NULL]	予備
-yobi_4	57	varchar(3)	[NULL]	default	false	[NULL]	予備
-kohan_4f	58	varchar(3)	[NULL]	default	false	[NULL]	後4ハロンタイム
-kohan_3f	59	varchar(3)	[NULL]	default	false	[NULL]	後3ハロンタイム
-aiteuma_joho_1	60	varchar(46)	[NULL]	default	false	[NULL]	1着馬(相手馬)情報1
-aiteuma_joho_2	61	varchar(46)	[NULL]	default	false	[NULL]	1着馬(相手馬)情報2
-aiteuma_joho_3	62	varchar(46)	[NULL]	default	false	[NULL]	1着馬(相手馬)情報3
-time_sa	63	varchar(4)	[NULL]	default	false	[NULL]	タイム差
-record_koshin_kubun	64	varchar(1)	[NULL]	default	false	[NULL]	レコード更新区分
-mining_kubun	65	varchar(1)	[NULL]	default	false	[NULL]	マイニング区分
-yoso_soha_time	66	varchar(5)	[NULL]	default	false	[NULL]	マイニング予想走破タイム
-yoso_gosa_plus	67	varchar(4)	[NULL]	default	false	[NULL]	マイニング予想誤差(信頼度)＋
-yoso_gosa_minus	68	varchar(4)	[NULL]	default	false	[NULL]	マイニング予想誤差(信頼度)－
-yoso_juni	69	varchar(2)	[NULL]	default	false	[NULL]	マイニング予想順位
-kyakushitsu_hantei	70	varchar(1)	[NULL]	default	false	[NULL]	今回レース脚質判定
+列名,＃,データ・タイプ,身元,Collation,ヌルでない,デフォルト,コメント
+record_id,1,varchar(2),[NULL],default,false,[NULL],レコード種別ID
+data_kubun,2,varchar(1),[NULL],default,false,[NULL],データ区分
+data_sakusei_nengappi,3,varchar(8),[NULL],default,false,[NULL],データ作成年月日
+kaisai_nen,4,varchar(4),[NULL],default,true,[NULL],開催年
+kaisai_tsukihi,5,varchar(4),[NULL],default,true,[NULL],開催月日
+keibajo_code,6,varchar(2),[NULL],default,true,[NULL],競馬場コード
+kaisai_kai,7,varchar(2),[NULL],default,false,[NULL],開催回[第N回]
+kaisai_nichime,8,varchar(2),[NULL],default,false,[NULL],開催日目[N日目]
+race_bango,9,varchar(2),[NULL],default,true,[NULL],レース番号
+wakuban,10,varchar(1),[NULL],default,false,[NULL],枠番
+umaban,11,varchar(2),[NULL],default,true,[NULL],馬番
+ketto_toroku_bango,12,varchar(10),[NULL],default,true,[NULL],血統登録番号
+bamei,13,varchar(36),[NULL],default,false,[NULL],馬名
+umakigo_code,14,varchar(2),[NULL],default,false,[NULL],馬記号コード
+seibetsu_code,15,varchar(1),[NULL],default,false,[NULL],性別コード
+hinshu_code,16,varchar(1),[NULL],default,false,[NULL],品種コード
+moshoku_code,17,varchar(2),[NULL],default,false,[NULL],毛色コード
+barei,18,varchar(2),[NULL],default,false,[NULL],馬齢
+tozai_shozoku_code,19,varchar(1),[NULL],default,false,[NULL],東西所属コード
+chokyoshi_code,20,varchar(5),[NULL],default,false,[NULL],調教師コード
+chokyoshimei_ryakusho,21,varchar(8),[NULL],default,false,[NULL],調教師名略称
+banushi_code,22,varchar(6),[NULL],default,false,[NULL],馬主コード
+banushimei,23,varchar(64),[NULL],default,false,[NULL],馬主名(法人格無)
+fukushoku_hyoji,24,varchar(60),[NULL],default,false,[NULL],服色標示
+yobi_1,25,varchar(60),[NULL],default,false,[NULL],予備
+futan_juryo,26,varchar(3),[NULL],default,false,[NULL],負担重量
+futan_juryo_henkomae,27,varchar(3),[NULL],default,false,[NULL],変更前負担重量
+blinker_shiyo_kubun,28,varchar(1),[NULL],default,false,[NULL],ブリンカー使用区分
+yobi_2,29,varchar(1),[NULL],default,false,[NULL],予備
+kishu_code,30,varchar(5),[NULL],default,false,[NULL],騎手コード
+kishu_code_henkomae,31,varchar(5),[NULL],default,false,[NULL],変更前騎手コード
+kishumei_ryakusho,32,varchar(8),[NULL],default,false,[NULL],騎手名略称
+kishumei_ryakusho_henkomae,33,varchar(8),[NULL],default,false,[NULL],変更前騎手名略称
+kishu_minarai_code,34,varchar(1),[NULL],default,false,[NULL],騎手見習コード
+kishu_minarai_code_henkomae,35,varchar(1),[NULL],default,false,[NULL],変更前騎手見習コード
+bataiju,36,varchar(3),[NULL],default,false,[NULL],馬体重
+zogen_fugo,37,varchar(1),[NULL],default,false,[NULL],増減符号
+zogen_sa,38,varchar(3),[NULL],default,false,[NULL],増減差
+ijo_kubun_code,39,varchar(1),[NULL],default,false,[NULL],異常区分コード
+nyusen_juni,40,varchar(2),[NULL],default,false,[NULL],入線順位
+kakutei_chakujun,41,varchar(2),[NULL],default,false,[NULL],確定着順
+dochaku_kubun,42,varchar(1),[NULL],default,false,[NULL],同着区分
+dochaku_tosu,43,varchar(1),[NULL],default,false,[NULL],同着頭数
+soha_time,44,varchar(4),[NULL],default,false,[NULL],走破タイム
+chakusa_code_1,45,varchar(3),[NULL],default,false,[NULL],着差コード
+chakusa_code_2,46,varchar(3),[NULL],default,false,[NULL],＋着差コード
+chakusa_code_3,47,varchar(3),[NULL],default,false,[NULL],＋＋着差コード
+corner_1,48,varchar(2),[NULL],default,false,[NULL],1コーナーでの順位
+corner_2,49,varchar(2),[NULL],default,false,[NULL],2コーナーでの順位
+corner_3,50,varchar(2),[NULL],default,false,[NULL],3コーナーでの順位
+corner_4,51,varchar(2),[NULL],default,false,[NULL],4コーナーでの順位
+tansho_odds,52,varchar(4),[NULL],default,false,[NULL],単勝オッズ
+tansho_ninkijun,53,varchar(2),[NULL],default,false,[NULL],単勝人気順
+kakutoku_honshokin,54,varchar(8),[NULL],default,false,[NULL],獲得本賞金
+kakutoku_fukashokin,55,varchar(8),[NULL],default,false,[NULL],獲得付加賞金
+yobi_3,56,varchar(3),[NULL],default,false,[NULL],予備
+yobi_4,57,varchar(3),[NULL],default,false,[NULL],予備
+kohan_4f,58,varchar(3),[NULL],default,false,[NULL],後4ハロンタイム
+kohan_3f,59,varchar(3),[NULL],default,false,[NULL],後3ハロンタイム
+aiteuma_joho_1,60,varchar(46),[NULL],default,false,[NULL],1着馬(相手馬)情報1
+aiteuma_joho_2,61,varchar(46),[NULL],default,false,[NULL],1着馬(相手馬)情報2
+aiteuma_joho_3,62,varchar(46),[NULL],default,false,[NULL],1着馬(相手馬)情報3
+time_sa,63,varchar(4),[NULL],default,false,[NULL],タイム差
+record_koshin_kubun,64,varchar(1),[NULL],default,false,[NULL],レコード更新区分
+mining_kubun,65,varchar(1),[NULL],default,false,[NULL],マイニング区分
+yoso_soha_time,66,varchar(5),[NULL],default,false,[NULL],マイニング予想走破タイム
+yoso_gosa_plus,67,varchar(4),[NULL],default,false,[NULL],マイニング予想誤差(信頼度)＋
+yoso_gosa_minus,68,varchar(4),[NULL],default,false,[NULL],マイニング予想誤差(信頼度)－
+yoso_juni,69,varchar(2),[NULL],default,false,[NULL],マイニング予想順位
+kyakushitsu_hantei,70,varchar(1),[NULL],default,false,[NULL],今回レース脚質判定

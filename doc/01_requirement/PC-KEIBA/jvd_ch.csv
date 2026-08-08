@@ -1,22 +1,22 @@
-列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
-record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
-data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
-data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
-chokyoshi_code	4	varchar(5)	[NULL]	default	true	[NULL]	調教師コード
-massho_kubun	5	varchar(1)	[NULL]	default	false	[NULL]	調教師抹消区分
-menkyo_kofu_nengappi	6	varchar(8)	[NULL]	default	false	[NULL]	調教師免許交付年月日
-menkyo_massho_nengappi	7	varchar(8)	[NULL]	default	false	[NULL]	調教師免許抹消年月日
-seinengappi	8	varchar(8)	[NULL]	default	false	[NULL]	生年月日
-chokyoshimei	9	varchar(34)	[NULL]	default	false	[NULL]	調教師名
-chokyoshimei_hankaku_kana	10	varchar(30)	[NULL]	default	false	[NULL]	調教師名半角ｶﾅ
-chokyoshimei_ryakusho	11	varchar(8)	[NULL]	default	false	[NULL]	調教師名略称
-chokyoshimei_eur	12	varchar(80)	[NULL]	default	false	[NULL]	調教師名欧字
-seibetsu_kubun	13	varchar(1)	[NULL]	default	false	[NULL]	性別区分
-tozai_shozoku_code	14	varchar(1)	[NULL]	default	false	[NULL]	調教師東西所属コード
-shotai_chiikimei	15	varchar(20)	[NULL]	default	false	[NULL]	招待地域名
-jushoshori_joho_1	16	varchar(163)	[NULL]	default	false	[NULL]	最近重賞勝利情報1
-jushoshori_joho_2	17	varchar(163)	[NULL]	default	false	[NULL]	最近重賞勝利情報2
-jushoshori_joho_3	18	varchar(163)	[NULL]	default	false	[NULL]	最近重賞勝利情報3
-seiseki_joho_1	19	varchar(1052)	[NULL]	default	false	[NULL]	本年･前年･累計成績情報1
-seiseki_joho_2	20	varchar(1052)	[NULL]	default	false	[NULL]	本年･前年･累計成績情報2
-seiseki_joho_3	21	varchar(1052)	[NULL]	default	false	[NULL]	本年･前年･累計成績情報3
+列名,＃,データ・タイプ,身元,Collation,ヌルでない,デフォルト,コメント
+record_id,1,varchar(2),[NULL],default,false,[NULL],レコード種別ID
+data_kubun,2,varchar(1),[NULL],default,false,[NULL],データ区分
+data_sakusei_nengappi,3,varchar(8),[NULL],default,false,[NULL],データ作成年月日
+chokyoshi_code,4,varchar(5),[NULL],default,true,[NULL],調教師コード
+massho_kubun,5,varchar(1),[NULL],default,false,[NULL],調教師抹消区分
+menkyo_kofu_nengappi,6,varchar(8),[NULL],default,false,[NULL],調教師免許交付年月日
+menkyo_massho_nengappi,7,varchar(8),[NULL],default,false,[NULL],調教師免許抹消年月日
+seinengappi,8,varchar(8),[NULL],default,false,[NULL],生年月日
+chokyoshimei,9,varchar(34),[NULL],default,false,[NULL],調教師名
+chokyoshimei_hankaku_kana,10,varchar(30),[NULL],default,false,[NULL],調教師名半角ｶﾅ
+chokyoshimei_ryakusho,11,varchar(8),[NULL],default,false,[NULL],調教師名略称
+chokyoshimei_eur,12,varchar(80),[NULL],default,false,[NULL],調教師名欧字
+seibetsu_kubun,13,varchar(1),[NULL],default,false,[NULL],性別区分
+tozai_shozoku_code,14,varchar(1),[NULL],default,false,[NULL],調教師東西所属コード
+shotai_chiikimei,15,varchar(20),[NULL],default,false,[NULL],招待地域名
+jushoshori_joho_1,16,varchar(163),[NULL],default,false,[NULL],最近重賞勝利情報1
+jushoshori_joho_2,17,varchar(163),[NULL],default,false,[NULL],最近重賞勝利情報2
+jushoshori_joho_3,18,varchar(163),[NULL],default,false,[NULL],最近重賞勝利情報3
+seiseki_joho_1,19,varchar(1052),[NULL],default,false,[NULL],本年･前年･累計成績情報1
+seiseki_joho_2,20,varchar(1052),[NULL],default,false,[NULL],本年･前年･累計成績情報2
+seiseki_joho_3,21,varchar(1052),[NULL],default,false,[NULL],本年･前年･累計成績情報3

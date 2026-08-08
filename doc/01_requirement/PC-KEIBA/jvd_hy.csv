@@ -1,7 +1,7 @@
-列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
-record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
-data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
-data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
-ketto_toroku_bango	4	varchar(10)	[NULL]	default	true	[NULL]	血統登録番号
-bamei	5	varchar(36)	[NULL]	default	false	[NULL]	馬名
-bamei_imi_yurai	6	varchar(64)	[NULL]	default	false	[NULL]	馬名の意味由来
+列名,＃,データ・タイプ,身元,Collation,ヌルでない,デフォルト,コメント
+record_id,1,varchar(2),[NULL],default,false,[NULL],レコード種別ID
+data_kubun,2,varchar(1),[NULL],default,false,[NULL],データ区分
+data_sakusei_nengappi,3,varchar(8),[NULL],default,false,[NULL],データ作成年月日
+ketto_toroku_bango,4,varchar(10),[NULL],default,true,[NULL],血統登録番号
+bamei,5,varchar(36),[NULL],default,false,[NULL],馬名
+bamei_imi_yurai,6,varchar(64),[NULL],default,false,[NULL],馬名の意味由来

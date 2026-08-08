@@ -1,267 +1,267 @@
-列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
-record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
-data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
-data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
-kaisai_nen	4	varchar(4)	[NULL]	default	true	[NULL]	開催年
-kaisai_tsukihi	5	varchar(4)	[NULL]	default	true	[NULL]	開催月日
-yobi_1	6	varchar(2)	[NULL]	default	false	[NULL]	予備
-race_joho_1	7	varchar(8)	[NULL]	default	false	[NULL]	重勝式対象レース情報1
-race_joho_2	8	varchar(8)	[NULL]	default	false	[NULL]	重勝式対象レース情報2
-race_joho_3	9	varchar(8)	[NULL]	default	false	[NULL]	重勝式対象レース情報3
-race_joho_4	10	varchar(8)	[NULL]	default	false	[NULL]	重勝式対象レース情報4
-race_joho_5	11	varchar(8)	[NULL]	default	false	[NULL]	重勝式対象レース情報5
-yobi_2	12	varchar(6)	[NULL]	default	false	[NULL]	予備
-win5_hyosu_gokei	13	varchar(11)	[NULL]	default	false	[NULL]	重勝式発売票数
-yuko_hyosu_1	14	varchar(11)	[NULL]	default	false	[NULL]	有効票数情報1
-yuko_hyosu_2	15	varchar(11)	[NULL]	default	false	[NULL]	有効票数情報2
-yuko_hyosu_3	16	varchar(11)	[NULL]	default	false	[NULL]	有効票数情報3
-yuko_hyosu_4	17	varchar(11)	[NULL]	default	false	[NULL]	有効票数情報4
-yuko_hyosu_5	18	varchar(11)	[NULL]	default	false	[NULL]	有効票数情報5
-henkan_flag	19	varchar(1)	[NULL]	default	false	[NULL]	返還フラグ
-fuseiritsu_flag	20	varchar(1)	[NULL]	default	false	[NULL]	不成立フラグ
-tekichu_nashi_flag	21	varchar(1)	[NULL]	default	false	[NULL]	的中無フラグ
-carry_over	22	varchar(15)	[NULL]	default	false	[NULL]	キャリーオーバー金額初期
-carry_over_zandaka	23	varchar(15)	[NULL]	default	false	[NULL]	キャリーオーバー金額残高
-haraimodoshi_win5_001	24	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報1
-haraimodoshi_win5_002	25	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報2
-haraimodoshi_win5_003	26	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報3
-haraimodoshi_win5_004	27	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報4
-haraimodoshi_win5_005	28	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報5
-haraimodoshi_win5_006	29	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報6
-haraimodoshi_win5_007	30	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報7
-haraimodoshi_win5_008	31	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報8
-haraimodoshi_win5_009	32	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報9
-haraimodoshi_win5_010	33	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報10
-haraimodoshi_win5_011	34	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報11
-haraimodoshi_win5_012	35	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報12
-haraimodoshi_win5_013	36	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報13
-haraimodoshi_win5_014	37	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報14
-haraimodoshi_win5_015	38	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報15
-haraimodoshi_win5_016	39	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報16
-haraimodoshi_win5_017	40	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報17
-haraimodoshi_win5_018	41	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報18
-haraimodoshi_win5_019	42	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報19
-haraimodoshi_win5_020	43	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報20
-haraimodoshi_win5_021	44	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報21
-haraimodoshi_win5_022	45	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報22
-haraimodoshi_win5_023	46	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報23
-haraimodoshi_win5_024	47	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報24
-haraimodoshi_win5_025	48	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報25
-haraimodoshi_win5_026	49	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報26
-haraimodoshi_win5_027	50	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報27
-haraimodoshi_win5_028	51	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報28
-haraimodoshi_win5_029	52	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報29
-haraimodoshi_win5_030	53	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報30
-haraimodoshi_win5_031	54	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報31
-haraimodoshi_win5_032	55	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報32
-haraimodoshi_win5_033	56	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報33
-haraimodoshi_win5_034	57	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報34
-haraimodoshi_win5_035	58	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報35
-haraimodoshi_win5_036	59	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報36
-haraimodoshi_win5_037	60	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報37
-haraimodoshi_win5_038	61	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報38
-haraimodoshi_win5_039	62	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報39
-haraimodoshi_win5_040	63	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報40
-haraimodoshi_win5_041	64	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報41
-haraimodoshi_win5_042	65	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報42
-haraimodoshi_win5_043	66	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報43
-haraimodoshi_win5_044	67	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報44
-haraimodoshi_win5_045	68	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報45
-haraimodoshi_win5_046	69	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報46
-haraimodoshi_win5_047	70	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報47
-haraimodoshi_win5_048	71	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報48
-haraimodoshi_win5_049	72	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報49
-haraimodoshi_win5_050	73	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報50
-haraimodoshi_win5_051	74	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報51
-haraimodoshi_win5_052	75	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報52
-haraimodoshi_win5_053	76	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報53
-haraimodoshi_win5_054	77	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報54
-haraimodoshi_win5_055	78	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報55
-haraimodoshi_win5_056	79	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報56
-haraimodoshi_win5_057	80	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報57
-haraimodoshi_win5_058	81	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報58
-haraimodoshi_win5_059	82	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報59
-haraimodoshi_win5_060	83	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報60
-haraimodoshi_win5_061	84	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報61
-haraimodoshi_win5_062	85	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報62
-haraimodoshi_win5_063	86	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報63
-haraimodoshi_win5_064	87	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報64
-haraimodoshi_win5_065	88	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報65
-haraimodoshi_win5_066	89	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報66
-haraimodoshi_win5_067	90	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報67
-haraimodoshi_win5_068	91	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報68
-haraimodoshi_win5_069	92	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報69
-haraimodoshi_win5_070	93	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報70
-haraimodoshi_win5_071	94	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報71
-haraimodoshi_win5_072	95	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報72
-haraimodoshi_win5_073	96	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報73
-haraimodoshi_win5_074	97	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報74
-haraimodoshi_win5_075	98	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報75
-haraimodoshi_win5_076	99	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報76
-haraimodoshi_win5_077	100	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報77
-haraimodoshi_win5_078	101	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報78
-haraimodoshi_win5_079	102	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報79
-haraimodoshi_win5_080	103	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報80
-haraimodoshi_win5_081	104	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報81
-haraimodoshi_win5_082	105	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報82
-haraimodoshi_win5_083	106	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報83
-haraimodoshi_win5_084	107	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報84
-haraimodoshi_win5_085	108	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報85
-haraimodoshi_win5_086	109	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報86
-haraimodoshi_win5_087	110	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報87
-haraimodoshi_win5_088	111	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報88
-haraimodoshi_win5_089	112	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報89
-haraimodoshi_win5_090	113	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報90
-haraimodoshi_win5_091	114	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報91
-haraimodoshi_win5_092	115	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報92
-haraimodoshi_win5_093	116	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報93
-haraimodoshi_win5_094	117	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報94
-haraimodoshi_win5_095	118	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報95
-haraimodoshi_win5_096	119	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報96
-haraimodoshi_win5_097	120	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報97
-haraimodoshi_win5_098	121	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報98
-haraimodoshi_win5_099	122	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報99
-haraimodoshi_win5_100	123	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報100
-haraimodoshi_win5_101	124	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報101
-haraimodoshi_win5_102	125	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報102
-haraimodoshi_win5_103	126	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報103
-haraimodoshi_win5_104	127	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報104
-haraimodoshi_win5_105	128	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報105
-haraimodoshi_win5_106	129	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報106
-haraimodoshi_win5_107	130	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報107
-haraimodoshi_win5_108	131	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報108
-haraimodoshi_win5_109	132	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報109
-haraimodoshi_win5_110	133	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報110
-haraimodoshi_win5_111	134	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報111
-haraimodoshi_win5_112	135	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報112
-haraimodoshi_win5_113	136	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報113
-haraimodoshi_win5_114	137	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報114
-haraimodoshi_win5_115	138	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報115
-haraimodoshi_win5_116	139	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報116
-haraimodoshi_win5_117	140	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報117
-haraimodoshi_win5_118	141	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報118
-haraimodoshi_win5_119	142	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報119
-haraimodoshi_win5_120	143	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報120
-haraimodoshi_win5_121	144	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報121
-haraimodoshi_win5_122	145	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報122
-haraimodoshi_win5_123	146	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報123
-haraimodoshi_win5_124	147	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報124
-haraimodoshi_win5_125	148	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報125
-haraimodoshi_win5_126	149	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報126
-haraimodoshi_win5_127	150	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報127
-haraimodoshi_win5_128	151	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報128
-haraimodoshi_win5_129	152	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報129
-haraimodoshi_win5_130	153	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報130
-haraimodoshi_win5_131	154	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報131
-haraimodoshi_win5_132	155	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報132
-haraimodoshi_win5_133	156	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報133
-haraimodoshi_win5_134	157	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報134
-haraimodoshi_win5_135	158	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報135
-haraimodoshi_win5_136	159	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報136
-haraimodoshi_win5_137	160	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報137
-haraimodoshi_win5_138	161	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報138
-haraimodoshi_win5_139	162	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報139
-haraimodoshi_win5_140	163	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報140
-haraimodoshi_win5_141	164	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報141
-haraimodoshi_win5_142	165	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報142
-haraimodoshi_win5_143	166	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報143
-haraimodoshi_win5_144	167	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報144
-haraimodoshi_win5_145	168	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報145
-haraimodoshi_win5_146	169	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報146
-haraimodoshi_win5_147	170	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報147
-haraimodoshi_win5_148	171	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報148
-haraimodoshi_win5_149	172	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報149
-haraimodoshi_win5_150	173	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報150
-haraimodoshi_win5_151	174	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報151
-haraimodoshi_win5_152	175	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報152
-haraimodoshi_win5_153	176	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報153
-haraimodoshi_win5_154	177	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報154
-haraimodoshi_win5_155	178	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報155
-haraimodoshi_win5_156	179	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報156
-haraimodoshi_win5_157	180	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報157
-haraimodoshi_win5_158	181	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報158
-haraimodoshi_win5_159	182	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報159
-haraimodoshi_win5_160	183	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報160
-haraimodoshi_win5_161	184	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報161
-haraimodoshi_win5_162	185	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報162
-haraimodoshi_win5_163	186	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報163
-haraimodoshi_win5_164	187	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報164
-haraimodoshi_win5_165	188	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報165
-haraimodoshi_win5_166	189	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報166
-haraimodoshi_win5_167	190	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報167
-haraimodoshi_win5_168	191	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報168
-haraimodoshi_win5_169	192	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報169
-haraimodoshi_win5_170	193	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報170
-haraimodoshi_win5_171	194	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報171
-haraimodoshi_win5_172	195	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報172
-haraimodoshi_win5_173	196	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報173
-haraimodoshi_win5_174	197	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報174
-haraimodoshi_win5_175	198	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報175
-haraimodoshi_win5_176	199	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報176
-haraimodoshi_win5_177	200	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報177
-haraimodoshi_win5_178	201	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報178
-haraimodoshi_win5_179	202	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報179
-haraimodoshi_win5_180	203	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報180
-haraimodoshi_win5_181	204	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報181
-haraimodoshi_win5_182	205	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報182
-haraimodoshi_win5_183	206	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報183
-haraimodoshi_win5_184	207	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報184
-haraimodoshi_win5_185	208	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報185
-haraimodoshi_win5_186	209	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報186
-haraimodoshi_win5_187	210	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報187
-haraimodoshi_win5_188	211	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報188
-haraimodoshi_win5_189	212	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報189
-haraimodoshi_win5_190	213	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報190
-haraimodoshi_win5_191	214	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報191
-haraimodoshi_win5_192	215	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報192
-haraimodoshi_win5_193	216	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報193
-haraimodoshi_win5_194	217	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報194
-haraimodoshi_win5_195	218	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報195
-haraimodoshi_win5_196	219	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報196
-haraimodoshi_win5_197	220	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報197
-haraimodoshi_win5_198	221	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報198
-haraimodoshi_win5_199	222	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報199
-haraimodoshi_win5_200	223	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報200
-haraimodoshi_win5_201	224	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報201
-haraimodoshi_win5_202	225	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報202
-haraimodoshi_win5_203	226	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報203
-haraimodoshi_win5_204	227	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報204
-haraimodoshi_win5_205	228	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報205
-haraimodoshi_win5_206	229	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報206
-haraimodoshi_win5_207	230	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報207
-haraimodoshi_win5_208	231	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報208
-haraimodoshi_win5_209	232	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報209
-haraimodoshi_win5_210	233	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報210
-haraimodoshi_win5_211	234	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報211
-haraimodoshi_win5_212	235	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報212
-haraimodoshi_win5_213	236	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報213
-haraimodoshi_win5_214	237	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報214
-haraimodoshi_win5_215	238	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報215
-haraimodoshi_win5_216	239	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報216
-haraimodoshi_win5_217	240	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報217
-haraimodoshi_win5_218	241	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報218
-haraimodoshi_win5_219	242	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報219
-haraimodoshi_win5_220	243	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報220
-haraimodoshi_win5_221	244	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報221
-haraimodoshi_win5_222	245	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報222
-haraimodoshi_win5_223	246	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報223
-haraimodoshi_win5_224	247	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報224
-haraimodoshi_win5_225	248	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報225
-haraimodoshi_win5_226	249	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報226
-haraimodoshi_win5_227	250	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報227
-haraimodoshi_win5_228	251	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報228
-haraimodoshi_win5_229	252	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報229
-haraimodoshi_win5_230	253	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報230
-haraimodoshi_win5_231	254	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報231
-haraimodoshi_win5_232	255	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報232
-haraimodoshi_win5_233	256	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報233
-haraimodoshi_win5_234	257	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報234
-haraimodoshi_win5_235	258	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報235
-haraimodoshi_win5_236	259	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報236
-haraimodoshi_win5_237	260	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報237
-haraimodoshi_win5_238	261	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報238
-haraimodoshi_win5_239	262	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報239
-haraimodoshi_win5_240	263	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報240
-haraimodoshi_win5_241	264	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報241
-haraimodoshi_win5_242	265	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報242
-haraimodoshi_win5_243	266	varchar(29)	[NULL]	default	false	[NULL]	重勝式払戻情報243
+列名,＃,データ・タイプ,身元,Collation,ヌルでない,デフォルト,コメント
+record_id,1,varchar(2),[NULL],default,false,[NULL],レコード種別ID
+data_kubun,2,varchar(1),[NULL],default,false,[NULL],データ区分
+data_sakusei_nengappi,3,varchar(8),[NULL],default,false,[NULL],データ作成年月日
+kaisai_nen,4,varchar(4),[NULL],default,true,[NULL],開催年
+kaisai_tsukihi,5,varchar(4),[NULL],default,true,[NULL],開催月日
+yobi_1,6,varchar(2),[NULL],default,false,[NULL],予備
+race_joho_1,7,varchar(8),[NULL],default,false,[NULL],重勝式対象レース情報1
+race_joho_2,8,varchar(8),[NULL],default,false,[NULL],重勝式対象レース情報2
+race_joho_3,9,varchar(8),[NULL],default,false,[NULL],重勝式対象レース情報3
+race_joho_4,10,varchar(8),[NULL],default,false,[NULL],重勝式対象レース情報4
+race_joho_5,11,varchar(8),[NULL],default,false,[NULL],重勝式対象レース情報5
+yobi_2,12,varchar(6),[NULL],default,false,[NULL],予備
+win5_hyosu_gokei,13,varchar(11),[NULL],default,false,[NULL],重勝式発売票数
+yuko_hyosu_1,14,varchar(11),[NULL],default,false,[NULL],有効票数情報1
+yuko_hyosu_2,15,varchar(11),[NULL],default,false,[NULL],有効票数情報2
+yuko_hyosu_3,16,varchar(11),[NULL],default,false,[NULL],有効票数情報3
+yuko_hyosu_4,17,varchar(11),[NULL],default,false,[NULL],有効票数情報4
+yuko_hyosu_5,18,varchar(11),[NULL],default,false,[NULL],有効票数情報5
+henkan_flag,19,varchar(1),[NULL],default,false,[NULL],返還フラグ
+fuseiritsu_flag,20,varchar(1),[NULL],default,false,[NULL],不成立フラグ
+tekichu_nashi_flag,21,varchar(1),[NULL],default,false,[NULL],的中無フラグ
+carry_over,22,varchar(15),[NULL],default,false,[NULL],キャリーオーバー金額初期
+carry_over_zandaka,23,varchar(15),[NULL],default,false,[NULL],キャリーオーバー金額残高
+haraimodoshi_win5_001,24,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報1
+haraimodoshi_win5_002,25,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報2
+haraimodoshi_win5_003,26,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報3
+haraimodoshi_win5_004,27,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報4
+haraimodoshi_win5_005,28,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報5
+haraimodoshi_win5_006,29,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報6
+haraimodoshi_win5_007,30,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報7
+haraimodoshi_win5_008,31,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報8
+haraimodoshi_win5_009,32,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報9
+haraimodoshi_win5_010,33,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報10
+haraimodoshi_win5_011,34,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報11
+haraimodoshi_win5_012,35,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報12
+haraimodoshi_win5_013,36,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報13
+haraimodoshi_win5_014,37,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報14
+haraimodoshi_win5_015,38,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報15
+haraimodoshi_win5_016,39,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報16
+haraimodoshi_win5_017,40,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報17
+haraimodoshi_win5_018,41,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報18
+haraimodoshi_win5_019,42,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報19
+haraimodoshi_win5_020,43,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報20
+haraimodoshi_win5_021,44,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報21
+haraimodoshi_win5_022,45,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報22
+haraimodoshi_win5_023,46,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報23
+haraimodoshi_win5_024,47,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報24
+haraimodoshi_win5_025,48,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報25
+haraimodoshi_win5_026,49,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報26
+haraimodoshi_win5_027,50,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報27
+haraimodoshi_win5_028,51,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報28
+haraimodoshi_win5_029,52,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報29
+haraimodoshi_win5_030,53,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報30
+haraimodoshi_win5_031,54,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報31
+haraimodoshi_win5_032,55,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報32
+haraimodoshi_win5_033,56,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報33
+haraimodoshi_win5_034,57,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報34
+haraimodoshi_win5_035,58,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報35
+haraimodoshi_win5_036,59,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報36
+haraimodoshi_win5_037,60,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報37
+haraimodoshi_win5_038,61,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報38
+haraimodoshi_win5_039,62,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報39
+haraimodoshi_win5_040,63,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報40
+haraimodoshi_win5_041,64,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報41
+haraimodoshi_win5_042,65,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報42
+haraimodoshi_win5_043,66,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報43
+haraimodoshi_win5_044,67,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報44
+haraimodoshi_win5_045,68,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報45
+haraimodoshi_win5_046,69,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報46
+haraimodoshi_win5_047,70,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報47
+haraimodoshi_win5_048,71,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報48
+haraimodoshi_win5_049,72,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報49
+haraimodoshi_win5_050,73,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報50
+haraimodoshi_win5_051,74,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報51
+haraimodoshi_win5_052,75,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報52
+haraimodoshi_win5_053,76,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報53
+haraimodoshi_win5_054,77,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報54
+haraimodoshi_win5_055,78,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報55
+haraimodoshi_win5_056,79,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報56
+haraimodoshi_win5_057,80,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報57
+haraimodoshi_win5_058,81,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報58
+haraimodoshi_win5_059,82,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報59
+haraimodoshi_win5_060,83,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報60
+haraimodoshi_win5_061,84,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報61
+haraimodoshi_win5_062,85,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報62
+haraimodoshi_win5_063,86,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報63
+haraimodoshi_win5_064,87,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報64
+haraimodoshi_win5_065,88,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報65
+haraimodoshi_win5_066,89,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報66
+haraimodoshi_win5_067,90,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報67
+haraimodoshi_win5_068,91,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報68
+haraimodoshi_win5_069,92,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報69
+haraimodoshi_win5_070,93,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報70
+haraimodoshi_win5_071,94,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報71
+haraimodoshi_win5_072,95,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報72
+haraimodoshi_win5_073,96,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報73
+haraimodoshi_win5_074,97,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報74
+haraimodoshi_win5_075,98,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報75
+haraimodoshi_win5_076,99,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報76
+haraimodoshi_win5_077,100,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報77
+haraimodoshi_win5_078,101,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報78
+haraimodoshi_win5_079,102,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報79
+haraimodoshi_win5_080,103,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報80
+haraimodoshi_win5_081,104,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報81
+haraimodoshi_win5_082,105,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報82
+haraimodoshi_win5_083,106,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報83
+haraimodoshi_win5_084,107,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報84
+haraimodoshi_win5_085,108,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報85
+haraimodoshi_win5_086,109,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報86
+haraimodoshi_win5_087,110,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報87
+haraimodoshi_win5_088,111,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報88
+haraimodoshi_win5_089,112,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報89
+haraimodoshi_win5_090,113,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報90
+haraimodoshi_win5_091,114,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報91
+haraimodoshi_win5_092,115,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報92
+haraimodoshi_win5_093,116,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報93
+haraimodoshi_win5_094,117,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報94
+haraimodoshi_win5_095,118,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報95
+haraimodoshi_win5_096,119,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報96
+haraimodoshi_win5_097,120,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報97
+haraimodoshi_win5_098,121,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報98
+haraimodoshi_win5_099,122,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報99
+haraimodoshi_win5_100,123,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報100
+haraimodoshi_win5_101,124,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報101
+haraimodoshi_win5_102,125,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報102
+haraimodoshi_win5_103,126,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報103
+haraimodoshi_win5_104,127,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報104
+haraimodoshi_win5_105,128,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報105
+haraimodoshi_win5_106,129,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報106
+haraimodoshi_win5_107,130,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報107
+haraimodoshi_win5_108,131,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報108
+haraimodoshi_win5_109,132,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報109
+haraimodoshi_win5_110,133,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報110
+haraimodoshi_win5_111,134,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報111
+haraimodoshi_win5_112,135,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報112
+haraimodoshi_win5_113,136,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報113
+haraimodoshi_win5_114,137,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報114
+haraimodoshi_win5_115,138,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報115
+haraimodoshi_win5_116,139,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報116
+haraimodoshi_win5_117,140,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報117
+haraimodoshi_win5_118,141,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報118
+haraimodoshi_win5_119,142,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報119
+haraimodoshi_win5_120,143,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報120
+haraimodoshi_win5_121,144,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報121
+haraimodoshi_win5_122,145,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報122
+haraimodoshi_win5_123,146,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報123
+haraimodoshi_win5_124,147,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報124
+haraimodoshi_win5_125,148,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報125
+haraimodoshi_win5_126,149,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報126
+haraimodoshi_win5_127,150,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報127
+haraimodoshi_win5_128,151,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報128
+haraimodoshi_win5_129,152,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報129
+haraimodoshi_win5_130,153,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報130
+haraimodoshi_win5_131,154,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報131
+haraimodoshi_win5_132,155,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報132
+haraimodoshi_win5_133,156,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報133
+haraimodoshi_win5_134,157,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報134
+haraimodoshi_win5_135,158,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報135
+haraimodoshi_win5_136,159,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報136
+haraimodoshi_win5_137,160,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報137
+haraimodoshi_win5_138,161,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報138
+haraimodoshi_win5_139,162,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報139
+haraimodoshi_win5_140,163,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報140
+haraimodoshi_win5_141,164,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報141
+haraimodoshi_win5_142,165,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報142
+haraimodoshi_win5_143,166,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報143
+haraimodoshi_win5_144,167,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報144
+haraimodoshi_win5_145,168,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報145
+haraimodoshi_win5_146,169,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報146
+haraimodoshi_win5_147,170,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報147
+haraimodoshi_win5_148,171,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報148
+haraimodoshi_win5_149,172,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報149
+haraimodoshi_win5_150,173,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報150
+haraimodoshi_win5_151,174,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報151
+haraimodoshi_win5_152,175,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報152
+haraimodoshi_win5_153,176,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報153
+haraimodoshi_win5_154,177,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報154
+haraimodoshi_win5_155,178,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報155
+haraimodoshi_win5_156,179,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報156
+haraimodoshi_win5_157,180,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報157
+haraimodoshi_win5_158,181,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報158
+haraimodoshi_win5_159,182,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報159
+haraimodoshi_win5_160,183,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報160
+haraimodoshi_win5_161,184,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報161
+haraimodoshi_win5_162,185,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報162
+haraimodoshi_win5_163,186,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報163
+haraimodoshi_win5_164,187,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報164
+haraimodoshi_win5_165,188,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報165
+haraimodoshi_win5_166,189,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報166
+haraimodoshi_win5_167,190,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報167
+haraimodoshi_win5_168,191,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報168
+haraimodoshi_win5_169,192,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報169
+haraimodoshi_win5_170,193,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報170
+haraimodoshi_win5_171,194,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報171
+haraimodoshi_win5_172,195,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報172
+haraimodoshi_win5_173,196,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報173
+haraimodoshi_win5_174,197,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報174
+haraimodoshi_win5_175,198,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報175
+haraimodoshi_win5_176,199,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報176
+haraimodoshi_win5_177,200,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報177
+haraimodoshi_win5_178,201,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報178
+haraimodoshi_win5_179,202,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報179
+haraimodoshi_win5_180,203,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報180
+haraimodoshi_win5_181,204,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報181
+haraimodoshi_win5_182,205,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報182
+haraimodoshi_win5_183,206,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報183
+haraimodoshi_win5_184,207,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報184
+haraimodoshi_win5_185,208,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報185
+haraimodoshi_win5_186,209,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報186
+haraimodoshi_win5_187,210,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報187
+haraimodoshi_win5_188,211,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報188
+haraimodoshi_win5_189,212,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報189
+haraimodoshi_win5_190,213,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報190
+haraimodoshi_win5_191,214,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報191
+haraimodoshi_win5_192,215,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報192
+haraimodoshi_win5_193,216,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報193
+haraimodoshi_win5_194,217,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報194
+haraimodoshi_win5_195,218,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報195
+haraimodoshi_win5_196,219,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報196
+haraimodoshi_win5_197,220,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報197
+haraimodoshi_win5_198,221,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報198
+haraimodoshi_win5_199,222,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報199
+haraimodoshi_win5_200,223,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報200
+haraimodoshi_win5_201,224,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報201
+haraimodoshi_win5_202,225,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報202
+haraimodoshi_win5_203,226,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報203
+haraimodoshi_win5_204,227,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報204
+haraimodoshi_win5_205,228,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報205
+haraimodoshi_win5_206,229,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報206
+haraimodoshi_win5_207,230,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報207
+haraimodoshi_win5_208,231,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報208
+haraimodoshi_win5_209,232,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報209
+haraimodoshi_win5_210,233,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報210
+haraimodoshi_win5_211,234,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報211
+haraimodoshi_win5_212,235,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報212
+haraimodoshi_win5_213,236,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報213
+haraimodoshi_win5_214,237,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報214
+haraimodoshi_win5_215,238,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報215
+haraimodoshi_win5_216,239,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報216
+haraimodoshi_win5_217,240,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報217
+haraimodoshi_win5_218,241,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報218
+haraimodoshi_win5_219,242,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報219
+haraimodoshi_win5_220,243,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報220
+haraimodoshi_win5_221,244,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報221
+haraimodoshi_win5_222,245,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報222
+haraimodoshi_win5_223,246,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報223
+haraimodoshi_win5_224,247,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報224
+haraimodoshi_win5_225,248,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報225
+haraimodoshi_win5_226,249,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報226
+haraimodoshi_win5_227,250,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報227
+haraimodoshi_win5_228,251,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報228
+haraimodoshi_win5_229,252,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報229
+haraimodoshi_win5_230,253,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報230
+haraimodoshi_win5_231,254,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報231
+haraimodoshi_win5_232,255,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報232
+haraimodoshi_win5_233,256,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報233
+haraimodoshi_win5_234,257,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報234
+haraimodoshi_win5_235,258,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報235
+haraimodoshi_win5_236,259,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報236
+haraimodoshi_win5_237,260,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報237
+haraimodoshi_win5_238,261,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報238
+haraimodoshi_win5_239,262,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報239
+haraimodoshi_win5_240,263,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報240
+haraimodoshi_win5_241,264,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報241
+haraimodoshi_win5_242,265,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報242
+haraimodoshi_win5_243,266,varchar(29),[NULL],default,false,[NULL],重勝式払戻情報243

@@ -1,63 +1,63 @@
-列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
-record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
-data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
-data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
-kaisai_nen	4	varchar(4)	[NULL]	default	true	[NULL]	開催年
-kaisai_tsukihi	5	varchar(4)	[NULL]	default	true	[NULL]	開催月日
-keibajo_code	6	varchar(2)	[NULL]	default	true	[NULL]	競馬場コード
-kaisai_kai	7	varchar(2)	[NULL]	default	false	[NULL]	開催回[第N回]
-kaisai_nichime	8	varchar(2)	[NULL]	default	false	[NULL]	開催日目[N日目]
-race_bango	9	varchar(2)	[NULL]	default	true	[NULL]	レース番号
-yobi_code	10	varchar(1)	[NULL]	default	false	[NULL]	曜日コード
-tokubetsu_kyoso_bango	11	varchar(4)	[NULL]	default	false	[NULL]	特別競走番号
-kyosomei_hondai	12	varchar(60)	[NULL]	default	false	[NULL]	競走名本題
-kyosomei_fukudai	13	varchar(60)	[NULL]	default	false	[NULL]	競走名副題
-kyosomei_kakkonai	14	varchar(60)	[NULL]	default	false	[NULL]	競走名カッコ内
-kyosomei_hondai_eur	15	varchar(120)	[NULL]	default	false	[NULL]	競走名本題欧字
-kyosomei_fukudai_eur	16	varchar(120)	[NULL]	default	false	[NULL]	競走名副題欧字
-kyosomei_kakkonai_eur	17	varchar(120)	[NULL]	default	false	[NULL]	競走名カッコ内欧字
-kyosomei_ryakusho_10	18	varchar(20)	[NULL]	default	false	[NULL]	競走名略称10文字
-kyosomei_ryakusho_6	19	varchar(12)	[NULL]	default	false	[NULL]	競走名略称6文字
-kyosomei_ryakusho_3	20	varchar(6)	[NULL]	default	false	[NULL]	競走名略称3文字
-kyosomei_kubun	21	varchar(1)	[NULL]	default	false	[NULL]	競走名区分
-jusho_kaiji	22	varchar(3)	[NULL]	default	false	[NULL]	重賞回次[第N回]
-grade_code	23	varchar(1)	[NULL]	default	false	[NULL]	グレードコード
-grade_code_henkomae	24	varchar(1)	[NULL]	default	false	[NULL]	変更前グレードコード
-kyoso_shubetsu_code	25	varchar(2)	[NULL]	default	false	[NULL]	競走種別コード
-kyoso_kigo_code	26	varchar(3)	[NULL]	default	false	[NULL]	競走記号コード
-juryo_shubetsu_code	27	varchar(1)	[NULL]	default	false	[NULL]	重量種別コード
-kyoso_joken_code_2sai	28	varchar(3)	[NULL]	default	false	[NULL]	競走条件コード 2歳条件
-kyoso_joken_code_3sai	29	varchar(3)	[NULL]	default	false	[NULL]	競走条件コード 3歳条件
-kyoso_joken_code_4sai	30	varchar(3)	[NULL]	default	false	[NULL]	競走条件コード 4歳条件
-kyoso_joken_code_5sai_ijo	31	varchar(3)	[NULL]	default	false	[NULL]	競走条件コード 5歳以上条件
-kyoso_joken_code	32	varchar(3)	[NULL]	default	false	[NULL]	競走条件コード 最若年条件
-kyoso_joken_meisho	33	varchar(60)	[NULL]	default	false	[NULL]	競走条件名称
-kyori	34	varchar(4)	[NULL]	default	false	[NULL]	距離
-kyori_henkomae	35	varchar(4)	[NULL]	default	false	[NULL]	変更前距離
-track_code	36	varchar(2)	[NULL]	default	false	[NULL]	トラックコード
-track_code_henkomae	37	varchar(2)	[NULL]	default	false	[NULL]	変更前トラックコード
-course_kubun	38	varchar(2)	[NULL]	default	false	[NULL]	コース区分
-course_kubun_henkomae	39	varchar(2)	[NULL]	default	false	[NULL]	変更前コース区分
-honshokin	40	varchar(56)	[NULL]	default	false	[NULL]	本賞金
-honshokin_henkomae	41	varchar(40)	[NULL]	default	false	[NULL]	変更前本賞金
-fukashokin	42	varchar(40)	[NULL]	default	false	[NULL]	付加賞金
-fukashokin_henkomae	43	varchar(24)	[NULL]	default	false	[NULL]	変更前付加賞金
-hasso_jikoku	44	varchar(4)	[NULL]	default	false	[NULL]	発走時刻
-hasso_jikoku_henkomae	45	varchar(4)	[NULL]	default	false	[NULL]	変更前発走時刻
-toroku_tosu	46	varchar(2)	[NULL]	default	false	[NULL]	登録頭数
-shusso_tosu	47	varchar(2)	[NULL]	default	false	[NULL]	出走頭数
-nyusen_tosu	48	varchar(2)	[NULL]	default	false	[NULL]	入線頭数
-tenko_code	49	varchar(1)	[NULL]	default	false	[NULL]	天候コード
-babajotai_code_shiba	50	varchar(1)	[NULL]	default	false	[NULL]	芝馬場状態コード
-babajotai_code_dirt	51	varchar(1)	[NULL]	default	false	[NULL]	ダート馬場状態コード
-lap_time	52	varchar(75)	[NULL]	default	false	[NULL]	ラップタイム
-shogai_mile_time	53	varchar(4)	[NULL]	default	false	[NULL]	障害マイルタイム
-zenhan_3f	54	varchar(3)	[NULL]	default	false	[NULL]	前3ハロン
-zenhan_4f	55	varchar(3)	[NULL]	default	false	[NULL]	前4ハロン
-kohan_3f	56	varchar(3)	[NULL]	default	false	[NULL]	後3ハロン
-kohan_4f	57	varchar(3)	[NULL]	default	false	[NULL]	後4ハロン
-corner_tsuka_juni_1	58	varchar(72)	[NULL]	default	false	[NULL]	コーナー通過順位1
-corner_tsuka_juni_2	59	varchar(72)	[NULL]	default	false	[NULL]	コーナー通過順位2
-corner_tsuka_juni_3	60	varchar(72)	[NULL]	default	false	[NULL]	コーナー通過順位3
-corner_tsuka_juni_4	61	varchar(72)	[NULL]	default	false	[NULL]	コーナー通過順位4
-record_koshin_kubun	62	varchar(1)	[NULL]	default	false	[NULL]	レコード更新区分
+列名,＃,データ・タイプ,身元,Collation,ヌルでない,デフォルト,コメント
+record_id,1,varchar(2),[NULL],default,false,[NULL],レコード種別ID
+data_kubun,2,varchar(1),[NULL],default,false,[NULL],データ区分
+data_sakusei_nengappi,3,varchar(8),[NULL],default,false,[NULL],データ作成年月日
+kaisai_nen,4,varchar(4),[NULL],default,true,[NULL],開催年
+kaisai_tsukihi,5,varchar(4),[NULL],default,true,[NULL],開催月日
+keibajo_code,6,varchar(2),[NULL],default,true,[NULL],競馬場コード
+kaisai_kai,7,varchar(2),[NULL],default,false,[NULL],開催回[第N回]
+kaisai_nichime,8,varchar(2),[NULL],default,false,[NULL],開催日目[N日目]
+race_bango,9,varchar(2),[NULL],default,true,[NULL],レース番号
+yobi_code,10,varchar(1),[NULL],default,false,[NULL],曜日コード
+tokubetsu_kyoso_bango,11,varchar(4),[NULL],default,false,[NULL],特別競走番号
+kyosomei_hondai,12,varchar(60),[NULL],default,false,[NULL],競走名本題
+kyosomei_fukudai,13,varchar(60),[NULL],default,false,[NULL],競走名副題
+kyosomei_kakkonai,14,varchar(60),[NULL],default,false,[NULL],競走名カッコ内
+kyosomei_hondai_eur,15,varchar(120),[NULL],default,false,[NULL],競走名本題欧字
+kyosomei_fukudai_eur,16,varchar(120),[NULL],default,false,[NULL],競走名副題欧字
+kyosomei_kakkonai_eur,17,varchar(120),[NULL],default,false,[NULL],競走名カッコ内欧字
+kyosomei_ryakusho_10,18,varchar(20),[NULL],default,false,[NULL],競走名略称10文字
+kyosomei_ryakusho_6,19,varchar(12),[NULL],default,false,[NULL],競走名略称6文字
+kyosomei_ryakusho_3,20,varchar(6),[NULL],default,false,[NULL],競走名略称3文字
+kyosomei_kubun,21,varchar(1),[NULL],default,false,[NULL],競走名区分
+jusho_kaiji,22,varchar(3),[NULL],default,false,[NULL],重賞回次[第N回]
+grade_code,23,varchar(1),[NULL],default,false,[NULL],グレードコード
+grade_code_henkomae,24,varchar(1),[NULL],default,false,[NULL],変更前グレードコード
+kyoso_shubetsu_code,25,varchar(2),[NULL],default,false,[NULL],競走種別コード
+kyoso_kigo_code,26,varchar(3),[NULL],default,false,[NULL],競走記号コード
+juryo_shubetsu_code,27,varchar(1),[NULL],default,false,[NULL],重量種別コード
+kyoso_joken_code_2sai,28,varchar(3),[NULL],default,false,[NULL],競走条件コード 2歳条件
+kyoso_joken_code_3sai,29,varchar(3),[NULL],default,false,[NULL],競走条件コード 3歳条件
+kyoso_joken_code_4sai,30,varchar(3),[NULL],default,false,[NULL],競走条件コード 4歳条件
+kyoso_joken_code_5sai_ijo,31,varchar(3),[NULL],default,false,[NULL],競走条件コード 5歳以上条件
+kyoso_joken_code,32,varchar(3),[NULL],default,false,[NULL],競走条件コード 最若年条件
+kyoso_joken_meisho,33,varchar(60),[NULL],default,false,[NULL],競走条件名称
+kyori,34,varchar(4),[NULL],default,false,[NULL],距離
+kyori_henkomae,35,varchar(4),[NULL],default,false,[NULL],変更前距離
+track_code,36,varchar(2),[NULL],default,false,[NULL],トラックコード
+track_code_henkomae,37,varchar(2),[NULL],default,false,[NULL],変更前トラックコード
+course_kubun,38,varchar(2),[NULL],default,false,[NULL],コース区分
+course_kubun_henkomae,39,varchar(2),[NULL],default,false,[NULL],変更前コース区分
+honshokin,40,varchar(56),[NULL],default,false,[NULL],本賞金
+honshokin_henkomae,41,varchar(40),[NULL],default,false,[NULL],変更前本賞金
+fukashokin,42,varchar(40),[NULL],default,false,[NULL],付加賞金
+fukashokin_henkomae,43,varchar(24),[NULL],default,false,[NULL],変更前付加賞金
+hasso_jikoku,44,varchar(4),[NULL],default,false,[NULL],発走時刻
+hasso_jikoku_henkomae,45,varchar(4),[NULL],default,false,[NULL],変更前発走時刻
+toroku_tosu,46,varchar(2),[NULL],default,false,[NULL],登録頭数
+shusso_tosu,47,varchar(2),[NULL],default,false,[NULL],出走頭数
+nyusen_tosu,48,varchar(2),[NULL],default,false,[NULL],入線頭数
+tenko_code,49,varchar(1),[NULL],default,false,[NULL],天候コード
+babajotai_code_shiba,50,varchar(1),[NULL],default,false,[NULL],芝馬場状態コード
+babajotai_code_dirt,51,varchar(1),[NULL],default,false,[NULL],ダート馬場状態コード
+lap_time,52,varchar(75),[NULL],default,false,[NULL],ラップタイム
+shogai_mile_time,53,varchar(4),[NULL],default,false,[NULL],障害マイルタイム
+zenhan_3f,54,varchar(3),[NULL],default,false,[NULL],前3ハロン
+zenhan_4f,55,varchar(3),[NULL],default,false,[NULL],前4ハロン
+kohan_3f,56,varchar(3),[NULL],default,false,[NULL],後3ハロン
+kohan_4f,57,varchar(3),[NULL],default,false,[NULL],後4ハロン
+corner_tsuka_juni_1,58,varchar(72),[NULL],default,false,[NULL],コーナー通過順位1
+corner_tsuka_juni_2,59,varchar(72),[NULL],default,false,[NULL],コーナー通過順位2
+corner_tsuka_juni_3,60,varchar(72),[NULL],default,false,[NULL],コーナー通過順位3
+corner_tsuka_juni_4,61,varchar(72),[NULL],default,false,[NULL],コーナー通過順位4
+record_koshin_kubun,62,varchar(1),[NULL],default,false,[NULL],レコード更新区分

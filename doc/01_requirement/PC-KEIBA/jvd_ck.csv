@@ -1,107 +1,107 @@
-列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
-record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
-data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
-data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
-kaisai_nen	4	varchar(4)	[NULL]	default	true	[NULL]	開催年
-kaisai_tsukihi	5	varchar(4)	[NULL]	default	true	[NULL]	開催月日
-keibajo_code	6	varchar(2)	[NULL]	default	true	[NULL]	競馬場コード
-kaisai_kai	7	varchar(2)	[NULL]	default	false	[NULL]	開催回[第N回]
-kaisai_nichime	8	varchar(2)	[NULL]	default	false	[NULL]	開催日目[N日目]
-race_bango	9	varchar(2)	[NULL]	default	true	[NULL]	レース番号
-ketto_toroku_bango	10	varchar(10)	[NULL]	default	true	[NULL]	血統登録番号
-bamei	11	varchar(36)	[NULL]	default	false	[NULL]	馬名
-heichi_honshokin_ruikei	12	varchar(9)	[NULL]	default	false	[NULL]	平地本賞金累計
-shogai_honshokin_ruikei	13	varchar(9)	[NULL]	default	false	[NULL]	障害本賞金累計
-heichi_fukashokin_ruikei	14	varchar(9)	[NULL]	default	false	[NULL]	平地付加賞金累計
-shogai_fukashokin_ruikei	15	varchar(9)	[NULL]	default	false	[NULL]	障害付加賞金累計
-heichi_shutokushokin_ruikei	16	varchar(9)	[NULL]	default	false	[NULL]	平地収得賞金累計
-shogai_shutokushokin_ruikei	17	varchar(9)	[NULL]	default	false	[NULL]	障害収得賞金累計
-sogo	18	varchar(18)	[NULL]	default	false	[NULL]	総合着回数
-chuo_gokei	19	varchar(18)	[NULL]	default	false	[NULL]	中央合計着回数
-shiba_choku	20	varchar(18)	[NULL]	default	false	[NULL]	芝直・着回数
-shiba_migi	21	varchar(18)	[NULL]	default	false	[NULL]	芝右・着回数
-shiba_hidari	22	varchar(18)	[NULL]	default	false	[NULL]	芝左・着回数
-dirt_choku	23	varchar(18)	[NULL]	default	false	[NULL]	ダ直・着回数
-dirt_migi	24	varchar(18)	[NULL]	default	false	[NULL]	ダ右・着回数
-dirt_hidari	25	varchar(18)	[NULL]	default	false	[NULL]	ダ左・着回数
-shogai	26	varchar(18)	[NULL]	default	false	[NULL]	障害・着回数
-shiba_ryo	27	varchar(18)	[NULL]	default	false	[NULL]	芝良・着回数
-shiba_yayaomo	28	varchar(18)	[NULL]	default	false	[NULL]	芝稍・着回数
-shiba_omo	29	varchar(18)	[NULL]	default	false	[NULL]	芝重・着回数
-shiba_furyo	30	varchar(18)	[NULL]	default	false	[NULL]	芝不・着回数
-dirt_ryo	31	varchar(18)	[NULL]	default	false	[NULL]	ダ良・着回数
-dirt_yayaomo	32	varchar(18)	[NULL]	default	false	[NULL]	ダ稍・着回数
-dirt_omo	33	varchar(18)	[NULL]	default	false	[NULL]	ダ重・着回数
-dirt_furyo	34	varchar(18)	[NULL]	default	false	[NULL]	ダ不・着回数
-shogai_ryo	35	varchar(18)	[NULL]	default	false	[NULL]	障良・着回数
-shogai_yayaomo	36	varchar(18)	[NULL]	default	false	[NULL]	障稍・着回数
-shogai_omo	37	varchar(18)	[NULL]	default	false	[NULL]	障重・着回数
-shogai_furyo	38	varchar(18)	[NULL]	default	false	[NULL]	障不・着回数
-shiba_1200_ika	39	varchar(18)	[NULL]	default	false	[NULL]	芝1200以下・着回数
-shiba_1201_1400	40	varchar(18)	[NULL]	default	false	[NULL]	芝1201-1400・着回数
-shiba_1401_1600	41	varchar(18)	[NULL]	default	false	[NULL]	芝1401-1600・着回数
-shiba_1601_1800	42	varchar(18)	[NULL]	default	false	[NULL]	芝1601-1800・着回数
-shiba_1801_2000	43	varchar(18)	[NULL]	default	false	[NULL]	芝1801-2000・着回数
-shiba_2001_2200	44	varchar(18)	[NULL]	default	false	[NULL]	芝2001-2200・着回数
-shiba_2201_2400	45	varchar(18)	[NULL]	default	false	[NULL]	芝2201-2400・着回数
-shiba_2401_2800	46	varchar(18)	[NULL]	default	false	[NULL]	芝2401-2800・着回数
-shiba_2801_ijo	47	varchar(18)	[NULL]	default	false	[NULL]	芝2801以上・着回数
-dirt_1200_ika	48	varchar(18)	[NULL]	default	false	[NULL]	ダ1200以下・着回数
-dirt_1201_1400	49	varchar(18)	[NULL]	default	false	[NULL]	ダ1201-1400・着回数
-dirt_1401_1600	50	varchar(18)	[NULL]	default	false	[NULL]	ダ1401-1600・着回数
-dirt_1601_1800	51	varchar(18)	[NULL]	default	false	[NULL]	ダ1601-1800・着回数
-dirt_1801_2000	52	varchar(18)	[NULL]	default	false	[NULL]	ダ1801-2000・着回数
-dirt_2001_2200	53	varchar(18)	[NULL]	default	false	[NULL]	ダ2001-2200・着回数
-dirt_2201_2400	54	varchar(18)	[NULL]	default	false	[NULL]	ダ2201-2400・着回数
-dirt_2401_2800	55	varchar(18)	[NULL]	default	false	[NULL]	ダ2401-2800・着回数
-dirt_2801_ijo	56	varchar(18)	[NULL]	default	false	[NULL]	ダ2801以上・着回数
-shiba_sapporo	57	varchar(18)	[NULL]	default	false	[NULL]	札幌芝・着回数
-shiba_hakodate	58	varchar(18)	[NULL]	default	false	[NULL]	函館芝・着回数
-shiba_fukushima	59	varchar(18)	[NULL]	default	false	[NULL]	福島芝・着回数
-shiba_niigata	60	varchar(18)	[NULL]	default	false	[NULL]	新潟芝・着回数
-shiba_tokyo	61	varchar(18)	[NULL]	default	false	[NULL]	東京芝・着回数
-shiba_nakayama	62	varchar(18)	[NULL]	default	false	[NULL]	中山芝・着回数
-shiba_chukyo	63	varchar(18)	[NULL]	default	false	[NULL]	中京芝・着回数
-shiba_kyoto	64	varchar(18)	[NULL]	default	false	[NULL]	京都芝・着回数
-shiba_hanshin	65	varchar(18)	[NULL]	default	false	[NULL]	阪神芝・着回数
-shiba_kokura	66	varchar(18)	[NULL]	default	false	[NULL]	小倉芝・着回数
-dirt_sapporo	67	varchar(18)	[NULL]	default	false	[NULL]	札幌ダ・着回数
-dirt_hakodate	68	varchar(18)	[NULL]	default	false	[NULL]	函館ダ・着回数
-dirt_fukushima	69	varchar(18)	[NULL]	default	false	[NULL]	福島ダ・着回数
-dirt_niigata	70	varchar(18)	[NULL]	default	false	[NULL]	新潟ダ・着回数
-dirt_tokyo	71	varchar(18)	[NULL]	default	false	[NULL]	東京ダ・着回数
-dirt_nakayama	72	varchar(18)	[NULL]	default	false	[NULL]	中山ダ・着回数
-dirt_chukyo	73	varchar(18)	[NULL]	default	false	[NULL]	中京ダ・着回数
-dirt_kyoto	74	varchar(18)	[NULL]	default	false	[NULL]	京都ダ・着回数
-dirt_hanshin	75	varchar(18)	[NULL]	default	false	[NULL]	阪神ダ・着回数
-dirt_kokura	76	varchar(18)	[NULL]	default	false	[NULL]	小倉ダ・着回数
-shogai_sapporo	77	varchar(18)	[NULL]	default	false	[NULL]	札幌障・着回数
-shogai_hakodate	78	varchar(18)	[NULL]	default	false	[NULL]	函館障・着回数
-shogai_fukushima	79	varchar(18)	[NULL]	default	false	[NULL]	福島障・着回数
-shogai_niigata	80	varchar(18)	[NULL]	default	false	[NULL]	新潟障・着回数
-shogai_tokyo	81	varchar(18)	[NULL]	default	false	[NULL]	東京障・着回数
-shogai_nakayama	82	varchar(18)	[NULL]	default	false	[NULL]	中山障・着回数
-shogai_chukyo	83	varchar(18)	[NULL]	default	false	[NULL]	中京障・着回数
-shogai_kyoto	84	varchar(18)	[NULL]	default	false	[NULL]	京都障・着回数
-shogai_hanshin	85	varchar(18)	[NULL]	default	false	[NULL]	阪神障・着回数
-shogai_kokura	86	varchar(18)	[NULL]	default	false	[NULL]	小倉障・着回数
-kyakushitsu_keiko	87	varchar(12)	[NULL]	default	false	[NULL]	脚質傾向
-toroku_race_su	88	varchar(3)	[NULL]	default	false	[NULL]	登録レース数
-kishu_code	89	varchar(5)	[NULL]	default	false	[NULL]	騎手コード
-kishumei	90	varchar(34)	[NULL]	default	false	[NULL]	騎手名
-seiseki_joho_kishu_1	91	varchar(1220)	[NULL]	default	false	[NULL]	騎手本年･累計成績情報1
-seiseki_joho_kishu_2	92	varchar(1220)	[NULL]	default	false	[NULL]	騎手本年･累計成績情報2
-chokyoshi_code	93	varchar(5)	[NULL]	default	false	[NULL]	調教師コード
-chokyoshimei	94	varchar(34)	[NULL]	default	false	[NULL]	調教師名
-seiseki_joho_chokyoshi_1	95	varchar(1220)	[NULL]	default	false	[NULL]	調教師本年･累計成績情報1
-seiseki_joho_chokyoshi_2	96	varchar(1220)	[NULL]	default	false	[NULL]	調教師本年･累計成績情報2
-banushi_code	97	varchar(6)	[NULL]	default	false	[NULL]	馬主コード
-banushimei_hojinkaku	98	varchar(64)	[NULL]	default	false	[NULL]	馬主名(法人格有)
-banushimei	99	varchar(64)	[NULL]	default	false	[NULL]	馬主名(法人格無)
-seiseki_joho_banushi_1	100	varchar(60)	[NULL]	default	false	[NULL]	馬主本年･累計成績情報1
-seiseki_joho_banushi_2	101	varchar(60)	[NULL]	default	false	[NULL]	馬主本年･累計成績情報2
-seisansha_code	102	varchar(8)	[NULL]	default	false	[NULL]	生産者コード
-seisanshamei_hojinkaku	103	varchar(72)	[NULL]	default	false	[NULL]	生産者名(法人格有)
-seisanshamei	104	varchar(72)	[NULL]	default	false	[NULL]	生産者名(法人格無)
-seiseki_joho_seisansha_1	105	varchar(60)	[NULL]	default	false	[NULL]	生産者本年･累計成績情報1
-seiseki_joho_seisansha_2	106	varchar(60)	[NULL]	default	false	[NULL]	生産者本年･累計成績情報2
+列名,＃,データ・タイプ,身元,Collation,ヌルでない,デフォルト,コメント
+record_id,1,varchar(2),[NULL],default,false,[NULL],レコード種別ID
+data_kubun,2,varchar(1),[NULL],default,false,[NULL],データ区分
+data_sakusei_nengappi,3,varchar(8),[NULL],default,false,[NULL],データ作成年月日
+kaisai_nen,4,varchar(4),[NULL],default,true,[NULL],開催年
+kaisai_tsukihi,5,varchar(4),[NULL],default,true,[NULL],開催月日
+keibajo_code,6,varchar(2),[NULL],default,true,[NULL],競馬場コード
+kaisai_kai,7,varchar(2),[NULL],default,false,[NULL],開催回[第N回]
+kaisai_nichime,8,varchar(2),[NULL],default,false,[NULL],開催日目[N日目]
+race_bango,9,varchar(2),[NULL],default,true,[NULL],レース番号
+ketto_toroku_bango,10,varchar(10),[NULL],default,true,[NULL],血統登録番号
+bamei,11,varchar(36),[NULL],default,false,[NULL],馬名
+heichi_honshokin_ruikei,12,varchar(9),[NULL],default,false,[NULL],平地本賞金累計
+shogai_honshokin_ruikei,13,varchar(9),[NULL],default,false,[NULL],障害本賞金累計
+heichi_fukashokin_ruikei,14,varchar(9),[NULL],default,false,[NULL],平地付加賞金累計
+shogai_fukashokin_ruikei,15,varchar(9),[NULL],default,false,[NULL],障害付加賞金累計
+heichi_shutokushokin_ruikei,16,varchar(9),[NULL],default,false,[NULL],平地収得賞金累計
+shogai_shutokushokin_ruikei,17,varchar(9),[NULL],default,false,[NULL],障害収得賞金累計
+sogo,18,varchar(18),[NULL],default,false,[NULL],総合着回数
+chuo_gokei,19,varchar(18),[NULL],default,false,[NULL],中央合計着回数
+shiba_choku,20,varchar(18),[NULL],default,false,[NULL],芝直・着回数
+shiba_migi,21,varchar(18),[NULL],default,false,[NULL],芝右・着回数
+shiba_hidari,22,varchar(18),[NULL],default,false,[NULL],芝左・着回数
+dirt_choku,23,varchar(18),[NULL],default,false,[NULL],ダ直・着回数
+dirt_migi,24,varchar(18),[NULL],default,false,[NULL],ダ右・着回数
+dirt_hidari,25,varchar(18),[NULL],default,false,[NULL],ダ左・着回数
+shogai,26,varchar(18),[NULL],default,false,[NULL],障害・着回数
+shiba_ryo,27,varchar(18),[NULL],default,false,[NULL],芝良・着回数
+shiba_yayaomo,28,varchar(18),[NULL],default,false,[NULL],芝稍・着回数
+shiba_omo,29,varchar(18),[NULL],default,false,[NULL],芝重・着回数
+shiba_furyo,30,varchar(18),[NULL],default,false,[NULL],芝不・着回数
+dirt_ryo,31,varchar(18),[NULL],default,false,[NULL],ダ良・着回数
+dirt_yayaomo,32,varchar(18),[NULL],default,false,[NULL],ダ稍・着回数
+dirt_omo,33,varchar(18),[NULL],default,false,[NULL],ダ重・着回数
+dirt_furyo,34,varchar(18),[NULL],default,false,[NULL],ダ不・着回数
+shogai_ryo,35,varchar(18),[NULL],default,false,[NULL],障良・着回数
+shogai_yayaomo,36,varchar(18),[NULL],default,false,[NULL],障稍・着回数
+shogai_omo,37,varchar(18),[NULL],default,false,[NULL],障重・着回数
+shogai_furyo,38,varchar(18),[NULL],default,false,[NULL],障不・着回数
+shiba_1200_ika,39,varchar(18),[NULL],default,false,[NULL],芝1200以下・着回数
+shiba_1201_1400,40,varchar(18),[NULL],default,false,[NULL],芝1201-1400・着回数
+shiba_1401_1600,41,varchar(18),[NULL],default,false,[NULL],芝1401-1600・着回数
+shiba_1601_1800,42,varchar(18),[NULL],default,false,[NULL],芝1601-1800・着回数
+shiba_1801_2000,43,varchar(18),[NULL],default,false,[NULL],芝1801-2000・着回数
+shiba_2001_2200,44,varchar(18),[NULL],default,false,[NULL],芝2001-2200・着回数
+shiba_2201_2400,45,varchar(18),[NULL],default,false,[NULL],芝2201-2400・着回数
+shiba_2401_2800,46,varchar(18),[NULL],default,false,[NULL],芝2401-2800・着回数
+shiba_2801_ijo,47,varchar(18),[NULL],default,false,[NULL],芝2801以上・着回数
+dirt_1200_ika,48,varchar(18),[NULL],default,false,[NULL],ダ1200以下・着回数
+dirt_1201_1400,49,varchar(18),[NULL],default,false,[NULL],ダ1201-1400・着回数
+dirt_1401_1600,50,varchar(18),[NULL],default,false,[NULL],ダ1401-1600・着回数
+dirt_1601_1800,51,varchar(18),[NULL],default,false,[NULL],ダ1601-1800・着回数
+dirt_1801_2000,52,varchar(18),[NULL],default,false,[NULL],ダ1801-2000・着回数
+dirt_2001_2200,53,varchar(18),[NULL],default,false,[NULL],ダ2001-2200・着回数
+dirt_2201_2400,54,varchar(18),[NULL],default,false,[NULL],ダ2201-2400・着回数
+dirt_2401_2800,55,varchar(18),[NULL],default,false,[NULL],ダ2401-2800・着回数
+dirt_2801_ijo,56,varchar(18),[NULL],default,false,[NULL],ダ2801以上・着回数
+shiba_sapporo,57,varchar(18),[NULL],default,false,[NULL],札幌芝・着回数
+shiba_hakodate,58,varchar(18),[NULL],default,false,[NULL],函館芝・着回数
+shiba_fukushima,59,varchar(18),[NULL],default,false,[NULL],福島芝・着回数
+shiba_niigata,60,varchar(18),[NULL],default,false,[NULL],新潟芝・着回数
+shiba_tokyo,61,varchar(18),[NULL],default,false,[NULL],東京芝・着回数
+shiba_nakayama,62,varchar(18),[NULL],default,false,[NULL],中山芝・着回数
+shiba_chukyo,63,varchar(18),[NULL],default,false,[NULL],中京芝・着回数
+shiba_kyoto,64,varchar(18),[NULL],default,false,[NULL],京都芝・着回数
+shiba_hanshin,65,varchar(18),[NULL],default,false,[NULL],阪神芝・着回数
+shiba_kokura,66,varchar(18),[NULL],default,false,[NULL],小倉芝・着回数
+dirt_sapporo,67,varchar(18),[NULL],default,false,[NULL],札幌ダ・着回数
+dirt_hakodate,68,varchar(18),[NULL],default,false,[NULL],函館ダ・着回数
+dirt_fukushima,69,varchar(18),[NULL],default,false,[NULL],福島ダ・着回数
+dirt_niigata,70,varchar(18),[NULL],default,false,[NULL],新潟ダ・着回数
+dirt_tokyo,71,varchar(18),[NULL],default,false,[NULL],東京ダ・着回数
+dirt_nakayama,72,varchar(18),[NULL],default,false,[NULL],中山ダ・着回数
+dirt_chukyo,73,varchar(18),[NULL],default,false,[NULL],中京ダ・着回数
+dirt_kyoto,74,varchar(18),[NULL],default,false,[NULL],京都ダ・着回数
+dirt_hanshin,75,varchar(18),[NULL],default,false,[NULL],阪神ダ・着回数
+dirt_kokura,76,varchar(18),[NULL],default,false,[NULL],小倉ダ・着回数
+shogai_sapporo,77,varchar(18),[NULL],default,false,[NULL],札幌障・着回数
+shogai_hakodate,78,varchar(18),[NULL],default,false,[NULL],函館障・着回数
+shogai_fukushima,79,varchar(18),[NULL],default,false,[NULL],福島障・着回数
+shogai_niigata,80,varchar(18),[NULL],default,false,[NULL],新潟障・着回数
+shogai_tokyo,81,varchar(18),[NULL],default,false,[NULL],東京障・着回数
+shogai_nakayama,82,varchar(18),[NULL],default,false,[NULL],中山障・着回数
+shogai_chukyo,83,varchar(18),[NULL],default,false,[NULL],中京障・着回数
+shogai_kyoto,84,varchar(18),[NULL],default,false,[NULL],京都障・着回数
+shogai_hanshin,85,varchar(18),[NULL],default,false,[NULL],阪神障・着回数
+shogai_kokura,86,varchar(18),[NULL],default,false,[NULL],小倉障・着回数
+kyakushitsu_keiko,87,varchar(12),[NULL],default,false,[NULL],脚質傾向
+toroku_race_su,88,varchar(3),[NULL],default,false,[NULL],登録レース数
+kishu_code,89,varchar(5),[NULL],default,false,[NULL],騎手コード
+kishumei,90,varchar(34),[NULL],default,false,[NULL],騎手名
+seiseki_joho_kishu_1,91,varchar(1220),[NULL],default,false,[NULL],騎手本年･累計成績情報1
+seiseki_joho_kishu_2,92,varchar(1220),[NULL],default,false,[NULL],騎手本年･累計成績情報2
+chokyoshi_code,93,varchar(5),[NULL],default,false,[NULL],調教師コード
+chokyoshimei,94,varchar(34),[NULL],default,false,[NULL],調教師名
+seiseki_joho_chokyoshi_1,95,varchar(1220),[NULL],default,false,[NULL],調教師本年･累計成績情報1
+seiseki_joho_chokyoshi_2,96,varchar(1220),[NULL],default,false,[NULL],調教師本年･累計成績情報2
+banushi_code,97,varchar(6),[NULL],default,false,[NULL],馬主コード
+banushimei_hojinkaku,98,varchar(64),[NULL],default,false,[NULL],馬主名(法人格有)
+banushimei,99,varchar(64),[NULL],default,false,[NULL],馬主名(法人格無)
+seiseki_joho_banushi_1,100,varchar(60),[NULL],default,false,[NULL],馬主本年･累計成績情報1
+seiseki_joho_banushi_2,101,varchar(60),[NULL],default,false,[NULL],馬主本年･累計成績情報2
+seisansha_code,102,varchar(8),[NULL],default,false,[NULL],生産者コード
+seisanshamei_hojinkaku,103,varchar(72),[NULL],default,false,[NULL],生産者名(法人格有)
+seisanshamei,104,varchar(72),[NULL],default,false,[NULL],生産者名(法人格無)
+seiseki_joho_seisansha_1,105,varchar(60),[NULL],default,false,[NULL],生産者本年･累計成績情報1
+seiseki_joho_seisansha_2,106,varchar(60),[NULL],default,false,[NULL],生産者本年･累計成績情報2

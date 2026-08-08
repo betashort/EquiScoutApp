@@ -1,15 +1,15 @@
-列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
-record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
-data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
-data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
-ketto_toroku_bango	4	varchar(10)	[NULL]	default	true	[NULL]	血統登録番号
-ketto_joho_01a	5	varchar(10)	[NULL]	default	false	[NULL]	父馬 繁殖登録番号
-ketto_joho_02a	6	varchar(10)	[NULL]	default	false	[NULL]	母馬 繁殖登録番号
-seinen	7	varchar(4)	[NULL]	default	false	[NULL]	生年
-shusaisha_shijo_code	8	varchar(6)	[NULL]	default	true	[NULL]	主催者・市場コード
-shusaisha_meisho	9	varchar(40)	[NULL]	default	false	[NULL]	主催者名称
-shijo_meisho	10	varchar(80)	[NULL]	default	false	[NULL]	市場の名称
-kaisai_kikan_min	11	varchar(8)	[NULL]	default	true	[NULL]	市場の開催期間(開始日)
-kaisai_kikan_max	12	varchar(8)	[NULL]	default	false	[NULL]	市場の開催期間(終了日)
-torihikiji_nenrei	13	varchar(1)	[NULL]	default	false	[NULL]	取引時の競走馬の年齢
-torihiki_kakaku	14	varchar(10)	[NULL]	default	false	[NULL]	取引価格
+列名,＃,データ・タイプ,身元,Collation,ヌルでない,デフォルト,コメント
+record_id,1,varchar(2),[NULL],default,false,[NULL],レコード種別ID
+data_kubun,2,varchar(1),[NULL],default,false,[NULL],データ区分
+data_sakusei_nengappi,3,varchar(8),[NULL],default,false,[NULL],データ作成年月日
+ketto_toroku_bango,4,varchar(10),[NULL],default,true,[NULL],血統登録番号
+ketto_joho_01a,5,varchar(10),[NULL],default,false,[NULL],父馬 繁殖登録番号
+ketto_joho_02a,6,varchar(10),[NULL],default,false,[NULL],母馬 繁殖登録番号
+seinen,7,varchar(4),[NULL],default,false,[NULL],生年
+shusaisha_shijo_code,8,varchar(6),[NULL],default,true,[NULL],主催者・市場コード
+shusaisha_meisho,9,varchar(40),[NULL],default,false,[NULL],主催者名称
+shijo_meisho,10,varchar(80),[NULL],default,false,[NULL],市場の名称
+kaisai_kikan_min,11,varchar(8),[NULL],default,true,[NULL],市場の開催期間(開始日)
+kaisai_kikan_max,12,varchar(8),[NULL],default,false,[NULL],市場の開催期間(終了日)
+torihikiji_nenrei,13,varchar(1),[NULL],default,false,[NULL],取引時の競走馬の年齢
+torihiki_kakaku,14,varchar(10),[NULL],default,false,[NULL],取引価格

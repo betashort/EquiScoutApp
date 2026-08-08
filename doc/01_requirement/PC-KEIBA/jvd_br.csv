@@ -1,12 +1,12 @@
-列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
-record_id	1	varchar(2)	[NULL]	default	false	[NULL]	レコード種別ID
-data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
-data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
-seisansha_code	4	varchar(8)	[NULL]	default	true	[NULL]	生産者コード
-seisanshamei_hojinkaku	5	varchar(72)	[NULL]	default	false	[NULL]	生産者名(法人格有)
-seisanshamei	6	varchar(72)	[NULL]	default	false	[NULL]	生産者名(法人格無)
-seisanshamei_hankaku_kana	7	varchar(72)	[NULL]	default	false	[NULL]	生産者名半角ｶﾅ
-seisanshamei_eur	8	varchar(168)	[NULL]	default	false	[NULL]	生産者名欧字
-seisansha_jusho_jichishomei	9	varchar(20)	[NULL]	default	false	[NULL]	生産者住所自治省名
-seiseki_joho_1	10	varchar(60)	[NULL]	default	false	[NULL]	本年･累計成績情報1
-seiseki_joho_2	11	varchar(60)	[NULL]	default	false	[NULL]	本年･累計成績情報2
+列名,＃,データ・タイプ,身元,Collation,ヌルでない,デフォルト,コメント
+record_id,1,varchar(2),[NULL],default,false,[NULL],レコード種別ID
+data_kubun,2,varchar(1),[NULL],default,false,[NULL],データ区分
+data_sakusei_nengappi,3,varchar(8),[NULL],default,false,[NULL],データ作成年月日
+seisansha_code,4,varchar(8),[NULL],default,true,[NULL],生産者コード
+seisanshamei_hojinkaku,5,varchar(72),[NULL],default,false,[NULL],生産者名(法人格有)
+seisanshamei,6,varchar(72),[NULL],default,false,[NULL],生産者名(法人格無)
+seisanshamei_hankaku_kana,7,varchar(72),[NULL],default,false,[NULL],生産者名半角ｶﾅ
+seisanshamei_eur,8,varchar(168),[NULL],default,false,[NULL],生産者名欧字
+seisansha_jusho_jichishomei,9,varchar(20),[NULL],default,false,[NULL],生産者住所自治省名
+seiseki_joho_1,10,varchar(60),[NULL],default,false,[NULL],本年･累計成績情報1
+seiseki_joho_2,11,varchar(60),[NULL],default,false,[NULL],本年･累計成績情報2

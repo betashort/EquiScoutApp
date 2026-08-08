@@ -1,11 +1,11 @@
-列名	＃	データ・タイプ	身元	Collation	ヌルでない	デフォルト	コメント
-data_kubun	2	varchar(1)	[NULL]	default	false	[NULL]	データ区分
-data_sakusei_nengappi	3	varchar(8)	[NULL]	default	false	[NULL]	データ作成年月日
-banushi_code	4	varchar(6)	[NULL]	default	true	[NULL]	馬主コード
-banushimei_hojinkaku	5	varchar(64)	[NULL]	default	false	[NULL]	馬主名(法人格有)
-banushimei	6	varchar(64)	[NULL]	default	false	[NULL]	馬主名(法人格無)
-banushimei_hankaku_kana	7	varchar(50)	[NULL]	default	false	[NULL]	馬主名半角ｶﾅ
-banushimei_eur	8	varchar(100)	[NULL]	default	false	[NULL]	馬主名欧字
-fukushoku_hyoji	9	varchar(60)	[NULL]	default	false	[NULL]	服色標示
-seiseki_joho_1	10	varchar(60)	[NULL]	default	false	[NULL]	本年･累計成績情報1
-seiseki_joho_2	11	varchar(60)	[NULL]	default	false	[NULL]	本年･累計成績情報2
+列名,＃,データ・タイプ,身元,Collation,ヌルでない,デフォルト,コメント
+data_kubun,2,varchar(1),[NULL],default,false,[NULL],データ区分
+data_sakusei_nengappi,3,varchar(8),[NULL],default,false,[NULL],データ作成年月日
+banushi_code,4,varchar(6),[NULL],default,true,[NULL],馬主コード
+banushimei_hojinkaku,5,varchar(64),[NULL],default,false,[NULL],馬主名(法人格有)
+banushimei,6,varchar(64),[NULL],default,false,[NULL],馬主名(法人格無)
+banushimei_hankaku_kana,7,varchar(50),[NULL],default,false,[NULL],馬主名半角ｶﾅ
+banushimei_eur,8,varchar(100),[NULL],default,false,[NULL],馬主名欧字
+fukushoku_hyoji,9,varchar(60),[NULL],default,false,[NULL],服色標示
+seiseki_joho_1,10,varchar(60),[NULL],default,false,[NULL],本年･累計成績情報1
+seiseki_joho_2,11,varchar(60),[NULL],default,false,[NULL],本年･累計成績情報2
