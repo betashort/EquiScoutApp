@@ -6,7 +6,7 @@
 | 根拠ドキュメント | [`doc/01_requirement/requirement.md`](../01_requirement/requirement.md) |
 | 関連設計 | [`DB_design.md`](./DB_design.md) / [`UI_design.md`](./UI_design.md)（情報設計） / [`UI/`](./UI/README.md)（レイアウト・ビジュアル） / [`base_desing.md`](./base_desing.md) |
 | 作成日 | 2026-07-26 |
-| 更新日 | 2026-07-26 |
+| 更新日 | 2026-08-09 |
 | 対象フェーズ | MVP（調教師本実装）＋将来拡張を見据えた骨格 |
 
 ---
@@ -43,9 +43,9 @@
 | 2 | **データは二段構成**とする（PG 正本 / SQLite 読取モデル） | JV-DL は既存 PostgreSQL、アプリは表示・分析用に SQLite |
 | 3 | **同期は一方向・アプリ使用マスタのみ** | 手動更新。SQLite → PG は行わない |
 | 4 | **更新時に分析し、結果を SQLite へ永続化**する | 表示は計算せず読取。集計・回帰等は TypeScript（＋SQL） |
-| 5 | **HTTP API は持たない** | データアクセスは SQL / ユースケース関数。Electron 化時は IPC |
+| 5 | **HTTP API は持たない** | データアクセスは SQL / ユースケース関数。Tauri 化時は `invoke`（コマンド） |
 | 6 | **スコアリングは差し替え可能なモジュール**にする | 強さ/コスパは PoC 後（MVP 非表示） |
-| 7 | **Web コア先行、Electron 後付け** | 開発はブラウザ + SQLite。製品は Win/Mac の Electron |
+| 7 | **Web コア先行、Tauri 後付け** | 開発はブラウザ + SQLite。製品は Win/Mac の Tauri |
 | 8 | **ローカル完結**を基本とする | 個人利用。通常操作は SQLite のみでオフライン可 |
 
 ### 1.3 本文書の範囲
@@ -60,41 +60,60 @@
 
 ## 2. システムコンテキスト
 
-```text
-┌─────────────────────────────────────────────────────────────┐
-│                         利用者                               │
-│              （個人の一口馬主希望者）                          │
-└────────────────────────────┬────────────────────────────────┘
-                             │ 操作（検索・入力・分析閲覧・手動同期）
-                             ▼
-┌─────────────────────────────────────────────────────────────┐
-│                     EquiScout App                            │
-│  ┌─────────────┐  ┌──────────────┐  ┌────────────────────┐ │
-│  │ Presentation│  │ Application  │  │ Analysis Domains   │ │
-│  │ (UI)        │↔│ / Use Cases  │↔│ Trainer / Farm /   │ │
-│  │             │  │              │  │ Pedigree / Score*  │ │
-│  └─────────────┘  └──────────────┘  └─────────┬──────────┘ │
-│                                               │            │
-│  ┌────────────────────────────────────────────▼──────────┐ │
-│  │     Data Access（通常時は SQLite のみ）                 │ │
-│  └────────────────────────────┬───────────────────────────┘ │
-│                               │                             │
-│  ┌────────────────────────────▼───────────────────────────┐ │
-│  │  Update Pipeline（手動更新）                            │ │
-│  │  1. Sync: PG → SQLite（使用マスタのみ・一方向）         │ │
-│  │  2. Analyze: 集計・指標算出（TS）→ 分析結果を SQLite へ │ │
-│  └────────────────────────────┬───────────────────────────┘ │
-└───────────────────────────────┼─────────────────────────────┘
-                                │ 手動更新時のみ PG 接続
-          ┌─────────────────────┼─────────────────────┐
-          ▼                     ▼                     ▼
-   ┌─────────────┐      ┌──────────────┐      ┌─────────────┐
-   │ PostgreSQL  │      │ 募集馬手入力 │      │ 外部データ  │
-   │ (JV-DL 正本 │      │ （画面先行。 │      │ （将来）    │
-   │  正規化済み）│      │  永続化は後）│      │             │
-   └─────────────┘      └──────────────┘      └─────────────┘
+```plantuml
+@startuml EquiScout_system_context
+skinparam backgroundColor #FEFEFE
+skinparam component {
+  BackgroundColor #F5F7FA
+  BorderColor #4A5568
+  ArrowColor #2D3748
+}
+skinparam package {
+  BackgroundColor #FFFFFF
+  BorderColor #4A5568
+}
+skinparam actor {
+  BackgroundColor #E8F0FE
+  BorderColor #3B82F6
+}
+skinparam note {
+  BackgroundColor #FEF3C7
+  BorderColor #D97706
+}
 
-* Score（強さ・コスパ）は MVP では無効化。PoC 後に有効化。
+title EquiScout システムコンテキスト
+
+actor "利用者\n（個人の一口馬主希望者）" as User
+
+package "EquiScout App" as App {
+  component "Presentation\n(UI)" as Presentation
+  component "Application\n/ Use Cases" as Application
+  component "Analysis Domains\nTrainer / Farm /\nPedigree / Score*" as Analysis
+  component "Data Access\n（通常時は SQLite のみ）" as DataAccess
+  component "Update Pipeline（手動更新）\n1. Sync: PG → SQLite（使用マスタのみ・一方向）\n2. Analyze: 集計・指標算出（TS）→ 分析結果を SQLite へ" as Pipeline
+
+  Presentation <-> Application
+  Application <-> Analysis
+  Analysis --> DataAccess
+  DataAccess --> Pipeline
+}
+
+database "PostgreSQL\n(JV-DL 正本\n正規化済み)" as PG
+component "募集馬手入力\n（画面先行。\n永続化は後）" as ManualInput
+component "外部データ\n（将来）" as ExternalData
+
+User --> Presentation : 操作\n（検索・入力・分析閲覧・手動同期）
+Pipeline --> PG : 手動更新時のみ PG 接続
+Pipeline --> ManualInput
+Pipeline --> ExternalData
+
+note right of Analysis
+  * Score（強さ・コスパ）は
+  MVP では無効化。
+  PoC 後に有効化。
+end note
+
+@enduml
 ```
 
 ### 2.1 外部境界
@@ -105,7 +124,7 @@
 | SQLite（アプリ DB） | マスタスナップショット＋**分析結果**の永続化。通常操作の読取先 | 表示は分析済み行を読むだけ |
 | 利用者入力 | UI フォーム | 募集馬は MVP では画面先行（永続化は後続） |
 | クラブ公式サイト等 | **接続しない** | スクレイピングはスコープ外 |
-| HTTP API / クラウド | **持たない** | ローカル完結。ユースケースは関数または IPC |
+| HTTP API / クラウド | **持たない** | ローカル完結。ユースケースは関数または Tauri `invoke` |
 
 ---
 
@@ -113,23 +132,32 @@
 
 レイヤード構成とする。上位層は下位層にのみ依存し、分析ロジックは UI や同期方式に依存しない。
 
-```text
-┌──────────────────────────────────────────────┐
-│  Presentation Layer                          │
-│  画面・ナビ・フォーム・チャート描画          │
-├──────────────────────────────────────────────┤
-│  Application Layer（ユースケース）            │
-│  検索 / 分析表示（読取） / 更新パイプライン指示│
-│  （募集馬永続化は後続）                       │
-├──────────────────────────────────────────────┤
-│  Domain Layer（分析・集計）                   │
-│  更新時に実行し結果を永続化                   │
-│  Trainer / Farm / Pedigree / Similarity*     │
-│  StrengthCost*（PoC後）                      │
-├──────────────────────────────────────────────┤
-│  Infrastructure Layer                        │
-│  SQLite Repository / PgSync / Config         │
-└──────────────────────────────────────────────┘
+```plantuml
+@startuml EquiScout_logical_architecture
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  BackgroundColor #F5F7FA
+  BorderColor #4A5568
+}
+skinparam ArrowColor #2D3748
+
+title EquiScout 論理アーキテクチャ
+
+rectangle "Presentation Layer\n画面・ナビ・フォーム・チャート描画" as Presentation
+rectangle "Application Layer（ユースケース）\n検索 / 分析表示（読取） / 更新パイプライン指示\n（募集馬永続化は後続）" as Application
+rectangle "Domain Layer（分析・集計）\n更新時に実行し結果を永続化\nTrainer / Farm / Pedigree / Similarity*\nStrengthCost*（PoC後）" as Domain
+rectangle "Infrastructure Layer\nSQLite Repository / PgSync / Config" as Infrastructure
+
+Presentation -down-> Application
+Application -down-> Domain
+Domain -down-> Infrastructure
+
+note right of Domain
+  * Similarity / StrengthCost は
+  MVP では無効化。PoC 後に有効化。
+end note
+
+@enduml
 ```
 
 ### 3.1 層の責務
@@ -151,7 +179,7 @@
   - 「更新パイプライン（Sync → Analyze → 結果 UPSERT）を実行する」
 - 表示時は原則として再集計しない（既に SQLite にある指標・率を返す）
 - スコアリングモジュールの有無を設定で切り替え（MVP はオフ）
-- **HTTP エンドポイントは公開しない**。同一プロセス内の関数呼び出し（ブラウザ開発時）、Electron 化後は IPC ハンドラが同じユースケースを呼ぶ
+- **HTTP エンドポイントは公開しない**。同一プロセス内の関数呼び出し（ブラウザ開発時）、Tauri 化後はコマンド（`invoke`）ハンドラが同じユースケースを呼ぶ
 
 #### Domain
 
@@ -195,28 +223,30 @@
 └─────────────────────────────────────────────┘
 ```
 
-ブラウザから直接 Node の `pg` / ネイティブ SQLite を叩けない制約がある場合は、**薄いローカルプロセス**（開発用のみ）でユースケースをホストしてよい。ただしこれは製品向け HTTP API ではなく、Electron Main に置き換える前提の一時的ホストとする。
+ブラウザから直接 Node の `pg` / ネイティブ SQLite を叩けない制約がある場合は、**薄いローカルプロセス**（開発用のみ）でユースケースをホストしてよい。ただしこれは製品向け HTTP API ではなく、Tauri のコマンド境界に置き換える前提の一時的ホストとする。
 
-#### 製品: Electron（Windows 主、macOS 対応）
+#### 製品: Tauri（Windows 主、macOS 対応）
 
 ```text
 ┌─────────────────────────────────────────────┐
-│              Electron                        │
+│              Tauri                           │
 │  ┌───────────────────────────────────────┐  │
-│  │  Renderer: React (Presentation)       │  │
+│  │  WebView: React (Presentation)        │  │
 │  └──────────────────┬────────────────────┘  │
-│                     │ IPC（HTTP ではない）   │
+│                     │ invoke（HTTP ではない）│
 │  ┌──────────────────▼────────────────────┐  │
-│  │  Main: Application + Domain           │  │
-│  │        + SQLite Repository            │  │
-│  │        + UpdatePipeline               │  │
-│  │          (PgSync → Analyze → Write)   │  │
+│  │  Rust Core: Commands（IPC 境界）      │  │
+│  │    → Application + Domain（TS）       │  │
+│  │    → SQLite Repository                │  │
+│  │    → UpdatePipeline                   │  │
+│  │         (PgSync → Analyze → Write)    │  │
 │  └───────────────────────────────────────┘  │
 └─────────────────────────────────────────────┘
 ```
 
-- 通常操作: Renderer → IPC → Main → **SQLite の分析結果・マスタを読取**
-- 手動更新: Main が PG 同期のあと Domain 分析を実行し、**結果を SQLite に UPSERT**
+- 通常操作: WebView → `invoke` → Tauri Commands → **SQLite の分析結果・マスタを読取**
+- 手動更新: コマンド側が PG 同期のあと Domain 分析を実行し、**結果を SQLite に UPSERT**
+- Application / Domain / Sync / Analyze の TypeScript 資産は Web コアとして維持し、製品時は Tauri コマンドから同一ユースケース境界を呼ぶ（実装は Rust 直呼び・Node サイドカー等。詳細は実装時確定）
 
 ### 4.2 主要コンポーネント一覧
 
@@ -394,20 +424,22 @@ PostgreSQL (使用マスタのみ)
 
 | 領域 | 選定 | 理由 |
 |------|------|------|
-| Frontend | **TypeScript + React** | コンポーネント分割・チャート・Electron 親和性 |
+| Frontend | **TypeScript + React** | コンポーネント分割・チャート・Tauri WebView 親和性 |
 | チャート | 実装時選定（Recharts / Chart.js / ECharts 等） | 賞金・着回数・距離別の棒/折れ線が中心 |
 | データアクセス | **TypeScript**（SQL クライアント / クエリビルダ） | API サーバ不要。SQL が扱えれば十分 |
 | **分析・集計** | **TypeScript**（＋ SQLite SQL） | 更新時に実行。率・集計は標準的。回帰は統計/ML ライブラリ |
 | 正本 DB | **PostgreSQL**（既存 JV-DL） | 正規化済み。アプリ外管理 |
 | アプリ DB | **SQLite** | マスタスナップショット＋分析結果。通常操作・オフライン |
-| デスクトップ | **Electron**（後付け） | Win/Mac 両対応。PG・SQLite・分析を TS で一貫処理 |
-| 開発形態 | **ブラウザ + SQLite 先行** | Electron 包装は製品化時 |
+| デスクトップ | **Tauri**（後付け） | Win/Mac 両対応。軽量。Web コアを WebView に載せ `invoke` で結ぶ |
+| ネイティブシェル | **Rust**（Tauri Core） | ウィンドウ・FS・コマンド境界。重い分析は TS ユースケース側 |
+| 開発形態 | **ブラウザ + SQLite 先行** | Tauri 包装は製品化時 |
 | パッケージ管理 | pnpm / npm 等、リポジトリ方針に従う | — |
 
 ### 7.2 選定の代替と制約
 
-- **Tauri** は軽量だが、PG 同期 + SQLite + 分析を TypeScript 一貫で扱う方針と噛み合いにくいため採用しない
-- **製品向け HTTP API** は持たない（開発用ホストを一時的に置く場合も IPC 置換前提）
+- **Electron** は採用しない（バンドル肥大・Chromium 同梱が個人デスクトップ用途に重い）。デスクトップは **Tauri** とする
+- PG 同期 + SQLite + 分析の **TypeScript 資産は Web コアとして維持**し、Tauri はシェル／IPC（`invoke`）境界とする。Rust へのロジック移植は必須としない（必要なら後続）
+- **製品向け HTTP API** は持たない（開発用ホストを一時的に置く場合も `invoke` 置換前提）
 - **クラウド DB / マルチユーザー認証**はスコープ外
 - 対象 OS: **Windows を主**、**macOS も製品対応**
 - 分析を Python に寄せる必要が出た場合は、Analyze 段階のプラグインとして後付け可能とする（MVP では不要）
@@ -418,7 +450,7 @@ PostgreSQL (使用マスタのみ)
 EquiScoutApp/
   apps/
     web/                 # Presentation (React) ※開発の主戦場
-    desktop/             # 将来: Electron シェル
+    desktop/             # 将来: Tauri シェル（Rust + WebView）
   packages/
     app-core/            # Application + Domain（ユースケース）
     domain/              # 分析ドメイン（純ロジック、UI非依存）※ app-core 内でも可
@@ -441,7 +473,7 @@ HTTP REST/GraphQL は採用しない。**ユースケース単位の関数**を�
 | 実行環境 | 呼び出し方 |
 |----------|------------|
 | ブラウザ開発 | 同一バンドル内、または開発用ホスト経由でユースケース関数を呼ぶ |
-| Electron | `ipcMain.handle` / `ipcRenderer.invoke` で同じユースケースを呼ぶ |
+| Tauri | WebView から `invoke` → Rust コマンドが同じユースケースを呼ぶ |
 
 ### 8.1 MVP で必要なユースケース（論理）
 
@@ -467,7 +499,7 @@ HTTP REST/GraphQL は採用しない。**ユースケース単位の関数**を�
 
 ### 9.1 利用形態
 
-- 単一ユーザー・デスクトップ（製品は Electron）
+- 単一ユーザー・デスクトップ（製品は Tauri）
 - 開発はブラウザでも可
 - 更新パイプライン実行済みであれば、通常操作は PostgreSQL なしでオフライン利用可能
 
@@ -490,7 +522,7 @@ HTTP REST/GraphQL は採用しない。**ユースケース単位の関数**を�
 
 - データはローカルに閉じる
 - PostgreSQL 接続情報はローカル設定に保持し、外部送信しない
-- Renderer（またはブラウザ）から PG/SQLite へ直接接続せず、Main / データアクセス層経由とする（製品時）
+- WebView（またはブラウザ）から PG/SQLite へ直接接続せず、Tauri Commands / データアクセス層経由とする（製品時）
 - JV-DL データの再配布は行わない（利用者が正当に保持する PG データを参照する前提）
 
 ### 9.5 保守・拡張
@@ -514,7 +546,7 @@ HTTP REST/GraphQL は採用しない。**ユースケース単位の関数**を�
 | ダッシュボードから調教師分析の埋め込み | 実装（実データ） |
 | 牧場・血統・類似馬 | 画面の最低限表示 |
 | StrengthCost / 複数頭ランキング | 未実装（拡張点のみ） |
-| Electron 包装 | 必須ではない（Win/Mac 対応可能な構造であること） |
+| Tauri 包装 | 必須ではない（Win/Mac 対応可能な構造であること） |
 
 ### 10.2 ロードマップとアーキテクチャ対応
 
@@ -526,7 +558,7 @@ HTTP REST/GraphQL は採用しない。**ユースケース単位の関数**を�
 | P1 | 牧場 BR 本実装 → 出身馬リスト | `FarmAnalysis` ＋ Sync/Analyze 追加 |
 | P1 | 血統本実装 | `PedigreeAnalysis` + SMILE マッピング |
 | P1 | 表示デフォルトのユーザー設定 | レイアウト設定ストア |
-| 製品化 | Electron（Win/Mac） | IPC でユースケース接続 |
+| 製品化 | Tauri（Win/Mac） | `invoke` でユースケース接続 |
 | v2 / PoC後 | 強さ・コスパ、複数頭ランキング | `StrengthCost` を Analyze に追加 |
 | 将来 | PDF/CSV import、外部データ | Sync/Import プラグイン追加 |
 
@@ -571,10 +603,11 @@ HTTP REST/GraphQL は採用しない。**ユースケース単位の関数**を�
 | SMILE 距離帯の境界値 | 実装時確定 | Pedigree / DB |
 | 定期更新の有無 | 任意（非必須） | Config + スケジューラ |
 | ブラウザ開発時の SQLite/PG ホスト方式 | 実装時確定 | 開発用ホスト or 同等 |
+| Tauri コマンドから TS ユースケースを呼ぶ方式 | 実装時確定 | Rust 直実装 / Node サイドカー等 |
 | 統計/回帰ライブラリの最終選定 | 実装時（PoC 前でも可） | `analysis` パッケージ |
 
 ---
 
 ## 13. まとめ
 
-EquiScout は **PostgreSQL 上の JV-DL を正本**とし、**SQLite にマスタスナップショットと分析結果**を持つローカル分析アプリとする。手動更新は **Sync（PG→SQLite）→ Analyze（TypeScript 集計・指標）→ 結果を SQLite へ永続化** のパイプラインとし、表示は再計算せず読取に徹する。HTTP API は持たず、ユースケース関数（のち Electron IPC）で結ぶ。MVP では調教師の Sync/Analyze と表示を縦に貫通させ、募集馬は画面先行、牧場・血統・類似・スコアは同一モジュール枠で後付けする。開発はブラウザ + SQLite、製品は Windows / macOS の Electron を後付けする。
+EquiScout は **PostgreSQL 上の JV-DL を正本**とし、**SQLite にマスタスナップショットと分析結果**を持つローカル分析アプリとする。手動更新は **Sync（PG→SQLite）→ Analyze（TypeScript 集計・指標）→ 結果を SQLite へ永続化** のパイプラインとし、表示は再計算せず読取に徹する。HTTP API は持たず、ユースケース関数（のち Tauri `invoke`）で結ぶ。MVP では調教師の Sync/Analyze と表示を縦に貫通させ、募集馬は画面先行、牧場・血統・類似・スコアは同一モジュール枠で後付けする。開発はブラウザ + SQLite、製品は Windows / macOS の Tauri を後付けする。
