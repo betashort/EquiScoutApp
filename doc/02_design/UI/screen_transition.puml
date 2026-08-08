@@ -1,0 +1,83 @@
+@startuml EquiScout_screen_transition
+skinparam backgroundColor #FEFEFE
+skinparam state {
+  BackgroundColor #F5F7FA
+  BorderColor #4A5568
+  ArrowColor #2D3748
+}
+skinparam state<<mvp>> {
+  BackgroundColor #E8F0FE
+  BorderColor #3B82F6
+}
+skinparam state<<skeleton>> {
+  BackgroundColor #F3F4F6
+  BorderColor #9CA3AF
+}
+skinparam state<<future>> {
+  BackgroundColor #FEF3C7
+  BorderColor #D97706
+  FontColor #92400E
+}
+
+title EquiScout 画面遷移（MVP）
+
+[*] --> S00 : 起動
+
+state "S00 ホーム\n（ランディング）" as S00 <<mvp>>
+state "S01 募集馬1頭分析" as S01 <<mvp>>
+state "S02 調教師単体分析" as S02 <<mvp>>
+state "S03 生産牧場単体分析" as S03 <<skeleton>>
+state "S04 血統単体分析" as S04 <<skeleton>>
+state "S06 データ更新・設定" as S06 <<mvp>>
+state "S05 複数頭比較\n（ナビ非表示）" as S05 <<future>>
+
+S00 --> S02 : カード / ナビ
+S00 --> S01 : カード / ナビ
+S00 --> S03 : カード / ナビ
+S00 --> S04 : カード / ナビ
+S00 --> S06 : カード / ナビ
+
+S01 --> S00 : ナビ
+S02 --> S00 : ナビ
+S03 --> S00 : ナビ
+S04 --> S00 : ナビ
+S06 --> S00 : ナビ
+
+S05 -[dashed]-> S01 : 将来: 1頭選択
+
+note right of S00
+  同一画面内: データ更新
+  結果はホーム＋ヘッダに反映
+  （画面遷移なし）
+  ----
+  グローバルナビ（MVP）:
+  ホーム / 募集馬 / 調教師 /
+  生産牧場 / 血統 / 設定
+  上記どうしはナビで相互遷移可
+  （図ではホーム経由のみ明示）
+end note
+
+note right of S01
+  遷移なし:
+  入力完了 → 分析ダッシュボード埋め込み
+end note
+
+note right of S02
+  遷移なし:
+  候補選択 → 分析表示
+  （S03 / S04 も同様）
+end note
+
+note bottom of S06
+  どこからでも到達可
+  ヘッダ[更新]は遷移なし（C08）
+end note
+
+legend right
+  |= スタイル |= 意味 |
+  | <<mvp>> | MVP 実データ／本実装枠 |
+  | <<skeleton>> | MVP 骨格 |
+  | <<future>> | MVP外 |
+endlegend
+
+@enduml

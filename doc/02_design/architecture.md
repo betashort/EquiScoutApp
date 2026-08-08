@@ -4,7 +4,7 @@
 |------|------|
 | 対象プロダクト | EquiScout |
 | 根拠ドキュメント | [`doc/01_requirement/requirement.md`](../01_requirement/requirement.md) |
-| 関連設計 | [`DB_design.md`](./DB_design.md) / [`UI_design.md`](./UI_design.md) / [`base_desing.md`](./base_desing.md) |
+| 関連設計 | [`DB_design.md`](./DB_design.md) / [`UI_design.md`](./UI_design.md)（情報設計） / [`UI/`](./UI/README.md)（レイアウト・ビジュアル） / [`base_desing.md`](./base_desing.md) |
 | 作成日 | 2026-07-26 |
 | 更新日 | 2026-07-26 |
 | 対象フェーズ | MVP（調教師本実装）＋将来拡張を見据えた骨格 |
@@ -52,7 +52,8 @@
 
 - システムの論理構成、コンポーネント責務、データフロー、技術選定
 - 詳細なテーブル定義 → `DB_design.md`（PostgreSQL 定義書 Excel を正本スキーマの根拠とする）
-- 画面レイアウト・コンポーネント詳細 → `UI_design.md`
+- 画面の情報設計 → `UI_design.md`
+- 画面レイアウト・コンポーネント詳細 → `UI/`（画面・パネル単位）
 - 強さ/コスパの計算式 → PoC 後に別紙（本アーキでは差し替え点のみ定義）
 
 ---
@@ -562,7 +563,7 @@ HTTP REST/GraphQL は採用しない。**ユースケース単位の関数**を�
 | SQLite テーブル・インデックス詳細（マスタ／分析結果の分離） | 未決 | `DB_design.md` |
 | PG 定義書とのカラムマッピング | 未決 | `DB_design.md`（Excel 定義書を根拠） |
 | Sync 成功後 Analyze 失敗時の整合方針 | 未決 | `DB_design.md` |
-| 画面ワイヤ・コンポーネント詳細 | 未決 | `UI_design.md` |
+| 画面ワイヤ・コンポーネント詳細 | 未決 | `UI/`（情報設計は `UI_design.md`） |
 | SQLite ファイル配置（ユーザーデータディレクトリ等） | 未決 | `DB_design.md` / 実装時 |
 | PG 接続設定の UX | 未決 | UI / Config |
 | 強さ/コスパ計算式・回帰の具体 | 未定（PoC） | PoC 報告書 → StrengthCost 実装 |
