@@ -1,17 +1,32 @@
-export type AnalysisModuleId = 'trainer' | 'farm' | 'pedigree' | 'similarity'
+export type AnalysisModuleId = 'horse' | 'trainer' | 'farm' | 'pedigree'
 
 export type AnalysisTypeOption = {
   id: AnalysisModuleId
   label: string
 }
 
-/** strength_cost は載せない（情報設計） */
+/** similarity / strength_cost は載せない（情報設計） */
 export const ANALYSIS_TYPE_OPTIONS: readonly AnalysisTypeOption[] = [
+  { id: 'horse', label: '募集馬' },
   { id: 'trainer', label: '調教師分析' },
   { id: 'farm', label: '生産牧場分析' },
   { id: 'pedigree', label: '血統分析' },
-  { id: 'similarity', label: '類似馬' },
 ] as const
+
+/** ダッシュボード 2×2 の既定スロット順（左上→右上→左下→右下） */
+export const DEFAULT_DASHBOARD_SLOT_ORDER: readonly AnalysisModuleId[] = [
+  'horse',
+  'trainer',
+  'farm',
+  'pedigree',
+] as const
+
+export const DASHBOARD_PANEL_LABELS: Record<AnalysisModuleId, string> = {
+  horse: '募集馬',
+  trainer: '調教師',
+  farm: '生産牧場',
+  pedigree: '血統',
+}
 
 export type Surface = 'turf' | 'dirt'
 

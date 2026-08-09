@@ -22,12 +22,7 @@ function HomeInShell({
       onNavSelect={fn()}
       onUpdateClick={fn()}
     >
-      <HomeScreen
-        updateStatus={updateStatus}
-        onDestinationSelect={fn()}
-        onUpdateClick={fn()}
-        onRetry={fn()}
-      />
+      <HomeScreen onDestinationSelect={fn()} />
     </AppShell>
   )
 }
@@ -39,10 +34,7 @@ const meta = {
     layout: 'fullscreen',
   },
   args: {
-    updateStatus: UPDATE_STATUS_IDLE,
     onDestinationSelect: fn(),
-    onUpdateClick: fn(),
-    onRetry: fn(),
   },
 } satisfies Meta<typeof HomeScreen>
 
@@ -51,24 +43,21 @@ type Story = StoryObj<typeof meta>
 
 export const Initial: Story = {
   name: '初期',
-  args: { updateStatus: UPDATE_STATUS_IDLE },
-  render: (args) => <HomeInShell updateStatus={args.updateStatus} />,
+  render: () => <HomeInShell updateStatus={UPDATE_STATUS_IDLE} />,
 }
 
+/** 更新はシェルヘッダに一任。ホーム本文に更新パネルは置かない。 */
 export const Updating: Story = {
-  name: '更新中',
-  args: { updateStatus: UPDATE_STATUS_RUNNING },
-  render: (args) => <HomeInShell updateStatus={args.updateStatus} />,
+  name: '更新中（ヘッダ）',
+  render: () => <HomeInShell updateStatus={UPDATE_STATUS_RUNNING} />,
 }
 
 export const UpdateSuccess: Story = {
-  name: '更新成功',
-  args: { updateStatus: UPDATE_STATUS_SUCCESS },
-  render: (args) => <HomeInShell updateStatus={args.updateStatus} />,
+  name: '更新成功（ヘッダ）',
+  render: () => <HomeInShell updateStatus={UPDATE_STATUS_SUCCESS} />,
 }
 
 export const UpdateFailure: Story = {
-  name: '更新失敗',
-  args: { updateStatus: UPDATE_STATUS_ERROR },
-  render: (args) => <HomeInShell updateStatus={args.updateStatus} />,
+  name: '更新失敗（ヘッダ）',
+  render: () => <HomeInShell updateStatus={UPDATE_STATUS_ERROR} />,
 }

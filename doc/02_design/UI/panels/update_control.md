@@ -4,7 +4,7 @@
 |------|------|
 | 親画面 | [`../settings.md`](../settings.md) |
 | 情報設計の読む順 | 1（更新実行と進捗） |
-| 同一 UC | ヘッダ [更新] / [`home_update.md`](./home_update.md) |
+| 同一 UC | ヘッダ [更新]（[`../shell.md`](../shell.md)） |
 | 更新日 | 2026-08-09 |
 
 ---

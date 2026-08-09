@@ -50,8 +50,8 @@
 |--------|------|
 | IntroPanel | [`panels/intro.md`](./panels/intro.md) |
 | DestinationPanel | [`panels/destination.md`](./panels/destination.md) |
-| HomeUpdatePanel | [`panels/home_update.md`](./panels/home_update.md) |
 | HorseEntryPanel | [`panels/horse_entry.md`](./panels/horse_entry.md) |
+| HorseProfilePanel | [`panels/horse_profile.md`](./panels/horse_profile.md) |
 | TrainerSearchPanel | [`panels/trainer_search.md`](./panels/trainer_search.md) |
 | TrainerAnalysisPanel | [`panels/trainer_analysis.md`](./panels/trainer_analysis.md) |
 | 生産牧場（検索＋本文） | [`panels/farm.md`](./panels/farm.md) |
@@ -82,10 +82,10 @@ AppShell … shell.md
 ├─ HeaderBar / GlobalNav（§2.1 順） / MainContent
 └─ Screens（インベントリ順）
      ホーム … home.md
-       IntroPanel / DestinationPanel / HomeUpdatePanel
+       IntroPanel / DestinationPanel
      募集馬分析 … horse.md
        HorseEntryPanel / AnalysisDashboardPanel
-         └─ Body: TrainerAnalysisPanel / 生産牧場本文 / 血統本文 / similarity
+         └─ Body 2×2: HorseProfilePanel / TrainerAnalysisPanel / 生産牧場本文 / 血統本文
      調教師 … trainer.md
        TrainerSearchPanel / TrainerAnalysisPanel
      生産牧場 / 血統 … 骨格パネル（本文は募集馬と共用）

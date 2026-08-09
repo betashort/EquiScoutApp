@@ -1,27 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
 import { eqRoot } from '../ui/classes'
-import { AnalysisTypeSelect } from './AnalysisTypeSelect'
+import { DragHandle } from './DragHandle'
 
 const meta = {
-  title: 'Components/AnalysisTypeSelect',
-  component: AnalysisTypeSelect,
+  title: 'Components/DragHandle',
+  component: DragHandle,
   parameters: { layout: 'centered' },
   decorators: [
     (Story) => (
-      <div className={`${eqRoot} p-6 w-[280px]`}>
+      <div className={`${eqRoot} p-6`}>
         <Story />
       </div>
     ),
   ],
-  args: { onChange: fn() },
-} satisfies Meta<typeof AnalysisTypeSelect>
+} satisfies Meta<typeof DragHandle>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    value: 'horse',
+    label: '募集馬',
   },
 }

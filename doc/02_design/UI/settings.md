@@ -17,7 +17,7 @@
 └─ （任意）パス表示
 ```
 
-シェルヘッダの [更新] および ホームの HomeUpdatePanel は UpdateControlPanel と同じ UC。更新中はヘッダに進行表示し、MainContent はブロックしない。
+シェルヘッダの [更新] は UpdateControlPanel と同じ UC。更新中はヘッダに進行表示し、MainContent はブロックしない。
 
 設定は情報量が少なければ **モーダル**でも可（実装選択）。ホームからは「設定・データ詳細」カードで本画面へ遷移する。
 

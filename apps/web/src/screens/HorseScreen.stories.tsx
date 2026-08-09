@@ -15,15 +15,16 @@ const meta = {
   parameters: { layout: 'fullscreen' },
   args: {
     entry: EMPTY_HORSE_ENTRY,
-    moduleId: 'trainer',
     hasAnalysisTarget: false,
+    entrySidebarOpen: true,
     trainerData: null,
     surface: 'turf',
     onEntryChange: fn(),
     onSubmit: fn(),
     onClear: fn(),
-    onModuleChange: fn(),
     onSurfaceChange: fn(),
+    onSlotOrderChange: fn(),
+    onEntrySidebarOpenChange: fn(),
   },
 } satisfies Meta<typeof HorseScreen>
 
@@ -53,11 +54,10 @@ export const ValidationError: Story = {
   ),
 }
 
-export const TrainerModule: Story = {
-  name: '分析表示・調教師',
+export const AnalysisShown: Story = {
+  name: '分析表示（2×2）',
   args: {
     entry: FILLED_HORSE_ENTRY,
-    moduleId: 'trainer',
     hasAnalysisTarget: true,
     trainerData: MOCK_TRAINER_ANALYSIS,
   },
@@ -68,12 +68,13 @@ export const TrainerModule: Story = {
   ),
 }
 
-export const FarmModule: Story = {
-  name: '分析表示・生産牧場',
+export const ReorderedSlots: Story = {
+  name: '分析表示・配置入れ替え後',
   args: {
     entry: FILLED_HORSE_ENTRY,
-    moduleId: 'farm',
     hasAnalysisTarget: true,
+    trainerData: MOCK_TRAINER_ANALYSIS,
+    initialSlotOrder: ['trainer', 'horse', 'pedigree', 'farm'],
   },
   render: (args) => (
     <ScreenShell activeNavId="horse">
@@ -82,26 +83,13 @@ export const FarmModule: Story = {
   ),
 }
 
-export const PedigreeModule: Story = {
-  name: '分析表示・血統',
+export const SidebarCollapsed: Story = {
+  name: '入力サイドバー折りたたみ',
   args: {
     entry: FILLED_HORSE_ENTRY,
-    moduleId: 'pedigree',
     hasAnalysisTarget: true,
-  },
-  render: (args) => (
-    <ScreenShell activeNavId="horse">
-      <HorseScreen {...args} />
-    </ScreenShell>
-  ),
-}
-
-export const SimilarityModule: Story = {
-  name: '分析表示・類似馬',
-  args: {
-    entry: FILLED_HORSE_ENTRY,
-    moduleId: 'similarity',
-    hasAnalysisTarget: true,
+    trainerData: MOCK_TRAINER_ANALYSIS,
+    entrySidebarOpen: false,
   },
   render: (args) => (
     <ScreenShell activeNavId="horse">

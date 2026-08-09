@@ -4,7 +4,12 @@ import { PrimaryButton } from '../components/PrimaryButton'
 import { SecondaryButton } from '../components/SecondaryButton'
 import { SectionHeader } from '../components/SectionHeader'
 import type { HorseEntryErrors, HorseEntryValues } from '../domain/mocks'
-import { formActions, formGrid, input, panel, panelBody } from '../ui/classes'
+import {
+  formActions,
+  formStack,
+  formStackPair,
+  input,
+} from '../ui/classes'
 
 export type HorseEntryPanelProps = {
   values: HorseEntryValues
@@ -28,10 +33,10 @@ export function HorseEntryPanel({
   })
 
   return (
-    <section className={panel} aria-label="募集馬の入力">
+    <section className="flex min-h-0 flex-1 flex-col" aria-label="募集馬の入力">
       <SectionHeader title="募集馬の入力" />
-      <div className={panelBody}>
-        <div className={formGrid}>
+      <div className="flex min-h-0 flex-1 flex-col gap-3.5 overflow-y-auto pr-1">
+        <div className={formStack}>
           <FormField label="生年月日" htmlFor="horse-birth" error={errors.birthDate}>
             <input
               id="horse-birth"
@@ -40,23 +45,27 @@ export function HorseEntryPanel({
               {...bind('birthDate')}
             />
           </FormField>
-          <FormField label="性別" htmlFor="horse-sex" error={errors.sex}>
-            <select id="horse-sex" className={input} {...bind('sex')}>
-              <option value="">選択</option>
-              <option value="牡">牡</option>
-              <option value="牝">牝</option>
-              <option value="セン">セン</option>
-            </select>
-          </FormField>
-          <FormField label="毛色" htmlFor="horse-color" error={errors.color}>
-            <select id="horse-color" className={input} {...bind('color')}>
-              <option value="">選択</option>
-              <option value="鹿毛">鹿毛</option>
-              <option value="黒鹿毛">黒鹿毛</option>
-              <option value="栗毛">栗毛</option>
-              <option value="青毛">青毛</option>
-            </select>
-          </FormField>
+
+          <div className={formStackPair}>
+            <FormField label="性別" htmlFor="horse-sex" error={errors.sex}>
+              <select id="horse-sex" className={input} {...bind('sex')}>
+                <option value="">選択</option>
+                <option value="牡">牡</option>
+                <option value="牝">牝</option>
+                <option value="セン">セン</option>
+              </select>
+            </FormField>
+            <FormField label="毛色" htmlFor="horse-color" error={errors.color}>
+              <select id="horse-color" className={input} {...bind('color')}>
+                <option value="">選択</option>
+                <option value="鹿毛">鹿毛</option>
+                <option value="黒鹿毛">黒鹿毛</option>
+                <option value="栗毛">栗毛</option>
+                <option value="青毛">青毛</option>
+              </select>
+            </FormField>
+          </div>
+
           <FormField label="体重 (kg)" htmlFor="horse-weight" error={errors.weight}>
             <input
               id="horse-weight"
@@ -86,7 +95,6 @@ export function HorseEntryPanel({
           <FormField label="生産牧場" htmlFor="horse-farm" error={errors.farmName}>
             <input id="horse-farm" className={input} {...bind('farmName')} />
           </FormField>
-
           <FormField
             label="産地"
             htmlFor="horse-birthplace"
@@ -112,28 +120,29 @@ export function HorseEntryPanel({
               {...bind('marketPrice')}
             />
           </FormField>
-          <div />
 
-          <FormField label="1口価格 (円・任意)" htmlFor="horse-share-price">
-            <input
-              id="horse-share-price"
-              className={input}
-              {...bind('sharePrice')}
-            />
-          </FormField>
-          <FormField label="口数 (任意)" htmlFor="horse-share-count">
-            <input
-              id="horse-share-count"
-              className={input}
-              {...bind('shareCount')}
-            />
-          </FormField>
+          <div className={formStackPair}>
+            <FormField label="1口価格 (円・任意)" htmlFor="horse-share-price">
+              <input
+                id="horse-share-price"
+                className={input}
+                {...bind('sharePrice')}
+              />
+            </FormField>
+            <FormField label="口数 (任意)" htmlFor="horse-share-count">
+              <input
+                id="horse-share-count"
+                className={input}
+                {...bind('shareCount')}
+              />
+            </FormField>
+          </div>
         </div>
+      </div>
 
-        <div className={formActions}>
-          <SecondaryButton label="クリア" onClick={onClear} />
-          <PrimaryButton label="分析を表示" onClick={onSubmit} />
-        </div>
+      <div className={`${formActions} shrink-0 border-t border-eq-border pt-3`}>
+        <SecondaryButton label="クリア" onClick={onClear} />
+        <PrimaryButton label="分析を表示" onClick={onSubmit} />
       </div>
     </section>
   )

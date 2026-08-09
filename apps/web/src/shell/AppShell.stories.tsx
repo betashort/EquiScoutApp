@@ -26,10 +26,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   render: (args) => (
     <AppShell {...args}>
-      <HomeScreen
-        updateStatus={args.updateStatus}
-        onUpdateClick={args.onUpdateClick}
-      />
+      <HomeScreen onDestinationSelect={fn()} />
     </AppShell>
   ),
 }

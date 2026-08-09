@@ -41,4 +41,32 @@ export const formGrid =
 
 export const formGrid2 = 'grid grid-cols-1 gap-x-3.5 gap-y-3 sm:grid-cols-2'
 
+/** 募集馬サイドバー用（1カラム縦積み） */
+export const formStack = 'flex flex-col gap-3'
+
+export const formStackPair = 'grid grid-cols-2 gap-x-2.5 gap-y-3'
+
 export const formActions = 'mt-1 flex justify-end gap-2'
+
+/** 募集馬画面: 左サイドバー + 右ダッシュボード */
+export const horseLayout =
+  '-m-4 flex min-h-[calc(100dvh-3.5rem)] md:-m-5'
+
+export const horseSidebar =
+  'flex w-[17.5rem] shrink-0 flex-col border-r border-eq-border bg-eq-surface p-3 md:w-72 md:p-4'
+
+export const horseSidebarRail =
+  'flex w-10 shrink-0 flex-col border-r border-eq-border bg-eq-surface'
+
+export const horseDashboard =
+  'min-w-0 flex-1 overflow-auto bg-transparent p-4 md:p-5'
+
+/** 分析ダッシュボード Body: 2×2（狭幅は 1 カラム） */
+export const dashboardGrid =
+  'grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-3.5'
+
+export const dashboardSlot =
+  'flex min-h-0 min-w-0 flex-col rounded-md border border-eq-border/80 bg-eq-surface/40 p-3'
+
+export const dashboardSlotDropTarget =
+  'border-eq-accent/40 bg-eq-accent-soft'
