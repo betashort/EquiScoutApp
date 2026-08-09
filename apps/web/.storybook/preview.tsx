@@ -1,21 +1,28 @@
 import type { Preview } from '@storybook/react-vite'
+import '../src/styles/equiscout.css'
 
 const preview: Preview = {
   parameters: {
+    layout: 'fullscreen',
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
-
     a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
-      test: 'todo'
-    }
+      test: 'todo',
+    },
+    backgrounds: {
+      options: {
+        light: { name: 'light', value: '#f2f4f7' },
+        dark: { name: 'dark', value: '#1a1f2a' },
+      },
+    },
   },
-};
+  initialGlobals: {
+    backgrounds: { value: 'light' },
+  },
+}
 
-export default preview;
+export default preview

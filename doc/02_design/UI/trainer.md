@@ -13,8 +13,8 @@
 
 ```text
 調教師単体分析
-├─ TrainerSearchPanel      … 優先1
-└─ TrainerAnalysisPanel    … 優先2〜7
+├─ TrainerSearchPanel      … 読む順1
+└─ TrainerAnalysisPanel    … 読む順2〜7
      ├─ ProfileHeader
      ├─ PrizeSummary
      ├─ FinishCountSummary

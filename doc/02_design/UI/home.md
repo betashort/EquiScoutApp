@@ -14,10 +14,10 @@
 
 ```text
 ホーム
-├─ IntroPanel              … 優先1
-├─ DestinationPanel        … 優先2（遷移カード）
+├─ IntroPanel              … 読む順1
+├─ DestinationPanel        … 読む順2（遷移カード）
 │    └─ NavCard ×（募集馬 / 調教師 / 生産牧場 / 血統 / 設定）
-└─ HomeUpdatePanel         … 優先3
+└─ HomeUpdatePanel         … 読む順3
 ```
 
 **画面ワイヤ**
