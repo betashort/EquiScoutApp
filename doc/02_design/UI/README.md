@@ -27,7 +27,6 @@
 | 文書 | 内容 |
 |------|------|
 | [`shell.md`](./shell.md) | AppShell（ヘッダ・左ナビ・MainContent） |
-| [`screen_transition.puml`](./screen_transition.puml) | 画面遷移（PlantUML。`UI_design.md` §2.2 と同一） |
 | [`components.md`](./components.md) | 共有コンポーネントカタログ |
 | [`visual.md`](./visual.md) | プロダクト横断ビジュアル（状態の見た目。表示値ルールは情報設計 §2.11） |
 | [`implementation.md`](./implementation.md) | 実装への翻訳（浅い構造・データ駆動・共用ビュー・表示フォーマット） |
@@ -37,11 +36,11 @@
 | 優先 | 画面名 | 文書 | 備考 |
 |------|--------|------|------|
 | 1 | ホーム | [`home.md`](./home.md) | 起動入口 |
-| 2 | 調教師単体分析 | [`trainer.md`](./trainer.md) | 本線・実データ |
-| 3 | 募集馬分析 | [`horse.md`](./horse.md) | ダッシュボードで調教師・生産牧場・血統本文を共用 |
-| 4 | データ更新・設定 | [`settings.md`](./settings.md) | 詳細設定はここ |
-| 5 | 生産牧場単体分析 | [`farm.md`](./farm.md) | 骨格。本文は募集馬と共用 |
-| 6 | 血統単体分析 | [`pedigree.md`](./pedigree.md) | 骨格。本文は募集馬と共用 |
+| 2 | 募集馬分析 | [`horse.md`](./horse.md) | ダッシュボードで調教師・生産牧場・血統本文を共用 |
+| 3 | 調教師単体分析 | [`trainer.md`](./trainer.md) | 本線・実データ |
+| 4 | 生産牧場単体分析 | [`farm.md`](./farm.md) | 骨格。本文は募集馬と共用 |
+| 5 | 血統単体分析 | [`pedigree.md`](./pedigree.md) | 骨格。本文は募集馬と共用 |
+| 6 | データ更新・設定 | [`settings.md`](./settings.md) | 詳細設定はここ |
 | — | 複数頭比較 | [`compare.md`](./compare.md) | 将来。インベントリ・ナビ対象外 |
 | — | 共通 | [`analysis_dashboard.md`](./analysis_dashboard.md) | 募集馬ダッシュボード埋め込み枠 |
 
@@ -68,7 +67,7 @@
 
 | 層 | 条件 | 状態 |
 |----|------|------|
-| レイアウト | AppShell＋起動時ホーム。ナビは優先順（ホーム / 調教師 / 募集馬 / 設定 / 生産牧場 / 血統） | 必須 |
+| レイアウト | AppShell＋起動時ホーム。ナビは優先順（ホーム / 募集馬 / 調教師 / 生産牧場 / 血統 / 設定） | 必須 |
 | レイアウト | AppShell＋調教師単体の縦積みワイヤどおり | 必須 |
 | レイアウト | ホーム / 設定 / ヘッダから更新・進捗・最終更新 | 必須 |
 | レイアウト | 募集馬分析 ダッシュボード本文は 調教師 / 生産牧場 / 血統と共用 | 必須 |
@@ -84,12 +83,12 @@ AppShell … shell.md
 └─ Screens（ナビ優先）
      ホーム … home.md
        IntroPanel / DestinationPanel / HomeUpdatePanel
-     調教師 … trainer.md
-       TrainerSearchPanel / TrainerAnalysisPanel
      募集馬分析 … horse.md
        HorseEntryPanel / AnalysisDashboardPanel
          └─ Body: TrainerAnalysisPanel / 生産牧場本文 / 血統本文 / similarity
-     設定 … UpdateControlPanel / UpdateResultPanel / ConnectionPanel
+     調教師 … trainer.md
+       TrainerSearchPanel / TrainerAnalysisPanel
      生産牧場 / 血統 … 骨格パネル（本文は募集馬と共用）
+     設定 … UpdateControlPanel / UpdateResultPanel / ConnectionPanel
      複数頭比較 …（インベントリ外・非表示）
 ```

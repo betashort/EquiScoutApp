@@ -2,7 +2,7 @@
 
 | 項目 | 内容 |
 |------|------|
-| 情報設計 | [`../UI_design.md`](../UI_design.md) §2.5 |
+| 情報設計 | [`../UI_design.md`](../UI_design.md) §2.4 |
 | ダッシュボード | [`analysis_dashboard.md`](./analysis_dashboard.md) |
 | 更新日 | 2026-08-09 |
 

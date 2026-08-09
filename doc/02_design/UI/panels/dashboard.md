@@ -3,7 +3,7 @@
 | 項目 | 内容 |
 |------|------|
 | 親画面 | [`../horse.md`](../horse.md) / [`../analysis_dashboard.md`](../analysis_dashboard.md) |
-| 情報設計 | [`../../UI_design.md`](../../UI_design.md) §2.5（募集馬分析 ダッシュボード要素） |
+| 情報設計 | [`../../UI_design.md`](../../UI_design.md) §2.4（募集馬分析 ダッシュボード要素） |
 | 更新日 | 2026-08-09 |
 
 ---
