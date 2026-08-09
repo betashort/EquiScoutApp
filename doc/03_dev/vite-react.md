@@ -180,6 +180,6 @@ export default defineConfig({
 ## 関連
 
 - 前: [`nodejs.md`](./nodejs.md)
-- 次: [`storybook.md`](./storybook.md)
+- 次: [`tailwindcss.md`](./tailwindcss.md) → [`storybook.md`](./storybook.md)
 - 設計: [`architecture.md`](../02_design/architecture.md)（ブラウザ + SQLite 先行）
 - 索引: [`README.md`](./README.md)

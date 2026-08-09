@@ -1,4 +1,4 @@
-# S03 生産牧場単体分析（骨格）
+# 生産牧場単体分析（骨格）
 
 | 項目 | 内容 |
 |------|------|
@@ -9,17 +9,18 @@
 
 ## レイアウト
 
-**検索上・本文下**。本文は `PlaceholderPanel` のみ。
+**検索上・本文下**。本文は `PlaceholderPanel` のみ。  
+本文コンポーネントは 募集馬分析 ダッシュボードの `farm` 埋め込みと共用。
 
 ```text
-S03: FarmSearchPanel → FarmAnalysisPanel（Placeholder）
+生産牧場: FarmSearchPanel → FarmAnalysisPanel（Placeholder）
 ```
 
 ### パネル
 
 | パネル | 文書 |
 |--------|------|
-| 検索＋本文 | [`panels/P-S03_farm.md`](./panels/P-S03_farm.md) |
+| 検索＋本文 | [`panels/farm.md`](./panels/farm.md) |
 
 ---
 

@@ -1,4 +1,4 @@
-# S02 調教師単体分析
+# 調教師単体分析
 
 | 項目 | 内容 |
 |------|------|
@@ -12,15 +12,15 @@
 読む順: **検索（上）→ 分析本文（下・縦積み）**。
 
 ```text
-S02
-├─ P-S02-A TrainerSearchPanel     … 優先1
-└─ P-S02-B TrainerAnalysisPanel   … 優先2〜7
-     ├─ B1 ProfileHeader
-     ├─ B2 PrizeSummary
-     ├─ B3 FinishCountSummary
-     ├─ B4 RateSummary
-     ├─ B5 DistanceFinishChart（芝|ダート切替 ＋ グラフ ＋ 表）
-     └─ B6 RecentGradedWins
+調教師単体分析
+├─ TrainerSearchPanel      … 優先1
+└─ TrainerAnalysisPanel    … 優先2〜7
+     ├─ ProfileHeader
+     ├─ PrizeSummary
+     ├─ FinishCountSummary
+     ├─ RateSummary
+     ├─ DistanceFinishChart（芝|ダート切替 ＋ グラフ ＋ 表）
+     └─ RecentGradedWins
 ```
 
 **画面ワイヤ**
@@ -46,10 +46,10 @@ S02
 
 | パネル | 文書 |
 |--------|------|
-| P-S02-A | [`panels/P-S02-A_trainer_search.md`](./panels/P-S02-A_trainer_search.md) |
-| P-S02-B | [`panels/P-S02-B_trainer_analysis.md`](./panels/P-S02-B_trainer_analysis.md) |
+| TrainerSearchPanel | [`panels/trainer_search.md`](./panels/trainer_search.md) |
+| TrainerAnalysisPanel | [`panels/trainer_analysis.md`](./panels/trainer_analysis.md) |
 
-S01 の trainer 埋め込み時も **同一コンポーネント・同一縦順**（ProfileHeader はダッシュボード副題と重複するなら省略可）。
+募集馬の trainer 埋め込み時も **同一コンポーネント・同一縦順**（ProfileHeader はダッシュボード副題と重複するなら省略可）。
 
 ---
 

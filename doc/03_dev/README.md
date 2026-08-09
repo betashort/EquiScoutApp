@@ -5,8 +5,8 @@
 | 対象 | EquiScout の開発環境（ホストマシン上） |
 | 根拠 | [`architecture.md`](../02_design/architecture.md) / [`storybook_ui_design_lifecycle.md`](../99_knowhow/storybook_ui_design_lifecycle.md) |
 | 作成日 | 2026-07-26 |
-| 更新日 | 2026-07-26 |
-| バージョン固定基準日 | 2026-07-26（各ツールの最新安定版を固定記載） |
+| 更新日 | 2026-08-09 |
+| バージョン固定基準日 | 2026-07-26（各ツールの最新安定版を固定記載。追記分は各ファイルの基準日を正とする） |
 
 ---
 
@@ -44,6 +44,7 @@
         │
         └─ フロント（想定: apps/web または同等）
               ├─ Vite + React + TypeScript   ← vite-react.md
+              ├─ Tailwind CSS                ← tailwindcss.md
               └─ Storybook                   ← storybook.md
 
 （後続・未定）
@@ -66,6 +67,7 @@
 | TypeScript | **7.0.2** | 同上 |
 | @vitejs/plugin-react | **6.0.4** | 同上 |
 | Storybook | **10.5.4** | [`storybook.md`](./storybook.md) |
+| Tailwind CSS / @tailwindcss/vite | **4.3.3**（基準日 2026-08-09） | [`tailwindcss.md`](./tailwindcss.md) |
 
 バージョンを上げるときは、この表と各ツール文書を同じコミットで更新する。
 
@@ -75,7 +77,8 @@
 
 1. [Node.js + npm](./nodejs.md) で **fnm** を入れ、Node **26.5.0** を有効化する
 2. [Vite + React + TypeScript](./vite-react.md) でフロント骨格を作る
-3. [Storybook](./storybook.md) を同じ UI ツリーに入れる
+3. [Tailwind CSS](./tailwindcss.md) を同じフロントに入れる
+4. [Storybook](./storybook.md) を同じ UI ツリーに入れる
 
 ---
 
@@ -85,7 +88,10 @@
 |----------|------|-----------|
 | [`nodejs.md`](./nodejs.md) | fnm・Node.js・npm | 方針 / fnm 導入 / 版切替 / 日常確認 |
 | [`vite-react.md`](./vite-react.md) | Vite・React・TypeScript | 方針 / プロジェクト作成 / dev・build |
+| [`tailwindcss.md`](./tailwindcss.md) | Tailwind CSS（npm ライブラリ） | 方針 / Vite プラグイン導入 / 確認 |
 | [`storybook.md`](./storybook.md) | Storybook | 方針 / 導入 / storybook 起動 |
+
+npm ライブラリの手順は、今後この索引にファイルを足していく（先頭は Tailwind CSS）。
 
 各ファイルの定型見出し:
 

@@ -1,9 +1,9 @@
-# P-S02-B TrainerAnalysisPanel
+# TrainerAnalysisPanel
 
 | 項目 | 内容 |
 |------|------|
-| 親画面 | [`../S02_trainer.md`](../S02_trainer.md) |
-| 再利用 | S01 ダッシュボード `trainer` 埋め込み |
+| 親画面 | [`../trainer.md`](../trainer.md) |
+| 再利用 | 募集馬分析 ダッシュボード `trainer` 埋め込み |
 | 情報設計優先 | 2〜7 |
 | 更新日 | 2026-08-09 |
 
@@ -14,12 +14,12 @@
 縦積み（上→下）:
 
 ```text
-B1 ProfileHeader
-B2 PrizeSummary
-B3 FinishCountSummary
-B4 RateSummary
-B5 DistanceFinishChart（芝|ダート切替 ＋ グラフ ＋ 表）
-B6 RecentGradedWins
+ProfileHeader
+PrizeSummary
+FinishCountSummary
+RateSummary
+DistanceFinishChart（芝|ダート切替 ＋ グラフ ＋ 表）
+RecentGradedWins
 ```
 
 ```text
@@ -34,16 +34,16 @@ B6 RecentGradedWins
 
 | ブロック | コンポーネント | 配置メモ |
 |----------|----------------|----------|
-| B1 | `SectionHeader` | 分析ブロック先頭。ダッシュボード埋め込み時は省略可 |
-| B2 / B3 | `MetricTable` | 表。賞金→着回の順 |
-| B4 | `RateBadgeRow` | 率は表の直後（視線の流れ） |
-| B5 | タブ/トグル + `BarChart` + `MetricTable` | グラフ主、表は併置 |
-| B6 | `DataTable` | 最下部。0件は Empty |
+| ProfileHeader | `SectionHeader` | 分析ブロック先頭。ダッシュボード埋め込み時は省略可 |
+| PrizeSummary / FinishCountSummary | `MetricTable` | 表。賞金→着回の順 |
+| RateSummary | `RateBadgeRow` | 率は表の直後（視線の流れ） |
+| DistanceFinishChart | タブ/トグル + `BarChart` + `MetricTable` | グラフ主、表は併置 |
+| RecentGradedWins | `DataTable` | 最下部。0件は Empty |
 
 ### 再利用マトリクス
 
-| ブロック | S02 | S01（trainer） |
-|----------|-----|----------------|
+| ブロック | 調教師 | 募集馬分析（trainer） |
+|----------|--------|------------------------|
 | ProfileHeader | ○ | ○（省略可） |
 | Prize / Finish / Rate / Distance / GradedWins | ○ | ○ |
 

@@ -7,7 +7,7 @@
 | 関連設計 | [`DB_design.md`](./DB_design.md) / [`UI_design.md`](./UI_design.md)（情報設計） / [`UI/`](./UI/README.md)（レイアウト・ビジュアル） / [`base_desing.md`](./base_desing.md) |
 | 作成日 | 2026-07-26 |
 | 更新日 | 2026-08-09 |
-| 対象フェーズ | MVP（調教師本実装）＋将来拡張を見据えた骨格 |
+| 対象フェーズ | 調教師本実装＋将来拡張を見据えた骨格 |
 
 ---
 
@@ -22,7 +22,7 @@
 7. [技術選定](#7-技術選定)
 8. [インターフェース方針（API レス）](#8-インターフェース方針api-レス)
 9. [非機能アーキテクチャ](#9-非機能アーキテクチャ)
-10. [MVP と段階展開](#10-mvp-と段階展開)
+10. [段階展開](#10-段階展開)
 11. [横断的関心事](#11-横断的関心事)
 12. [未決事項・他設計への委譲](#12-未決事項他設計への委譲)
 13. [まとめ](#13-まとめ)
@@ -44,7 +44,7 @@
 | 3 | **同期は一方向・アプリ使用マスタのみ** | 手動更新。SQLite → PG は行わない |
 | 4 | **更新時に分析し、結果を SQLite へ永続化**する | 表示は計算せず読取。集計・回帰等は TypeScript（＋SQL） |
 | 5 | **HTTP API は持たない** | データアクセスは SQL / ユースケース関数。Tauri 化時は `invoke`（コマンド） |
-| 6 | **スコアリングは差し替え可能なモジュール**にする | 強さ/コスパは PoC 後（MVP 非表示） |
+| 6 | **スコアリングは差し替え可能なモジュール**にする | 強さ/コスパは PoC 後（当面非表示） |
 | 7 | **Web コア先行、Tauri 後付け** | 開発はブラウザ + SQLite。製品は Win/Mac の Tauri |
 | 8 | **ローカル完結**を基本とする | 個人利用。通常操作は SQLite のみでオフライン可 |
 
@@ -109,7 +109,7 @@ Pipeline --> ExternalData
 
 note right of Analysis
   * Score（強さ・コスパ）は
-  MVP では無効化。
+  当面無効化。
   PoC 後に有効化。
 end note
 
@@ -122,7 +122,7 @@ end note
 |----------|----------|------|
 | PostgreSQL（JV-DL） | 手動更新時のみ。アプリ使用マスタを SQLite へ抽出 | 正規化・テーブル分割済み。定義書（Excel）あり |
 | SQLite（アプリ DB） | マスタスナップショット＋**分析結果**の永続化。通常操作の読取先 | 表示は分析済み行を読むだけ |
-| 利用者入力 | UI フォーム | 募集馬は MVP では画面先行（永続化は後続） |
+| 利用者入力 | UI フォーム | 募集馬は画面先行（永続化は後続） |
 | クラブ公式サイト等 | **接続しない** | スクレイピングはスコープ外 |
 | HTTP API / クラウド | **持たない** | ローカル完結。ユースケースは関数または Tauri `invoke` |
 
@@ -154,7 +154,7 @@ Domain -down-> Infrastructure
 
 note right of Domain
   * Similarity / StrengthCost は
-  MVP では無効化。PoC 後に有効化。
+  当面無効化。PoC 後に有効化。
 end note
 
 @enduml
@@ -167,7 +167,7 @@ end note
 - 操作フロー（1頭分析 / 単体分析 / 将来の複数頭比較）の画面遷移
 - 分析ダッシュボード内の分析種類切替（プルダウン等）
 - 表・グラフの描画（**分析済み SQLite データを表示**。重い集計は行わない）
-- MVP: 調教師は実データ、牧場・血統・類似馬は最低限 UI（入力・プレースホルダ可）
+- 調教師は実データ、牧場・血統・類似馬は最低限 UI（入力・プレースホルダ可）
 - 募集馬: 入力フォームは用意。保存・再表示は後続でよい
 
 #### Application
@@ -178,15 +178,15 @@ end note
   - 「選択中分析をダッシュボードに埋め込む」
   - 「更新パイプライン（Sync → Analyze → 結果 UPSERT）を実行する」
 - 表示時は原則として再集計しない（既に SQLite にある指標・率を返す）
-- スコアリングモジュールの有無を設定で切り替え（MVP はオフ）
+- スコアリングモジュールの有無を設定で切り替え（当面オフ）
 - **HTTP エンドポイントは公開しない**。同一プロセス内の関数呼び出し（ブラウザ開発時）、Tauri 化後はコマンド（`invoke`）ハンドラが同じユースケースを呼ぶ
 
 #### Domain
 
 更新パイプラインの Analyze 段階で実行し、**成果物を SQLite の分析テーブルへ書き込む**。表示用ユースケースは主にその読取を行う。
 
-| モジュール | MVP | 責務 |
-|------------|-----|------|
+| モジュール | 現状 | 責務 |
+|------------|------|------|
 | `TrainerAnalysis` | **本実装** | 着回数からの率算出、表示用指標の整形。結果を SQLite に保存 |
 | `FarmAnalysis` | UI骨格 | 生産者＝牧場。本実装は後続 |
 | `PedigreeAnalysis` | UI骨格 | 距離/馬場適性・兄弟成績（本実装は後続） |
@@ -208,7 +208,7 @@ end note
 
 ### 4.1 ランタイム構成
 
-#### 開発（MVP 先行）: ブラウザ + SQLite
+#### 開発（先行）: ブラウザ + SQLite
 
 ```text
 ┌─────────────────────────────────────────────┐
@@ -253,15 +253,15 @@ end note
 | ID | コンポーネント | 層 | 説明 |
 |----|----------------|-----|------|
 | C01 | `AppShell` | Presentation | ナビ・レイアウト・分析ルート |
-| C02 | `HorseEntryForm` | Presentation | 募集馬入力 UI（MVP: 画面先行、永続化は後続） |
+| C02 | `HorseEntryForm` | Presentation | 募集馬入力 UI（画面先行、永続化は後続） |
 | C03 | `AnalysisDashboard` | Presentation | 分析種類切替＋埋め込み領域 |
 | C04 | `TrainerAnalysisView` | Presentation | 調教師分析の表・グラフ（読取専用） |
-| C05 | `FarmAnalysisView` | Presentation | 牧場分析（MVP: 骨格） |
-| C06 | `PedigreeAnalysisView` | Presentation | 血統分析（MVP: 骨格） |
-| C07 | `SimilarityPanel` | Presentation | 類似馬枠（MVP: プレースホルダ） |
+| C05 | `FarmAnalysisView` | Presentation | 牧場分析（骨格） |
+| C06 | `PedigreeAnalysisView` | Presentation | 血統分析（骨格） |
+| C07 | `SimilarityPanel` | Presentation | 類似馬枠（プレースホルダ） |
 | C08 | `DataUpdateUI` | Presentation | 手動更新ボタン・進捗・最終更新日時・結果表示 |
 | C09 | `SearchService` | Application | 調教師名テキスト検索→候補（SQLite） |
-| C10 | `HorseRegistryService` | Application | 募集馬の登録・再表示（**後続**。MVP はスタブ可） |
+| C10 | `HorseRegistryService` | Application | 募集馬の登録・再表示（**後続**。当面スタブ可） |
 | C11 | `AnalysisOrchestrator` | Application | 表示: モジュール選択と分析結果の読取。更新: Analyze バッチ起動 |
 | C12 | `TrainerAnalysis` | Domain | 調教師指標の算出・整形（更新時実行） |
 | C13 | `RateCalculator` | Domain | 勝率・連対率・複勝率（着回数から。更新時に永続化） |
@@ -276,17 +276,17 @@ end note
 UpdatePipeline
   ├─ PgSyncJob.sync()
   └─ AnalysisMaterializer.run()
-        ├─ TrainerAnalysis.materializeAll()   ← MVP
+        ├─ TrainerAnalysis.materializeAll()   ← 本実装
         ├─ FarmAnalysis...                   ← 後続
         └─ StrengthCost...                   ← PoC後
 
 AnalysisOrchestrator（表示時）
   ├─ getAvailableModules()
   ├─ getAnalysis(moduleId, context)  → SQLite 読取
-  └─ StrengthCostModule              ← feature flag OFF（MVP）
+  └─ StrengthCostModule              ← feature flag OFF（当面）
 ```
 
-募集馬1頭分析では、入力済み調教師 ID を `context` に渡し、同一ダッシュボード内で分析結果を埋め込む（画面遷移に依存しない）。MVP では募集馬の永続化前でも、フォーム上の調教師選択値を渡して埋め込み可能とする。
+募集馬分析では、入力済みの調教師・生産牧場・血統キーを `context` に渡し、同一ダッシュボード内で分析結果を埋め込む（画面遷移に依存しない）。埋め込み本文は各単体分析ビュー（C04〜C06）と共用する。募集馬の永続化前でも、フォーム上の選択値を渡して埋め込み可能とする。
 
 ---
 
@@ -311,7 +311,7 @@ AnalysisOrchestrator（表示時）
 | マスタスナップショット | 調教師の賞金・着回数・距離別・最近重賞など（同期コピー） | SQLite | 更新パイプライン Sync 段階 |
 | **分析結果** | 勝率・連対率・複勝率、整形済み表示用指標、（将来）回帰スコア等 | SQLite | 更新パイプライン Analyze 段階 |
 | 追加集計（将来） | 年別推移、クラス別、新馬、勝ち上がり | SQLite（分析結果） | P1。元は PG レース成績を Sync 後に Analyze |
-| ユーザー入力 | 募集馬、1口価格・口数、募集時体重 | SQLite（アプリ領域） | CRUD。**MVP では画面のみ可** |
+| ユーザー入力 | 募集馬、1口価格・口数、募集時体重 | SQLite（アプリ領域） | CRUD。**当面は画面のみ可** |
 | アプリ設定 | PG 接続、最終更新日時、表示デフォルト（P1） | SQLite / 設定ファイル | CRUD |
 
 ### 5.3 永続化方針
@@ -322,13 +322,13 @@ AnalysisOrchestrator（表示時）
 - **更新時**:
   1. PostgreSQL から使用マスタを抽出 → SQLite に UPSERT（Sync）
   2. TypeScript の Domain で集計・指標算出（必要なら回帰等）→ 分析結果を SQLite に UPSERT（Analyze）
-- **募集馬**: JV-DL 馬マスタと分離したアプリ領域に保存する（実装は MVP 後でも可）
+- **募集馬**: JV-DL 馬マスタと分離したアプリ領域に保存する（実装は後続で可）
 - SQLite には JV-DL 全カラムの完全ミラーは不要。**画面・分析が要する形**に落とす
 
-### 5.4 MVP 同期・分析範囲（設計決定）
+### 5.4 同期・分析範囲（設計決定）
 
-| 優先 | 対象 | MVP |
-|------|------|-----|
+| 優先 | 対象 | 実施 |
+|------|------|------|
 | 必須 Sync | 調教師（CH 相当）および分析に必要な関連表 | **する** |
 | 必須 Analyze | 勝率・連対率・複勝率、表示用に必要な整形 | **する**（結果を SQLite へ） |
 | 後続 | 生産者(BR)、競走馬(UM)、HS、BT、レース成績、回帰スコア等 | Sync/Analyze 対象に追加 |
@@ -350,7 +350,7 @@ PostgreSQL (使用マスタのみ)
 
 | 処理 | TypeScript での扱い | 備考 |
 |------|---------------------|------|
-| 集計・率・ランキング | **十分容易** | SQL（SQLite）＋ TS。MVP の中心 |
+| 集計・率・ランキング | **十分容易** | SQL（SQLite）＋ TS。本線の中心 |
 | 単純な回帰・相関 | **可能** | `simple-statistics` / `ml-regression` / `danfojs` 等 |
 | 大規模 ML・高度な統計 PoC | 必要なら後から分離 | まずは TS。足りなければ Python 等を Analyze プラグイン化 |
 
@@ -374,12 +374,12 @@ PostgreSQL (使用マスタのみ)
 ```
 
 - 起動時の自動全更新は必須としない
-- Sync 単位は「アプリが使用するマスタ」。MVP は調教師関連のみ
+- Sync 単位は「アプリが使用するマスタ」。当面は調教師関連のみ
 - Analyze は Sync 成功後に実行。失敗時はマスタのみ更新済みかロールバック方針を `DB_design.md` で定める
 - 設定による定期更新は将来オプション
 - UI に最終更新日時（Sync/Analyze 完了時刻）を表示する
 
-### 6.2 調教師単体分析（MVP 本線・表示）
+### 6.2 調教師単体分析（本線・表示）
 
 ```text
 利用者: 名前テキスト入力
@@ -395,15 +395,15 @@ PostgreSQL (使用マスタのみ)
       ・最近重賞勝利一覧
 ```
 
-### 6.3 募集馬1頭分析（ダッシュボード埋め込み）
+### 6.3 募集馬分析（ダッシュボード埋め込み）
 
 ```text
 利用者: 必須項目入力（手入力→候補選択を含む）
-  → （MVP）フォーム状態を保持。永続化は後続
+  → フォーム状態を保持。永続化は後続
   → AnalysisDashboard（分析種類プルダウン）
-       ├─ trainer 選択時 → 入力済み調教師の分析結果（SQLite）を同一画面に表示
-       ├─ farm / pedigree → 骨格ビュー
-       └─ similarity → プレースホルダ
+       ├─ trainer 選択時 → TrainerAnalysisView（調教師単体と共用）で SQLite 結果を同一画面に表示
+       ├─ farm / pedigree → Farm / Pedigree 骨格ビュー（生産牧場 / 血統と共用）
+       └─ similarity → プレースホルダ（単体画面なし）
 ```
 
 ### 6.4 将来: 強さ・コスパ / 複数頭比較
@@ -414,7 +414,7 @@ PostgreSQL (使用マスタのみ)
   → 1頭選択 → 既存 AnalysisDashboard
 ```
 
-モジュール境界を先に切っておくことで、MVP コードへの侵入を最小化する。
+モジュール境界を先に切っておくことで、本線実装への侵入を最小化する。
 
 ---
 
@@ -442,7 +442,7 @@ PostgreSQL (使用マスタのみ)
 - **製品向け HTTP API** は持たない（開発用ホストを一時的に置く場合も `invoke` 置換前提）
 - **クラウド DB / マルチユーザー認証**はスコープ外
 - 対象 OS: **Windows を主**、**macOS も製品対応**
-- 分析を Python に寄せる必要が出た場合は、Analyze 段階のプラグインとして後付け可能とする（MVP では不要）
+- 分析を Python に寄せる必要が出た場合は、Analyze 段階のプラグインとして後付け可能とする（当面は不要）
 
 ### 7.3 リポジトリ構成（案）
 
@@ -475,7 +475,7 @@ HTTP REST/GraphQL は採用しない。**ユースケース単位の関数**を�
 | ブラウザ開発 | 同一バンドル内、または開発用ホスト経由でユースケース関数を呼ぶ |
 | Tauri | WebView から `invoke` → Rust コマンドが同じユースケースを呼ぶ |
 
-### 8.1 MVP で必要なユースケース（論理）
+### 8.1 必要なユースケース（論理）
 
 | ユースケース | 概要 |
 |--------------|------|
@@ -529,13 +529,13 @@ HTTP REST/GraphQL は採用しない。**ユースケース単位の関数**を�
 
 - 分析モジュールの追加が Application / UI の大規模改修なしで行えること（Analyze プラグイン）
 - 同期対象マスタの追加が Sync プラグイン追加で行えること
-- 表示デフォルトのユーザー設定（P1）に備え、ダッシュボードのレイアウト定義をデータ化できる余地を残す（MVP は固定設定オブジェクトで可）
+- 表示デフォルトのユーザー設定（P1）に備え、ダッシュボードのレイアウト定義をデータ化できる余地を残す（当面は固定設定オブジェクトで可）
 
 ---
 
-## 10. MVP と段階展開
+## 10. 段階展開
 
-### 10.1 MVP アーキテクチャ上の完了条件
+### 10.1 アーキテクチャ上の完了条件
 
 | 項目 | 状態 |
 |------|------|
@@ -552,8 +552,8 @@ HTTP REST/GraphQL は採用しない。**ユースケース単位の関数**を�
 
 | フェーズ | 機能 | アーキ対応 |
 |----------|------|-----------|
-| MVP | 調教師 Sync + Analyze＋他 UI 骨格 | C12/C13/C15 本実装、C14 は調教師のみ |
-| MVP 後 | 募集馬の SQLite 永続化 | C10 本実装 |
+| 初期 | 調教師 Sync + Analyze＋他 UI 骨格 | C12/C13/C15 本実装、C14 は調教師のみ |
+| 初期の後 | 募集馬の SQLite 永続化 | C10 本実装 |
 | P1 | 多年推移・クラス別等 | レース成績 Sync＋Analyze 集計 |
 | P1 | 牧場 BR 本実装 → 出身馬リスト | `FarmAnalysis` ＋ Sync/Analyze 追加 |
 | P1 | 血統本実装 | `PedigreeAnalysis` + SMILE マッピング |
@@ -610,4 +610,4 @@ HTTP REST/GraphQL は採用しない。**ユースケース単位の関数**を�
 
 ## 13. まとめ
 
-EquiScout は **PostgreSQL 上の JV-DL を正本**とし、**SQLite にマスタスナップショットと分析結果**を持つローカル分析アプリとする。手動更新は **Sync（PG→SQLite）→ Analyze（TypeScript 集計・指標）→ 結果を SQLite へ永続化** のパイプラインとし、表示は再計算せず読取に徹する。HTTP API は持たず、ユースケース関数（のち Tauri `invoke`）で結ぶ。MVP では調教師の Sync/Analyze と表示を縦に貫通させ、募集馬は画面先行、牧場・血統・類似・スコアは同一モジュール枠で後付けする。開発はブラウザ + SQLite、製品は Windows / macOS の Tauri を後付けする。
+EquiScout は **PostgreSQL 上の JV-DL を正本**とし、**SQLite にマスタスナップショットと分析結果**を持つローカル分析アプリとする。手動更新は **Sync（PG→SQLite）→ Analyze（TypeScript 集計・指標）→ 結果を SQLite へ永続化** のパイプラインとし、表示は再計算せず読取に徹する。HTTP API は持たず、ユースケース関数（のち Tauri `invoke`）で結ぶ。調教師の Sync/Analyze と表示を縦に貫通させ、募集馬は画面先行、牧場・血統・類似・スコアは同一モジュール枠で後付けする。開発はブラウザ + SQLite、製品は Windows / macOS の Tauri を後付けする。

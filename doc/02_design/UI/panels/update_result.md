@@ -1,8 +1,8 @@
-# P-S06-B UpdateResultPanel
+# UpdateResultPanel
 
 | 項目 | 内容 |
 |------|------|
-| 親画面 | [`../S06_settings.md`](../S06_settings.md) |
+| 親画面 | [`../settings.md`](../settings.md) |
 | 情報設計優先 | 2〜3（結果サマリ・最終更新） |
 | 更新日 | 2026-08-09 |
 
@@ -18,7 +18,7 @@
 | 結果表示（表または定義リスト） | サマリ |
 | `ErrorBanner` | 失敗 |
 
-ホーム（P-S00-C）は短い結果のみ。詳細は本パネル。
+ホーム（HomeUpdatePanel）は短い結果のみ。詳細は本パネル。
 
 ---
 

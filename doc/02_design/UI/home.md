@@ -1,4 +1,4 @@
-# S00 ホーム
+# ホーム
 
 | 項目 | 内容 |
 |------|------|
@@ -13,11 +13,11 @@
 読む順: **案内（上）→ 遷移カード（中）→ データ更新（下）**。
 
 ```text
-S00
-├─ P-S00-A IntroPanel              … 優先1
-├─ P-S00-B DestinationPanel        … 優先2〜3
-│    └─ NavCard ×（S02 / S01 / S03 / S04 / S06）
-└─ P-S00-C HomeUpdatePanel         … 優先4
+ホーム
+├─ IntroPanel              … 優先1
+├─ DestinationPanel        … 優先2（遷移カード）
+│    └─ NavCard ×（調教師 / 募集馬 / 設定 / 生産牧場 / 血統）
+└─ HomeUpdatePanel         … 優先3
 ```
 
 **画面ワイヤ**
@@ -28,8 +28,8 @@ S00
 └──────────────────────────────────────────────────────────┘
 ┌─ 分析・設定へ ───────────────────────────────────────────┐
 │  [調教師を調べる]     [募集馬を分析する]                   │
-│  [生産牧場を調べる]   [血統を調べる]                       │
 │  [設定・データ詳細]                                        │
+│  [生産牧場を調べる]   [血統を調べる]                       │
 └──────────────────────────────────────────────────────────┘
 ┌─ データ更新 ─────────────────────────────────────────────┐
 │  最終更新: YYYY-MM-DD HH:mm                                │
@@ -42,9 +42,9 @@ S00
 
 | パネル | 文書 |
 |--------|------|
-| P-S00-A | [`panels/P-S00-A_intro.md`](./panels/P-S00-A_intro.md) |
-| P-S00-B | [`panels/P-S00-B_destination.md`](./panels/P-S00-B_destination.md) |
-| P-S00-C | [`panels/P-S00-C_home_update.md`](./panels/P-S00-C_home_update.md) |
+| IntroPanel | [`panels/intro.md`](./panels/intro.md) |
+| DestinationPanel | [`panels/destination.md`](./panels/destination.md) |
+| HomeUpdatePanel | [`panels/home_update.md`](./panels/home_update.md) |
 
 ---
 

@@ -1,4 +1,4 @@
-# S01 募集馬1頭分析
+# 募集馬分析
 
 | 項目 | 内容 |
 |------|------|
@@ -13,21 +13,28 @@
 読む順: **上: 入力フォーム → 下: ダッシュボード**。
 
 ```text
-S01
-├─ P-S01-A HorseEntryPanel
-└─ P-S01-B AnalysisDashboardPanel
+募集馬
+├─ HorseEntryPanel
+└─ AnalysisDashboardPanel
      ├─ Toolbar（AnalysisTypeSelect + ContextLabel）
-     └─ Body（module 別 View）
+     └─ Body（module 別 View。単体画面と共用）
 ```
 
 ### パネル
 
 | パネル | 文書 |
 |--------|------|
-| P-S01-A | [`panels/P-S01-A_horse_entry.md`](./panels/P-S01-A_horse_entry.md) |
-| P-S01-B | [`panels/P-dashboard.md`](./panels/P-dashboard.md) / [`analysis_dashboard.md`](./analysis_dashboard.md) |
+| HorseEntryPanel | [`panels/horse_entry.md`](./panels/horse_entry.md) |
+| AnalysisDashboardPanel | [`panels/dashboard.md`](./panels/dashboard.md) / [`analysis_dashboard.md`](./analysis_dashboard.md) |
 
-trainer 埋め込み時の分析本文は [`panels/P-S02-B_trainer_analysis.md`](./panels/P-S02-B_trainer_analysis.md) と同一縦順。
+埋め込み本文は各単体画面と同一コンポーネント:
+
+| module | 共用元 |
+|--------|--------|
+| `trainer` | [`panels/trainer_analysis.md`](./panels/trainer_analysis.md) |
+| `farm` | [`panels/farm.md`](./panels/farm.md)（本文） |
+| `pedigree` | [`panels/pedigree.md`](./panels/pedigree.md)（本文） |
+| `similarity` | ダッシュボード専用プレースホルダ |
 
 ---
 

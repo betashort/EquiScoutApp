@@ -1,10 +1,10 @@
-# P-S00-C HomeUpdatePanel
+# HomeUpdatePanel
 
 | 項目 | 内容 |
 |------|------|
-| 親画面 | [`../S00_home.md`](../S00_home.md) |
-| 情報設計優先 | 4（データ更新） |
-| 同一 UC | シェルヘッダ [更新] / [`P-S06-A_update_control.md`](./P-S06-A_update_control.md) |
+| 親画面 | [`../home.md`](../home.md) |
+| 情報設計優先 | 3（データ更新） |
+| 同一 UC | シェルヘッダ [更新] / [`update_control.md`](./update_control.md) |
 | 更新日 | 2026-08-09 |
 
 ---
@@ -20,10 +20,10 @@
 | コンポーネント | 用途 |
 |----------------|------|
 | `PrimaryButton` | データを更新 |
-| `UpdateStatusSummary`（U16） | 最終更新・短い結果 |
+| `UpdateStatusSummary` | 最終更新・短い結果 |
 | `ErrorBanner` / `LoadingBlock` | 失敗・進行中 |
 
-詳細結果・接続設定は S06 へ誘導可（情報設計の分担）。
+詳細結果・接続設定は 設定 へ誘導可（情報設計の分担）。
 
 ---
 

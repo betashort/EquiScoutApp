@@ -1,8 +1,8 @@
-# P-S02-A TrainerSearchPanel
+# TrainerSearchPanel
 
 | 項目 | 内容 |
 |------|------|
-| 親画面 | [`../S02_trainer.md`](../S02_trainer.md) |
+| 親画面 | [`../trainer.md`](../trainer.md) |
 | 情報設計優先 | 1 |
 | 更新日 | 2026-08-09 |
 
