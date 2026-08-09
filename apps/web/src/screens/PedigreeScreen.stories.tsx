@@ -1,12 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn } from 'storybook/test'
 import { ScreenShell } from '../storybook/ScreenShell'
+import {
+  desktopScreenParameters,
+  viewportGlobals,
+} from '../storybook/viewports'
 import { PedigreeScreen } from './PedigreeScreen'
 
 const meta = {
   title: 'Screens/Pedigree',
   component: PedigreeScreen,
-  parameters: { layout: 'fullscreen' },
+  parameters: desktopScreenParameters,
+  globals: viewportGlobals(),
   args: {
     sireName: '',
     damName: '',

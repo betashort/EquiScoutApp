@@ -8,6 +8,10 @@ import {
   type UpdateStatusViewModel,
 } from '../domain/updateStatus'
 import { AppShell } from '../shell/AppShell'
+import {
+  desktopScreenParameters,
+  viewportGlobals,
+} from '../storybook/viewports'
 import { HomeScreen } from './HomeScreen'
 
 function HomeInShell({
@@ -30,9 +34,8 @@ function HomeInShell({
 const meta = {
   title: 'Screens/Home',
   component: HomeScreen,
-  parameters: {
-    layout: 'fullscreen',
-  },
+  parameters: desktopScreenParameters,
+  globals: viewportGlobals(),
   args: {
     onDestinationSelect: fn(),
   },

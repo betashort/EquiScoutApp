@@ -7,12 +7,17 @@ import {
   MOCK_TRAINER_ANALYSIS,
 } from '../domain/mocks'
 import { ScreenShell } from '../storybook/ScreenShell'
+import {
+  desktopScreenParameters,
+  viewportGlobals,
+} from '../storybook/viewports'
 import { HorseScreen } from './HorseScreen'
 
 const meta = {
   title: 'Screens/Horse',
   component: HorseScreen,
-  parameters: { layout: 'fullscreen' },
+  parameters: desktopScreenParameters,
+  globals: viewportGlobals(),
   args: {
     entry: EMPTY_HORSE_ENTRY,
     hasAnalysisTarget: false,

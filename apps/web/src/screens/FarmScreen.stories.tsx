@@ -2,12 +2,17 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn } from 'storybook/test'
 import { FARM_CANDIDATES } from '../domain/mocks'
 import { ScreenShell } from '../storybook/ScreenShell'
+import {
+  desktopScreenParameters,
+  viewportGlobals,
+} from '../storybook/viewports'
 import { FarmScreen } from './FarmScreen'
 
 const meta = {
   title: 'Screens/Farm',
   component: FarmScreen,
-  parameters: { layout: 'fullscreen' },
+  parameters: desktopScreenParameters,
+  globals: viewportGlobals(),
   args: {
     query: '',
     candidates: [],

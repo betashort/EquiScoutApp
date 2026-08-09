@@ -5,12 +5,17 @@ import {
   TRAINER_CANDIDATES,
 } from '../domain/mocks'
 import { ScreenShell } from '../storybook/ScreenShell'
+import {
+  desktopScreenParameters,
+  viewportGlobals,
+} from '../storybook/viewports'
 import { TrainerScreen } from './TrainerScreen'
 
 const meta = {
   title: 'Screens/Trainer',
   component: TrainerScreen,
-  parameters: { layout: 'fullscreen' },
+  parameters: desktopScreenParameters,
+  globals: viewportGlobals(),
   args: {
     query: '',
     candidates: [],

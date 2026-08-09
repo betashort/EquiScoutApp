@@ -13,12 +13,17 @@ import {
   UPDATE_STATUS_SUCCESS,
 } from '../domain/updateStatus'
 import { ScreenShell } from '../storybook/ScreenShell'
+import {
+  desktopScreenParameters,
+  viewportGlobals,
+} from '../storybook/viewports'
 import { SettingsScreen } from './SettingsScreen'
 
 const meta = {
   title: 'Screens/Settings',
   component: SettingsScreen,
-  parameters: { layout: 'fullscreen' },
+  parameters: desktopScreenParameters,
+  globals: viewportGlobals(),
   args: {
     updateStatus: UPDATE_STATUS_IDLE,
     result: UPDATE_RESULT_IDLE,
