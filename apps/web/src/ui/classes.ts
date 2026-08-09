@@ -4,7 +4,7 @@ export const eqRoot =
   'box-border min-h-full bg-linear-to-br from-eq-bg-top via-eq-bg-bottom to-eq-bg-end font-eq text-sm leading-normal text-eq-ink antialiased text-left [&_button]:font-[inherit]'
 
 export const shell =
-  'grid min-h-dvh grid-cols-1 grid-rows-[3.5rem_auto_1fr] md:grid-cols-[11.5rem_1fr] md:grid-rows-[3.5rem_1fr]'
+  'grid min-h-dvh grid-cols-1 grid-rows-[3.5rem_1fr]'
 
 export const panel =
   'rounded-lg border border-eq-border bg-eq-surface p-4 shadow-eq'

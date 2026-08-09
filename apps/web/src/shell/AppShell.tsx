@@ -2,7 +2,6 @@ import type { ReactNode } from 'react'
 import type { NavId } from '../domain/navigation'
 import type { UpdateStatusViewModel } from '../domain/updateStatus'
 import { eqRoot, shell } from '../ui/classes'
-import { GlobalNav } from './GlobalNav'
 import { HeaderBar } from './HeaderBar'
 import { MainContent } from './MainContent'
 
@@ -24,8 +23,12 @@ export function AppShell({
   return (
     <div className={eqRoot}>
       <div className={shell}>
-        <HeaderBar updateStatus={updateStatus} onUpdateClick={onUpdateClick} />
-        <GlobalNav activeNavId={activeNavId} onNavSelect={onNavSelect} />
+        <HeaderBar
+          activeNavId={activeNavId}
+          updateStatus={updateStatus}
+          onNavSelect={onNavSelect}
+          onUpdateClick={onUpdateClick}
+        />
         <MainContent>{children}</MainContent>
       </div>
     </div>
