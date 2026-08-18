@@ -3,3 +3,6 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+.env
+PoC/playground/contrail_offspring/search1_race_result/work/out/
+PoC/playground/contrail_offspring/search1_race_result/work/.db_url
